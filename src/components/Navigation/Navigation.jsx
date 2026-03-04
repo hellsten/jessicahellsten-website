@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import "./Navigation.scss";
 
+import Hamburger from '../../assets/icons/Hamburger.svg?react'
+
 function Navigation() {
     
   const scrollToSection = (id) => {
@@ -12,7 +14,8 @@ function Navigation() {
 
   return (
     <section className="navigation">
-      <nav className="navigation__container">
+
+      <nav className="navigation__container navigation__mobile-on">
         <div className="navigation__icon">
             <NavLink
             to="/"
@@ -20,6 +23,22 @@ function Navigation() {
             Jessica Hellsten
           </NavLink>
         </div>
+        
+        <button className="navigation__hamburger">
+            <Hamburger className="navigation__hamburger-icon" />
+        </button>
+      </nav>
+
+      <nav className="navigation__container navigation__desktop-on">
+        <div className="navigation__icon">
+            <NavLink
+            to="/"
+          >
+            Jessica Hellsten
+          </NavLink>
+        </div>
+
+
         <div className="navigation__links">
           <NavLink
             to="/"
