@@ -1,5 +1,6 @@
 @use "./../../styles/colors" as *;
 @use "./../../styles/keyframes" as *;
+@use "./../../styles/mixins" as *;
 
 .navigation {
   position: sticky;
@@ -15,20 +16,21 @@
   &__icon {
     padding: 10px;
     border-radius: 20px;
-    font-size: 12px;
-    font-weight: 700;
-    color: $green-color-primary;
     a {
       padding: 10px;
       border-radius: 20px;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 700;
       color: $green-color-primary;
       border: 1px solid transparent;
+            @include tablet{
+        font-size: 10px;
+        padding: 10px 5px;
+            }
       &:hover {
         color: $color-white;
-        background-color: $green-color-secondary;
-        border: 1px solid $green-color-secondary;
+        background-color: $green-color-primary;
+        border: 1px solid $green-color-primary;
       }
     }
   }
@@ -36,17 +38,26 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 36vw;
+    width: 60%;
+    @include tablet{
+      width: 70%;
+    }
     a {
       padding: 10px;
       border-radius: 20px;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 700;
       color: $green-color-primary;
       border: 1px solid transparent;
+      @include tablet{
+        font-size: 10px;
+        padding: 10px 5px;
+      }
+      @include mobile{
+        display: none;
+      }
       &:hover {
-        color: $green-color-secondary;
-        border: 1px solid $green-color-secondary;
+        border: 1px solid $green-color-primary;
       }
     }
   }
@@ -55,10 +66,13 @@
     flex-direction: row;
     justify-content: space-between;
     width: 1vw;
-    padding: 10px 2px;
+    padding: 10px;
     gap: 5px;
+    @include tablet{
+      display: none;
+    }
     p {
-      font-size: 12px;
+      font-size: 16px;
       font-weight: 700;
       color: $green-color-primary;
       opacity: 0;
