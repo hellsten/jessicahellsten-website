@@ -1,0 +1,52 @@
+@use "./../../styles/colors" as *;
+
+.navigation {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+    width: 75%;
+  }
+  &__icon {
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: $green-color-primary;
+    a {
+      padding: 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      color: $green-color-primary;
+      border: 1px solid transparent;
+      &:hover {
+        color: $color-white;
+        background-color: $green-color-secondary;
+        border: 1px solid $green-color-secondary;
+      }
+    }
+  }
+  &__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 36vw;
+    a {
+      padding: 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      color: $green-color-primary;
+      border: 1px solid transparent;
+      &:hover {
+        color: $green-color-secondary;
+        border: 1px solid $green-color-secondary;
+      }
+    }
+  }
+}
