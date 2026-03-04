@@ -31,7 +31,10 @@ function Navigation() {
           >
             About
           </NavLink>
-
+          <div className="navigation__dots">
+            <p className="navigation__dots-1">•</p>
+            <p className="navigation__dots-2">•</p>
+          </div>
           <NavLink
             to="/"
             onClick={(e) => {
@@ -42,7 +45,10 @@ function Navigation() {
           >
             Skills
           </NavLink>
-
+          <div className="navigation__dots">
+            <p className="navigation__dots-3">•</p>
+            <p className="navigation__dots-4">•</p>
+          </div>
           <NavLink
             to="/"
             onClick={(e) => {
@@ -53,7 +59,10 @@ function Navigation() {
           >
             Projects
           </NavLink>
-
+          <div className="navigation__dots">
+            <p className="navigation__dots-5">•</p>
+            <p className="navigation__dots-6">•</p>
+          </div>
           <NavLink
             to="/"
             onClick={(e) => {
@@ -64,7 +73,10 @@ function Navigation() {
           >
             Education
           </NavLink>
-
+          <div className="navigation__dots">
+            <p className="navigation__dots-7">•</p>
+            <p className="navigation__dots-8">•</p>
+          </div>
           <NavLink
             to="/"
             onClick={(e) => {
@@ -75,7 +87,10 @@ function Navigation() {
           >
             Experience
           </NavLink>
-
+          <div className="navigation__dots">
+            <p className="navigation__dots-9">•</p>
+            <p className="navigation__dots-10">•</p>
+          </div>
           <NavLink
             to="/"
             onClick={(e) => {
