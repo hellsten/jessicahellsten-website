@@ -5,12 +5,14 @@ import './App.css'
 import Navigation from './components/Navigation/Navigation.jsx'
 import HomePage from './pages/HomePage/HomePage.jsx'
 import ExtraPage from './pages/ExtraPage/ExtraPage.jsx'
+import UtilityNavigation from './components/UtilityNavigation/UtilityNavigation.jsx'
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
+        <UtilityNavigation />
         <Navigation />
 
         <Routes>
