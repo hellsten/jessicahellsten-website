@@ -1,4 +1,5 @@
 @use "./../../styles/colors" as *;
+@use "./../../styles/keyframes" as *;
 
 .navigation {
   position: sticky;
@@ -47,6 +48,31 @@
         color: $green-color-secondary;
         border: 1px solid $green-color-secondary;
       }
+    }
+  }
+  &__dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1vw;
+    padding: 10px 2px;
+    gap: 5px;
+    p {
+      font-size: 12px;
+      font-weight: 700;
+      color: $green-color-primary;
+      opacity: 0;
+      animation: dotFadeIn 350ms ease-out forwards;
+      &.navigation__dots-1 { animation-delay: 1s; }
+      &.navigation__dots-2 { animation-delay: 2s; }
+      &.navigation__dots-3 { animation-delay: 3s; }
+      &.navigation__dots-4 { animation-delay: 4s; }
+      &.navigation__dots-5 { animation-delay: 5s; }
+      &.navigation__dots-6 { animation-delay: 6s; }
+      &.navigation__dots-7 { animation-delay: 7s; }
+      &.navigation__dots-8 { animation-delay: 8s; }
+      &.navigation__dots-9 { animation-delay: 9s; }
+      &.navigation__dots-10 { animation-delay: 10s; }
     }
   }
 }
