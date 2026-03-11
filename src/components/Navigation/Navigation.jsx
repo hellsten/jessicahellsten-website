@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import "./Navigation.scss";
 
-import Hamburger from '../../assets/icons/hamburger.svg?react'
+import Hamburger from '../../assets/icons/hamburger.svg?react';
+import Foot from '../../assets/icons/foot.svg?react';
 
 function Navigation() {
     
@@ -51,8 +52,8 @@ function Navigation() {
             About
           </NavLink>
           <div className="navigation__dots">
-            <p className="navigation__dots-1">•</p>
-            <p className="navigation__dots-2">•</p>
+            <p className="navigation__dots-1"><Foot /></p>
+            <p className="navigation__dots-2"><Foot /></p>
           </div>
           <NavLink
             to="/"
@@ -65,8 +66,8 @@ function Navigation() {
             Skills
           </NavLink>
           <div className="navigation__dots">
-            <p className="navigation__dots-3">•</p>
-            <p className="navigation__dots-4">•</p>
+            <p className="navigation__dots-3"><Foot /></p>
+            <p className="navigation__dots-4"><Foot /></p>
           </div>
           <NavLink
             to="/"
@@ -79,8 +80,8 @@ function Navigation() {
             Projects
           </NavLink>
           <div className="navigation__dots">
-            <p className="navigation__dots-5">•</p>
-            <p className="navigation__dots-6">•</p>
+            <p className="navigation__dots-5"><Foot /></p>
+            <p className="navigation__dots-6"><Foot /></p>
           </div>
           <NavLink
             to="/"
@@ -93,8 +94,8 @@ function Navigation() {
             Education
           </NavLink>
           <div className="navigation__dots">
-            <p className="navigation__dots-7">•</p>
-            <p className="navigation__dots-8">•</p>
+            <p className="navigation__dots-7"><Foot /></p>
+            <p className="navigation__dots-8"><Foot /></p>
           </div>
           <NavLink
             to="/"
@@ -107,8 +108,8 @@ function Navigation() {
             Experience
           </NavLink>
           <div className="navigation__dots">
-            <p className="navigation__dots-9">•</p>
-            <p className="navigation__dots-10">•</p>
+            <p className="navigation__dots-9"><Foot /></p>
+            <p className="navigation__dots-10"><Foot /></p>
           </div>
           <NavLink
             to="/"
