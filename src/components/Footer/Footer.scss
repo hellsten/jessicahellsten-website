@@ -41,20 +41,30 @@
     @include mobile{
         font-size: 3rem;
         text-align: center;
+        padding: 1rem 0;
     }
   }
   &__info {
-    width: 80%;
+    width: 85%;
     line-height: 1.5rem;
     text-align: justify;
-    text-indent: 2.5rem;
+    text-indent: -1rem;
+    padding-left: 1rem;
     letter-spacing: 5%;
+    @include small-desktop{
+        text-indent: 0rem;
+        padding: 0;
+    }
+    @include tablet{
+        text-align: left;
+    }
     @include mobile{
         width: 100%;
+        text-align: justify;
     }
     span{
-        font-size: 1.5rem;
-        font-weight: 600;
+        font-size: 2rem;
+        font-weight: 700;
         color: $green-color-secondary;
     }
   }
@@ -66,9 +76,11 @@
     }
     svg{
         height: 2rem;
+        width: 2rem;
         padding: 0.5rem;
         background: $color-white;
         border-radius: 1rem;
+        fill: $green-color-tertiary;
     }
   }
   &__back-to-top {
@@ -96,6 +108,8 @@
     }
     @include tablet{
         flex-direction: column;
+        justify-content: left;
+        gap: 4rem;
     }
   }
   &__site-map {
@@ -160,15 +174,13 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 3rem;
-    font-weight: 500;
-    @include mobile{
-        text-align: center;
-    }
+    font-weight: 600;
+    text-align: center;
   }
   &__dot{
     font-size: 2rem;
     padding: 0 0.5rem 0.25rem;
-    @include mobile{
+    @include tablet{
         display: none;
     }
   }
@@ -178,6 +190,12 @@
     justify-content: space-between;
     padding: 2rem 0 1rem;
     border-top: 1px solid $green-color-accent;
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
   }
   &__counter {
   }
