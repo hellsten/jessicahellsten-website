@@ -4,8 +4,9 @@
 .about {
   display: flex;
   justify-self: center;
+  justify-content: center;
   padding: 4rem 0;
-  margin: 2rem 0 0;
+  margin: 2rem auto 0;
   width: 80%;
   @include small-desktop {
     width: 90%;
