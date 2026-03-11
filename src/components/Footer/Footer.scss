@@ -1,0 +1,186 @@
+@use "./../../styles/colors" as *;
+@use "./../../styles/mixins" as *;
+
+.footer {
+    margin-top: 5rem;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    background-color: $green-color-tertiary;
+    padding: 0 6rem 1rem;
+    color: $color-white;
+    @include mobile{
+        padding: 0 2rem 1rem;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    padding: 4rem 0;
+    gap: 4rem;
+    @include mobile{
+        flex-direction: column;
+        padding: 2rem 0;
+    }
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    width: 33vw;
+    gap: 2rem;
+    @include mobile{
+        width: 100%;
+    }
+    span{
+        letter-spacing: -5%;
+    }
+  }
+  &__header {
+    font-size: 4rem;
+    font-weight: 500;
+    @include mobile{
+        font-size: 3rem;
+        text-align: center;
+    }
+  }
+  &__info {
+    width: 80%;
+    line-height: 1.5rem;
+    text-align: justify;
+    text-indent: 2.5rem;
+    letter-spacing: 5%;
+    @include mobile{
+        width: 100%;
+    }
+    span{
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $green-color-secondary;
+    }
+  }
+  &__socials {
+    display: flex;
+    gap: 1rem;
+    @include mobile{
+        justify-content: center;
+    }
+    svg{
+        height: 2rem;
+        padding: 0.5rem;
+        background: $color-white;
+        border-radius: 1rem;
+    }
+  }
+  &__back-to-top {
+    display: inline-block;
+    align-self: flex-start;
+    margin: 0;
+    color: $green-color-tertiary;
+    background-color: $color-white;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    @include mobile{
+        align-self: center;
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 45vw;
+    @include mobile{
+        align-self: center;
+        gap: 3rem;
+    }
+    @include tablet{
+        flex-direction: column;
+    }
+  }
+  &__site-map {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    @include mobile{
+        align-self: center;
+        gap: 1rem;
+    }
+    h1{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    li{
+        list-style: none;
+        @include mobile{
+        align-self: center;
+    }
+    }
+  }
+  &__projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    @include mobile{
+        align-self: center;
+        gap: 1rem;
+    }
+    h1{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    li{
+        list-style: none;
+        @include mobile{
+        align-self: center;
+    }
+    }
+  }
+  &__pages {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    @include mobile{
+        align-self: center;
+        gap: 1rem;
+    }
+    h1{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    li{
+        list-style: none;
+        @include mobile{
+        align-self: center;
+    }
+    }
+  }
+  &__disclaimer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+    font-weight: 500;
+    @include mobile{
+        text-align: center;
+    }
+  }
+  &__dot{
+    font-size: 2rem;
+    padding: 0 0.5rem 0.25rem;
+    @include mobile{
+        display: none;
+    }
+  }
+  &__legal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 0 1rem;
+    border-top: 1px solid $green-color-accent;
+  }
+  &__counter {
+  }
+  &__rights {
+  }
+}
