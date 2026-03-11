@@ -12,6 +12,14 @@
     width: 90%;
     margin: 0 auto;
   }
+  @include tablet{
+    width: 88%;
+  }
+  @include mobile{
+    padding: 1rem 0rem;
+    margin: 2rem 2rem;
+    width: auto;
+  }
   &__container {
     overflow: hidden;
     border-radius: 2rem;
@@ -85,12 +93,30 @@
       p {
         display: inline-block;
         background-color: $green-color-secondary;
-        font-weight: 700;
+        font-size: 1rem;
+        font-weight: 500;
         color: $color-white;
-        padding: 0.25rem 0.5rem;
+        padding: 0.25rem 0.75rem;
+        line-height: 1.5rem;
         border-radius: 2rem;
         @include tablet {
           line-height: 1rem;
+          padding: 0.5rem 0.75rem;
+        }
+        @include mobile{
+          font-size: 0.75rem;
+          padding: 0.25rem 0.5rem;
+        }
+        &.about__vancouver{
+          font-size: 1.25rem;
+          padding: 0.5rem 1rem;
+          @include small-desktop{
+            font-size: 1rem;
+            padding: 0.25rem 0.75rem;
+          }
+          @include tablet{
+            padding: 0.5rem 0.75rem;
+          }
         }
       }
     }

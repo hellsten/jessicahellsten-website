@@ -12,7 +12,7 @@ function About() {
         <div className="about__card-container">
           <div className="about__card-left">
             <span>
-              Based in <p>Vancouver, BC</p>, I approach software development like
+              Based in <p className="about__vancouver">Vancouver, BC</p>, I approach software development like
               navigating a trail: clear, structured, and thoughtful. My
               background spans healthcare and biomedical engineering, with
               experience in client-facing roles that honed problem-solving and
