@@ -1,0 +1,94 @@
+@use "./../../styles/colors" as *;
+@use "./../../styles/mixins" as *;
+
+.footer {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    background-color: $green-color-tertiary;
+    padding: 0 4rem 1rem;
+    color: $color-white;
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    padding: 4rem 0;
+    gap: 4rem;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    width: 33vw;
+    gap: 2rem;
+  }
+  &__header {
+    font-size: 4rem;
+  }
+  &__info {
+    width: 80%;
+    line-height: 1.5rem;
+    text-align: justify;
+  }
+  &__socials {
+    display: flex;
+    gap: 1rem;
+    svg{
+        height: 2rem;
+        padding: 0.5rem;
+        background: $color-white;
+        border-radius: 1rem;
+    }
+  }
+  &__back-to-top {
+    display: inline-block;
+    align-self: flex-start;
+    margin: 0;
+    color: $green-color-tertiary;
+    background-color: $color-white;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  &__right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 25vw;
+  }
+  &__site-map {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    h1{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    li{
+        list-style: none;
+    }
+  }
+  &__projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    h1{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    li{
+        list-style: none;
+    }
+  }
+  &__legal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 0 1rem;
+    border-top: 1px solid $green-color-accent;
+  }
+  &__counter {
+  }
+  &__rights {
+  }
+}

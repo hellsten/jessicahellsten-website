@@ -2,31 +2,59 @@ import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./Footer.scss";
 
+import projects from "./../../assets/data/projects.js";
+
+import GitHub from "./../../assets/icons/github.svg?react";
+import LinkedIn from "./../../assets/icons/linkedin.svg?react";
+import Mail from "./../../assets/icons/mail.svg?react";
+
 function Footer() {
-
-  const [visitors, setVisitors] = useState(0);
-
-  useEffect(() => {
-    async function getVisitors() {
-      //api counter
-      const response = await fetch(
-        "https://api.countapi.xyz/hit/jessicahellsten-portfolio/visits"
-      );
-      const data = await response.json();
-      setVisitors(data.value);
-    }
-
-    getVisitors();
-  }, []);
 
   return (
     <section className="footer">
-        <div className="footer__container">
-            <div className="footer__legals">
-                <div className="footer__counter">Visitors: {visitors}</div>
-                <div className="footer__rights">© 2026 Jessica Hellsten. All Rights Reserved.</div>
+      <div className="footer__container">
+        <div className="footer__content">
+          <div className="footer__left">
+            <div className="footer__header">Jessica Hellsten</div>
+            <div className="footer__info">
+              Inspired by the forests, mountains, and trails surrounding
+              Vancouver, BC. Just like a well-marked path, good software should
+              provide clear direction and thoughtful structure. Well-designed
+              systems guide users naturally without unnecessary complexity.
+              Clean interfaces and strong architecture create reliable digital
+              experiences. Navigation, clarity, and usability are treated with
+              the same care as trail markers on a mountain route. This portfolio
+              showcases projects focused on building modern, dependable web
+              applications.
             </div>
+            <div className="footer__socials"><GitHub /><LinkedIn /><Mail /></div>
+            <div className="footer__back-to-top">Back to Top</div>
+          </div>
+          <div className="footer__right">
+            <div className="footer__site-map">
+              <h1>Site Map</h1>
+              <li>About</li>
+              <li>Skills</li>
+              <li>Projects</li>
+              <li>Education</li>
+              <li>Experience</li>
+              <li>Contact</li>
+            </div>
+            <div className="footer__projects">
+              <h1>Projects</h1>
+              {projects.map((project) => (
+                <li key={project.id} className="footer__projects-item">{project.title}</li>
+              ))}
+            </div>
+          </div>
         </div>
+        <div className="footer__legal">
+          <div className="footer__counter">Visitors: 3</div>
+          <div className="footer__rights">
+            © 2026 Jessica Hellsten. All Rights Reserved.
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
