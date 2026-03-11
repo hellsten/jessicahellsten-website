@@ -1,18 +1,18 @@
-import defaultImage from "../images/default.jpg"
+import defaultImage from "../images/default.jpg";
 
 const projects = [
   {
-    id: 1,
+    id: "portfolio",
     image: defaultImage,
-    title: "Portfolio Website",
+    title: "Portfolio",
     intro:
       "Modern portfolio application built with React, JavaScript, and SCSS featuring responsive design and project showcases.",
     skills: ["React", "JavaScript", "SCSS"],
-    demoLink: "https://jessicahellsten.com/",
+    demoLink: "https://jessicahellsten.com",
     codeLink: "https://github.com/hellsten/jessicahellsten-website.git",
   },
   {
-    id: 2,
+    id: "canhunt",
     image: defaultImage,
     title: "CANhunt",
     intro:
@@ -32,9 +32,26 @@ const projects = [
     codeLink: "#",
   },
   {
-    id: 3,
+    id: "instock",
     image: defaultImage,
-    title: "TrailBucket",
+    title: "Instock",
+    intro:
+      "Web and mobile inventory management app that stores warehouses, warehouse details, and inventory information, enabling organized tracking and easy data access.",
+    skills: [
+      "React",
+      "JavaScript",
+      "REST APIs",
+      "React",
+      "Responsive Design",
+      "Git",
+    ],
+    demoLink: "#",
+    codeLink: "#",
+  },
+  {
+    id: "trailbucket",
+    image: defaultImage,
+    title: "TrailBucket (future)",
     intro:
       "Cross-platform trail app for web, Android, and iOS, offering boundary map layers, the ability to record routes, access saved public trails, and track outdoor adventures.",
     skills: [
@@ -45,23 +62,6 @@ const projects = [
       "REST APIs",
       "Data Visualization",
       "GPS Tracking",
-      "Responsive Design",
-      "Git",
-    ],
-    demoLink: "#",
-    codeLink: "#",
-  },
-  {
-    id: 4,
-    image: defaultImage,
-    title: "Instock",
-    intro:
-      "Web and mobile inventory management app that stores warehouses, warehouse details, and inventory information, enabling organized tracking and easy data access.",
-    skills: [
-      "React",
-      "JavaScript",
-      "REST APIs",
-      "React",
       "Responsive Design",
       "Git",
     ],

@@ -20,8 +20,8 @@ function Projects() {
             ))}
             </div>
             <div className="project__card-links">
-              <div className="project__card-demo" href={project.demoLink} className="project__card-demo">Demo</div>
-              <div className="project__card-code" href={project.codeLink} className="project__card-code">Code</div>
+              <a className="project__card-demo" href={project.demoLink}>Demo</a>
+              <a className="project__card-code" href={project.codeLink}>Code</a>
             </div>
           </div>
           ))}
