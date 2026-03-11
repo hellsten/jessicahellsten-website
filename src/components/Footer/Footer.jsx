@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
 import "./Footer.scss";
 
 import projects from "./../../assets/data/projects.js";
@@ -9,7 +8,6 @@ import LinkedIn from "./../../assets/icons/linkedin.svg?react";
 import Mail from "./../../assets/icons/mail.svg?react";
 
 function Footer() {
-
   return (
     <section className="footer">
       <div className="footer__container">
@@ -49,10 +47,11 @@ function Footer() {
             <div className="footer__pages">
               <h1>Extras</h1>
               <li>Outside</li>
+              <li>References</li>
             </div>
           </div>
         </div>
-        <span className="footer__disclaimer"><span className="footer__dot">•</span> Believe it or not. This website was painstakingly all typed out by hand. <span className="footer__dot">•</span></span>
+        <span className="footer__disclaimer"><span className="footer__dot">•</span> Believe it or not. This website was painstakingly all coded by hand. <span className="footer__dot">•</span></span>
         <div className="footer__legal">
           <div className="footer__counter">Visitors: 3</div>
           <div className="footer__rights">
