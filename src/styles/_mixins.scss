@@ -3,8 +3,12 @@
     @content;
   }
 }
-
 @mixin tablet {
+  @media screen and (max-width: 1000px){
+    @content;
+  }
+}
+@mixin small-desktop {
   @media screen and (max-width: 1460px) {
     @content;
   }
