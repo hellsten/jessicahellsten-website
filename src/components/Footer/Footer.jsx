@@ -17,7 +17,7 @@ function Footer() {
           <div className="footer__left">
             <div className="footer__header">Jessica Hellsten</div>
             <div className="footer__info">
-              Inspired by the forests, mountains, and trails surrounding
+              <span>Inspired</span> by the forests, mountains, and trails surrounding
               Vancouver, BC. Just like a well-marked path, good software should
               provide clear direction and thoughtful structure. Well-designed
               systems guide users naturally without unnecessary complexity.
@@ -46,8 +46,13 @@ function Footer() {
                 <li key={project.id} className="footer__projects-item">{project.title}</li>
               ))}
             </div>
+            <div className="footer__pages">
+              <h1>Extras</h1>
+              <li>Outside</li>
+            </div>
           </div>
         </div>
+        <span className="footer__disclaimer"><span className="footer__dot">•</span> Believe it or not. This website was painstakingly all typed out by hand. <span className="footer__dot">•</span></span>
         <div className="footer__legal">
           <div className="footer__counter">Visitors: 3</div>
           <div className="footer__rights">
