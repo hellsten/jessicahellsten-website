@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./Navigation.scss";
 
-import Hamburger from '../../assets/icons/Hamburger.svg?react'
+import Hamburger from '../../assets/icons/hamburger.svg?react'
 
 function Navigation() {
     
