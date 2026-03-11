@@ -1,0 +1,117 @@
+@use "./../../styles/colors" as *;
+@use "./../../styles/mixins" as *;
+
+.about {
+  display: flex;
+  justify-self: center;
+  padding: 4rem 0;
+  margin: 2rem 0 0;
+  width: 80%;
+  @include small-desktop {
+    width: 90%;
+    margin: 0;
+  }
+  &__container {
+    overflow: hidden;
+    border-radius: 2rem;
+    padding: 6rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    @include small-desktop {
+      padding: 4rem;
+    }
+    @include tablet {
+      padding: 2rem 1rem 3rem;
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: center;
+  }
+  &__title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: $green-color-primary;
+    padding-bottom: 4rem;
+    @include tablet {
+      font-size: 3rem;
+      padding: 1rem 0 3rem;
+    }
+    @include mobile {
+      font-size: 2rem;
+      padding: 0.5rem 0 2rem;
+    }
+  }
+  &__card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    @include small-desktop {
+      gap: 3rem;
+    }
+    @include tablet {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+  &__card-left {
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+    width: 70%;
+    gap: 2rem;
+    @include tablet {
+      width: 90%;
+      gap: 1rem;
+    }
+    span {
+      font-size: 1.5rem;
+      color: $green-color-accent;
+      line-height: 2rem;
+      @include small-desktop {
+        font-size: 1rem;
+      }
+      @include tablet {
+        line-height: 1.5rem;
+      }
+      span {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: 0.5rem;
+        padding: 1rem 1rem;
+        line-height: 2rem;
+      }
+      p {
+        display: inline-block;
+        background-color: $green-color-secondary;
+        font-weight: 700;
+        color: $color-white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 2rem;
+        @include tablet {
+          line-height: 1rem;
+        }
+      }
+    }
+  }
+  &__card-right {
+    display: flex;
+    align-items: center;
+    @include mobile {
+      justify-content: center;
+    }
+    img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 20rem;
+      transition: transform 0.5s ease;
+      @include mobile {
+        width: 80%;
+      }
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
