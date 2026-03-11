@@ -18,11 +18,11 @@
     color: $green-color-primary;
     @include tablet {
         font-size: 3rem;
-        padding: 1.5rem;
+        padding: 1rem;
     }
     @include mobile {
         font-size: 2rem;
-        padding: 1.25rem;
+        padding: 0.5rem 0 0.25rem;
     }
   }
   &__card-container {
@@ -47,7 +47,7 @@
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
   }
   @include tablet {
-    width: 50%;
+    width: 45%;
   }
   @include mobile {
     width: 100%;
@@ -90,7 +90,7 @@
     padding: 0 1.5rem 1.5rem;
     margin-top: auto;
     gap: 1rem;
-    div {
+    a {
       cursor: pointer;
       text-align: center;
       width: 50%;
@@ -104,6 +104,9 @@
         background-color: $green-color-secondary;
         padding: 0.6rem 1.1rem;
       }
+    }
+    a[href="#"]{
+      background: $color-white;
     }
   }
 }
