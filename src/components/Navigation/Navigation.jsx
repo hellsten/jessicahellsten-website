@@ -14,7 +14,7 @@ function Navigation() {
   };
 
   return (
-    <section className="navigation">
+    <section className="navigation" id="sectionNav">
 
       <nav className="navigation__container navigation__mobile-on">
         <div className="navigation__icon">

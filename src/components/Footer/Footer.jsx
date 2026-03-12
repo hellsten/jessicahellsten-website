@@ -8,6 +8,13 @@ import LinkedIn from "./../../assets/icons/linkedin.svg?react";
 import Mail from "./../../assets/icons/mail.svg?react";
 
 function Footer() {
+
+  const scrollToSection = (id) => {
+    const sectionElement = document.getElementById(id);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section className="footer">
       <div className="footer__container">
@@ -25,8 +32,15 @@ function Footer() {
               showcases projects focused on building modern, dependable web
               applications.
             </div>
-            <div className="footer__socials"><GitHub /><LinkedIn /><Mail /></div>
-            <div className="footer__back-to-top">Back to Top</div>
+            <div className="footer__socials">
+              <NavLink to="https://github.com/hellsten"><GitHub /></NavLink>
+              <NavLink to="https://www.linkedin.com/in/jessicahellsten/"><LinkedIn /></NavLink>
+              <NavLink to="mailto:jessicahellsten@gmail.com"><Mail /></NavLink>
+            </div>
+            <div className="footer__back-to-top"><NavLink onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("sectionNav");
+            }}>Back to Top</NavLink></div>
           </div>
           <div className="footer__right">
             <div className="footer__site-map">
