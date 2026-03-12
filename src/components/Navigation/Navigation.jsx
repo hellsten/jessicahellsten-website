@@ -42,12 +42,10 @@ function Navigation() {
 
         <div className="navigation__links">
           <NavLink
-            to="/"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection("sectionAbout");
             }}
-            className={({ isActive }) => (isActive ? "active" : "")}
           >
             About
           </NavLink>
@@ -56,12 +54,10 @@ function Navigation() {
             <p className="navigation__dots-2"><Foot /></p>
           </div>
           <NavLink
-            to="/"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection("sectionSkills");
             }}
-            className={({ isActive }) => (isActive ? "active" : "")}
           >
             Skills
           </NavLink>
@@ -70,12 +66,11 @@ function Navigation() {
             <p className="navigation__dots-4"><Foot /></p>
           </div>
           <NavLink
-            to="/"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection("sectionProjects");
             }}
-            className={({ isActive }) => (isActive ? "active" : "")}
+            
           >
             Projects
           </NavLink>
@@ -84,12 +79,10 @@ function Navigation() {
             <p className="navigation__dots-6"><Foot /></p>
           </div>
           <NavLink
-            to="/"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection("sectionEducation");
             }}
-            className={({ isActive }) => (isActive ? "active" : "")}
           >
             Education
           </NavLink>
@@ -98,12 +91,10 @@ function Navigation() {
             <p className="navigation__dots-8"><Foot /></p>
           </div>
           <NavLink
-            to="/"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection("sectionExperience");
             }}
-            className={({ isActive }) => (isActive ? "active" : "")}
           >
             Experience
           </NavLink>
@@ -112,12 +103,10 @@ function Navigation() {
             <p className="navigation__dots-10"><Foot /></p>
           </div>
           <NavLink
-            to="/"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection("sectionContact");
             }}
-            className={({ isActive }) => (isActive ? "active" : "")}
           >
             Contact
           </NavLink>

@@ -3,7 +3,7 @@ import projects from "./../../assets/data/projects.js";
 
 function Projects() {
   return (
-    <section className="projects">
+    <section className="projects" id="sectionProjects">
       <div className="projects__container">
         <div className="projects__header">
           <div className="projects__title">Projects</div>
