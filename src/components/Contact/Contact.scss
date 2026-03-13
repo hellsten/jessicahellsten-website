@@ -182,6 +182,12 @@
       font-size: 3rem;
       font-weight: 700;
       color: $color-white;
+      @include tablet{
+        font-size: 2.25 rem;
+      }
+      @include mobile{
+        font-size: 1.75rem;
+      }
     }
   }
 }
