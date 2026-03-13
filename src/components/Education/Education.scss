@@ -4,12 +4,16 @@
 
 .education {
   &__container {
-    margin-top: 2rem;
-    padding: 2rem 2rem 4rem;
+    margin: 5rem 7rem;
+    padding: 2rem 4rem 4rem;
+    border-radius: 2rem;
+    background-color: $green-color-primary;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
   }
   &__header {
     display: flex;
     justify-content: center;
+    
   }
   &__title {
     padding: 2rem;
@@ -17,7 +21,7 @@
     border-radius: 20rem;
     font-size: 4rem;
     font-weight: 700;
-    color: $green-color-primary;
+    color: $color-white;
     @include tablet {
       font-size: 3rem;
       padding: 1rem;
@@ -28,10 +32,63 @@
     }
   }
   &__card-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      gap: 2rem;
+    }
+  &__card {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    gap: 1rem;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    line-height: 1.5rem;
+    gap: 8rem;
+    padding: 4rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 2rem;
+    height: auto;
+    //background-color: $color-white;
+    background-color: $green-color-tertiary;
+    transition:
+        transform 0.5s ease;
+    &:hover{
+        transform: scale(1.01);
+    }
+    &-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        gap: 1.5rem;
+    }
+    &-dates{
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: $green-color-tertiary;
+        color: $green-color-accent;
+    }
+    &-degree{
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 1rem 0 0;
+        color: $green-color-secondary;
+    }
+    &-major{
+        font-size: 3rem;
+        text-indent: 1.5rem;
+        font-weight: 700;
+        color: $color-white;
+        height: 3.5rem;
+    }
+    &-logo{
+       width: 25rem;
+       height: auto;  
+       align-self: center;
+       
+       padding: 1rem 3rem;
+       border-radius: 2rem;
+    }
   }
 }
