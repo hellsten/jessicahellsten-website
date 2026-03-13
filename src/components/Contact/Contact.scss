@@ -96,6 +96,9 @@
         border-radius: 1rem;
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
         label{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
             padding: 0 0 0.5rem;
             font-size: 1.25rem;
             font-weight: 500;
@@ -114,7 +117,7 @@
         }
         &-submit{
             color: $color-white;
-            width: 7vw;
+            width: 9vw;
             align-self: center;
             text-align: center;
             padding: 1rem 1rem;
@@ -141,6 +144,15 @@
         font-weight: 500;
         border-radius: 0.5rem;
         border: none;
+    }
+    &-sent{
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+        font-size: 3rem;
+        font-weight: 700;
+        color: $color-white;
     }
   }
 }
