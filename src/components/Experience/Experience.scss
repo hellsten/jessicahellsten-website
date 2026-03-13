@@ -1,0 +1,139 @@
+@use "./../../styles/colors" as *;
+@use "./../../styles/mixins" as *;
+@use "./../../styles/keyframes" as *;
+
+.experience {
+  &__container {
+    scroll-margin-top: 2rem;
+    padding: 1rem 6em 0rem;
+  }
+  &__header {
+    display: flex;
+    justify-content: center;
+  }
+  &__title {
+    padding: 0 0 2rem;
+    margin: 0 0 2rem;
+    border-radius: 20rem;
+    font-size: 4rem;
+    font-weight: 700;
+    color: $green-color-primary;
+    @include tablet {
+      font-size: 3rem;
+      padding: 1rem;
+    }
+    @include mobile {
+      font-size: 2rem;
+      padding: 0.5rem 0 0.25rem;
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //gap: 3rem;
+    &-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      border-radius: 2rem;
+      padding: 3rem;
+      width: 100%;
+      margin-bottom: 3rem;
+      @include tablet{
+            flex-direction: column;
+            gap: 2rem;
+            width: 85%;
+        }
+      &:hover{
+        transform: scale(1.01);
+      }
+    }
+    &-outside{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 3rem;
+
+        &:last-child {
+            .experience__card-line-line{
+                display: none;
+            }
+        }
+        &:hover{
+            color: $green-color-primary;
+            .experience__card-line-dot{
+                color: $green-color-primary;
+            }
+            .experience__card-line-line{
+                border-color: $green-color-primary;;
+            }
+        }
+    }
+    &-logo{
+        display: flex;
+        height: 12rem;
+        @include small-desktop{
+            height: 6rem;
+            align-self: center;
+        }
+    }
+    &-details{
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        gap: 1rem;
+        @include tablet{
+            text-align: left;
+        }
+    }
+    &-dates{
+        font-size: 1.5rem;
+        font-weight: 600;
+        @include mobile{
+            font-size: 1rem;
+        }
+    }
+    &-company{
+        font-size: 2rem;
+        font-weight: 700;
+        @include mobile{
+            font-size: 1.5rem;
+        }
+    }
+    &-position{
+        font-size: 1.5rem;
+        font-weight: 700;
+        @include mobile{
+            font-size: 1rem;
+        }
+    }   
+    &-location{
+        font-size: 1rem;
+        font-weight: 600;
+        @include mobile{
+            font-size: 0.75rem;
+        }
+    }
+    &-line{
+        display: flex;
+        flex-direction: column;
+        @include tablet{
+            display: none;
+        }
+        &-dot{
+            font-size: 6rem;
+            line-height: 1rem;
+            padding: 1rem 0 1rem;
+            color: $green-color-accent;
+            transform: translateX(-0.75rem);
+        }
+        &-line{
+            padding: 0;
+            height: 100%;
+            border-left: 3px solid $green-color-accent;
+        }
+    }
+  }
+}
