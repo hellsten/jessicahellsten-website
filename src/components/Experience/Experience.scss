@@ -5,7 +5,7 @@
 .experience {
   &__container {
     scroll-margin-top: 2rem;
-    padding: 1rem 6em 0rem;
+    padding: 1rem 10em 0rem;
   }
   &__header {
     display: flex;
@@ -73,7 +73,7 @@
     }
     &-logo{
         display: flex;
-        height: 12rem;
+        height: 10rem;
         @include small-desktop{
             height: 6rem;
             align-self: center;
@@ -91,6 +91,9 @@
     &-dates{
         font-size: 1.5rem;
         font-weight: 600;
+        @include small-desktop{
+            font-size: 1.25rem;
+        }
         @include mobile{
             font-size: 1rem;
         }
@@ -98,6 +101,9 @@
     &-company{
         font-size: 2rem;
         font-weight: 700;
+        @include small-desktop{
+            font-size: 1.5rem;
+        }
         @include mobile{
             font-size: 1.5rem;
         }
@@ -105,6 +111,9 @@
     &-position{
         font-size: 1.5rem;
         font-weight: 700;
+        @include small-desktop{
+            font-size: 1.25rem;
+        }
         @include mobile{
             font-size: 1rem;
         }
@@ -112,6 +121,9 @@
     &-location{
         font-size: 1rem;
         font-weight: 600;
+        @include small-desktop{
+            font-size: 0.9rem;
+        }
         @include mobile{
             font-size: 0.75rem;
         }
