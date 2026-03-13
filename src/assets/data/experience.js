@@ -6,9 +6,9 @@ const experience = [
     {
         id: "future",
         company: "Your Company",
-        position: "Developer",
+        position: "Software Engineer",
         dates: "April 2026 - Present",
-        location: "Remote",
+        location: "Remote or British Columbia",
         logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_J64H9TeNc_w3Oo8fZ9vWpn8jLVG9bO9toQ&s",
         details: ""
     },
@@ -16,7 +16,7 @@ const experience = [
         id: "rainforest",
         company: "Rainforest Studios Inc.",
         position: "Co-Founder & Full-Stack Developer",
-        dates: "April 2022 - Present",
+        dates: "January 2026 - Present",
         location: "Maple Ridge, BC",
         logo: Rainforest,
     },
