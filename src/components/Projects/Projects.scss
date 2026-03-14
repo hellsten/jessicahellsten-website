@@ -18,12 +18,12 @@
     font-weight: 700;
     color: $green-color-primary;
     @include tablet {
-        font-size: 3rem;
-        padding: 1rem;
+      font-size: 3rem;
+      padding: 1rem;
     }
     @include mobile {
-        font-size: 2rem;
-        padding: 0.5rem 0 0.25rem;
+      font-size: 2rem;
+      padding: 0.5rem 0 0.25rem;
     }
   }
   &__card-container {
@@ -42,7 +42,9 @@
   width: 30%;
   border-radius: 1.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   &:hover {
     transform: translateY(-0.75rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
@@ -88,27 +90,52 @@
   }
   &-links {
     display: flex;
-    justify-content: center;
-    padding: 0 1.5rem 1.5rem;
-    margin-top: auto;
-    gap: 1rem;
-    a {
+    flex-direction: column;
+    margin: auto 1.5rem 1.5rem;
+    &-learnmore {
       cursor: pointer;
       text-align: center;
-      width: 50%;
       background-color: $green-color-primary;
       color: $color-white;
       padding: 0.5rem 1rem;
       border-radius: 1rem;
       font-weight: 600;
-      transition: background-color 0.3s ease, padding 0.3s ease;
+      transition:
+        background-color 0.3s ease,
+        padding 0.3s ease;
       &:hover {
         background-color: $green-color-secondary;
         padding: 0.6rem 1.1rem;
       }
     }
-    a[href="#"]{
-      background: $color-white;
+    &-group {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+
+      a {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        cursor: pointer;
+        text-align: center;
+        background-color: $green-color-primary;
+        color: $color-white;
+        padding: 0.5rem 1rem;
+        margin-top: 1.5rem;
+        border-radius: 1rem;
+        font-weight: 600;
+        transition:
+          background-color 0.3s ease,
+          padding 0.3s ease;
+        &:hover {
+          background-color: $green-color-secondary;
+          padding: 0.6rem 1.1rem;
+        }
+      }
+      a[href="#"] {
+        display: none;
+      }
     }
   }
 }
