@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import "./Navigation.scss";
 
-import Hamburger from '../../assets/icons/hamburger.svg?react'
+import Hamburger from '../../assets/icons/hamburger.svg?react';
+import Foot from '../../assets/icons/foot.svg?react';
 
 function Navigation() {
     
@@ -41,82 +42,71 @@ function Navigation() {
 
         <div className="navigation__links">
           <NavLink
-            to="/"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection("sectionAbout");
             }}
-            className={({ isActive }) => (isActive ? "active" : "")}
           >
             About
           </NavLink>
           <div className="navigation__dots">
-            <p className="navigation__dots-1">•</p>
-            <p className="navigation__dots-2">•</p>
+            <p className="navigation__dots-1"><Foot /></p>
+            <p className="navigation__dots-2"><Foot /></p>
           </div>
           <NavLink
-            to="/"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection("sectionSkills");
             }}
-            className={({ isActive }) => (isActive ? "active" : "")}
           >
             Skills
           </NavLink>
           <div className="navigation__dots">
-            <p className="navigation__dots-3">•</p>
-            <p className="navigation__dots-4">•</p>
+            <p className="navigation__dots-3"><Foot /></p>
+            <p className="navigation__dots-4"><Foot /></p>
           </div>
           <NavLink
-            to="/"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection("sectionProjects");
             }}
-            className={({ isActive }) => (isActive ? "active" : "")}
+            
           >
             Projects
           </NavLink>
           <div className="navigation__dots">
-            <p className="navigation__dots-5">•</p>
-            <p className="navigation__dots-6">•</p>
+            <p className="navigation__dots-5"><Foot /></p>
+            <p className="navigation__dots-6"><Foot /></p>
           </div>
           <NavLink
-            to="/"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection("sectionEducation");
             }}
-            className={({ isActive }) => (isActive ? "active" : "")}
           >
             Education
           </NavLink>
           <div className="navigation__dots">
-            <p className="navigation__dots-7">•</p>
-            <p className="navigation__dots-8">•</p>
+            <p className="navigation__dots-7"><Foot /></p>
+            <p className="navigation__dots-8"><Foot /></p>
           </div>
           <NavLink
-            to="/"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection("sectionExperience");
             }}
-            className={({ isActive }) => (isActive ? "active" : "")}
           >
             Experience
           </NavLink>
           <div className="navigation__dots">
-            <p className="navigation__dots-9">•</p>
-            <p className="navigation__dots-10">•</p>
+            <p className="navigation__dots-9"><Foot /></p>
+            <p className="navigation__dots-10"><Foot /></p>
           </div>
           <NavLink
-            to="/"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection("sectionContact");
             }}
-            className={({ isActive }) => (isActive ? "active" : "")}
           >
             Contact
           </NavLink>
