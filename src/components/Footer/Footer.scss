@@ -2,15 +2,15 @@
 @use "./../../styles/mixins" as *;
 
 .footer {
-    margin-top: 5rem;
+  margin-top: 5rem;
   &__container {
     display: flex;
     flex-direction: column;
     background-color: $green-color-tertiary;
     padding: 0 6rem 1rem;
     color: $color-white;
-    @include mobile{
-        padding: 0 2rem 1rem;
+    @include mobile {
+      padding: 0 2rem 1rem;
     }
   }
   &__content {
@@ -18,9 +18,9 @@
     flex-direction: row;
     padding: 4rem 0;
     gap: 4rem;
-    @include mobile{
-        flex-direction: column;
-        padding: 2rem 0;
+    @include mobile {
+      flex-direction: column;
+      padding: 2rem 0;
     }
   }
   &__left {
@@ -28,20 +28,20 @@
     flex-direction: column;
     width: 33vw;
     gap: 2rem;
-    @include mobile{
-        width: 100%;
+    @include mobile {
+      width: 100%;
     }
-    span{
-        letter-spacing: -5%;
+    span {
+      letter-spacing: -5%;
     }
   }
   &__header {
     font-size: 4rem;
     font-weight: 500;
-    @include mobile{
-        font-size: 3rem;
-        text-align: center;
-        padding: 1rem 0;
+    @include mobile {
+      font-size: 3rem;
+      text-align: center;
+      padding: 1rem 0;
     }
   }
   &__info {
@@ -51,50 +51,63 @@
     text-indent: -1rem;
     padding-left: 1rem;
     letter-spacing: 5%;
-    @include small-desktop{
-        text-indent: 0rem;
-        padding: 0;
+    @include small-desktop {
+      text-indent: 0rem;
+      padding: 0;
     }
-    @include tablet{
-        text-align: left;
+    @include tablet {
+      text-align: left;
     }
-    @include mobile{
-        width: 100%;
-        text-align: justify;
+    @include mobile {
+      width: 100%;
+      text-align: justify;
     }
-    span{
-        font-size: 2rem;
-        font-weight: 700;
-        color: $green-color-secondary;
+    span {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $green-color-secondary;
     }
   }
   &__socials {
     display: flex;
     gap: 1rem;
-    @include mobile{
-        justify-content: center;
+    @include mobile {
+      justify-content: center;
     }
-    svg{
-        height: 2rem;
-        width: 2rem;
-        padding: 0.5rem;
-        background: $color-white;
-        border-radius: 1rem;
-        fill: $green-color-tertiary;
+    svg {
+      height: 2rem;
+      width: 2rem;
+      padding: 0.5rem;
+      background: $color-white;
+      border-radius: 1rem;
+      fill: $green-color-tertiary;
+      &:hover {
+        fill: $color-white;
+        background: $green-color-secondary;
+      }
     }
   }
   &__back-to-top {
     display: inline-block;
     align-self: flex-start;
     margin: 0;
+    text-decoration: none;
     color: $green-color-tertiary;
     background-color: $color-white;
     padding: 1rem;
     border-radius: 2rem;
     font-size: 1rem;
     font-weight: 700;
-    @include mobile{
-        align-self: center;
+    @include mobile {
+      align-self: center;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    &:hover {
+      color: $color-white;
+      background-color: $green-color-secondary;
     }
   }
   &__right {
@@ -102,71 +115,77 @@
     flex-direction: row;
     justify-content: space-between;
     width: 45vw;
-    @include mobile{
-        align-self: center;
-        gap: 3rem;
+    @include mobile {
+      align-self: center;
+      gap: 3rem;
     }
-    @include tablet{
-        flex-direction: column;
-        justify-content: left;
-        gap: 4rem;
+    @include tablet {
+      flex-direction: column;
+      justify-content: left;
+      gap: 4rem;
     }
   }
   &__site-map {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    @include mobile{
+    @include mobile {
+      align-self: center;
+      gap: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    li {
+      list-style: none;
+      @include mobile {
         align-self: center;
-        gap: 1rem;
-    }
-    h1{
-        font-size: 2rem;
-        font-weight: 600;
-    }
-    li{
-        list-style: none;
-        @include mobile{
-        align-self: center;
-    }
+      }
+      a {
+        color: inherit;
+        &:hover {
+          color: $green-color-secondary;
+        }
+      }
     }
   }
   &__projects {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    @include mobile{
+    @include mobile {
+      align-self: center;
+      gap: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    li {
+      list-style: none;
+      @include mobile {
         align-self: center;
-        gap: 1rem;
-    }
-    h1{
-        font-size: 2rem;
-        font-weight: 600;
-    }
-    li{
-        list-style: none;
-        @include mobile{
-        align-self: center;
-    }
+      }
     }
   }
   &__pages {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    @include mobile{
+    @include mobile {
+      align-self: center;
+      gap: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    li {
+      list-style: none;
+      @include mobile {
         align-self: center;
-        gap: 1rem;
-    }
-    h1{
-        font-size: 2rem;
-        font-weight: 600;
-    }
-    li{
-        list-style: none;
-        @include mobile{
-        align-self: center;
-    }
+      }
     }
   }
   &__disclaimer {
@@ -177,11 +196,11 @@
     font-weight: 600;
     text-align: center;
   }
-  &__dot{
+  &__dot {
     font-size: 2rem;
     padding: 0 0.5rem 0.25rem;
-    @include tablet{
-        display: none;
+    @include tablet {
+      display: none;
     }
   }
   &__legal {
@@ -190,11 +209,11 @@
     justify-content: space-between;
     padding: 2rem 0 1rem;
     border-top: 1px solid $green-color-accent;
-    @include mobile{
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 1rem;
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
     }
   }
   &__counter {
