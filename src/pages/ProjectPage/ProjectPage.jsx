@@ -32,20 +32,30 @@ function ProjectPage() {
             </div>
           </section>
           <section className="projectPage__overview">{projectItem.overview}</section>
-          <section className="projectPage__techStack"></section>
-          {/* <section className="projectPage__features">
+          {/* <section className="projectPage__techStack"></section> */}
+          <section className="projectPage__features">
             {projectItem.features.map((feature, index) => (
                   <div key={index} className="projectPage__features-item">
                     {feature}
                   </div>
                 ))}
-          </section> */}
-          <section className="projectPage__problem"></section>
-          
-          
-          <section className="projectPage__screenshots"></section>
-          <section className="projectPage__challenges"></section>
-          <section className="projectPage__futureWork"></section>
+          </section>   
+          <section className="projectPage__screenshots">
+            {projectItem.screenshots.map((screenshot, index) => (
+                  <div key={index} className="projectPage__screenshot-item">
+                    <div className="projectPage__screenshot-item-images">
+                      {screenshot.images.map((image, index) => (
+                        
+                  <img key={index} className="projectPage__screenshot-item-image" src={image} />
+                ))}
+                    </div>
+                    
+                    <div className="projectPage__screenshot-title">{screenshot.title}</div>
+                    <div className="projectPage__screenshot-description">{screenshot.description}</div>
+                  </div>
+                ))}
+          </section>
+          <section className="projectPage__resources"></section>
         </div>
       </section>
     </>
