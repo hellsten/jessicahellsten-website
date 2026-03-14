@@ -4,6 +4,7 @@ import Skills from './../../components/Skills/Skills.jsx'
 import Projects from './../../components/Projects/Projects.jsx'
 import Education from './../../components/Education/Education.jsx'
 import Experience from './../../components/Experience/Experience.jsx'
+import Contact from './../../components/Contact/Contact.jsx'
 
 function HomePage() {
 
@@ -14,6 +15,7 @@ function HomePage() {
       <Projects />
       <Education />
       <Experience />
+      <Contact />
     </>
   )
 }
