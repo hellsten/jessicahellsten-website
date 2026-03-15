@@ -13,6 +13,7 @@
     padding: 0rem 6rem 0 4.5rem;
     height: 5rem;
     width: 100vw;
+
     background-color: $green-color-tertiary;
     @include small-desktop {
       font-size: 1.5rem;
@@ -21,13 +22,13 @@
     }
     @include tablet {
       font-size: 1.1rem;
-      padding: 1rem 2.4rem 1rem 1.9rem;
+      padding: 1rem 2.25rem 1rem 2rem;
       height: 2.5rem;
     }
     @include mobile {
       font-size: 2rem;
       padding: 0 2rem;
-        height: 5rem;
+      height: 5rem;
     }
   }
   &__icon {
@@ -52,7 +53,7 @@
       padding: 0.5rem;
       margin: 0;
     }
-    @include mobile{
+    @include mobile {
       font-size: 1.75rem;
       padding: 0.25rem 0.5rem;
       margin: 0;
@@ -64,7 +65,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;;
+    align-items: center;
     width: 60%;
     @include small-desktop {
       width: 65%;
@@ -252,10 +253,54 @@
       }
     }
   }
-  &__hamburger-icon {
-    width: 4rem;
-    height: 4rem;
-    color: $color-white;
+  &__hamburger {
+    &-icon {
+      width: 4rem;
+      height: 4rem;
+      color: $color-white;
+    }
+  }
+  &__mobile-nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 2;
+    inset: 0;
+    background-color: $green-color-tertiary;
+    &-header{
+      display: flex;
+      justify-content: right;
+      padding: 1.25rem 2.5rem;
+    }
+    &-close{
+      display: flex;
+      background: none;
+    }
+    svg{
+      height: 2.5rem;
+      width: 2.5rem;
+      fill: $color-white;
+    }
+    &-links{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 80vw;
+      padding: 4rem 3rem;
+      gap: 2rem;
+    }
+    a{
+      font-size: 3rem;
+      font-weight: 600;
+      text-align: center;
+      color: $color-white;
+      padding: 0.5rem;
+      
+      &:hover{
+        color: $green-color-secondary;
+        cursor: pointer;
+      }
+    }
   }
   &__desktop-on {
     display: flex;
