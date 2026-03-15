@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import "./Projects.scss";
 import projects from "./../../assets/data/projects.js";
 
@@ -20,8 +22,13 @@ function Projects() {
             ))}
             </div>
             <div className="project__card-links">
-              <a className="project__card-demo" href={project.demoLink}>Demo</a>
+              <NavLink className="project__card-links-learnmore" to={`/project/${project.id}`}>
+                Learn More
+              </NavLink>
+              <div className="project__card-links-group">
+                <a className="project__card-demo" href={project.demoLink}>Demo</a>
               <a className="project__card-code" href={project.codeLink}>Code</a>
+                </div>
             </div>
           </div>
           ))}
