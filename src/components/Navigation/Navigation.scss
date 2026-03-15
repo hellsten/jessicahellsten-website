@@ -14,10 +14,10 @@
     width: 100vw;
     background-color: $green-color-tertiary;
     @include small-desktop{
-      padding: 0rem 3rem 0 2rem;
+      padding: 0rem 2rem 0 2rem;
     }
     @include mobile{
-      padding: 0rem 1.5rem;
+      padding: 0rem 2rem;
     }
   }
   &__icon {
@@ -30,19 +30,25 @@
       padding: 0.75rem;
     }
     a {
-      border-radius: 1rem;
+      border-radius: 2rem;
       font-size: 2rem;
-      font-weight: 700;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
       color: $color-white;
-      border: 1px solid $green-color-tertiary;
+      border: 2px solid $green-color-tertiary;
+      cursor: pointer;
+      &:hover{
+        border: 2px solid $color-white;
+      }
       @include small-desktop{
-        font-size: 1.25rem;
+        font-size: 1.5rem;
+        padding: 0.25rem 0.75rem;
       }
       @include tablet{
         font-size: 1.1rem;
       }
       @include mobile{
-        font-size: 1rem;
+        font-size: 2rem;
       }
     }
   }
@@ -54,6 +60,9 @@
     @include small-desktop{
       width: 70%;
     }
+    @include tablet{
+      width: 60%;
+    }
     a {
       padding: 0.75rem;
       border-radius: 2rem;
@@ -61,9 +70,15 @@
       font-weight: 700;
       color: $color-white;
       border: 2px solid transparent;
+      cursor: pointer;
       @include small-desktop{
         padding: 0.5rem;
         border-radius: 1.5rem;
+        font-size: 0.75rem;
+      }
+      @include tablet{
+        padding: 0.4rem;
+        border-radius: 1.25rem;
         font-size: 0.75rem;
       }
       &:hover {
@@ -81,7 +96,7 @@
     gap: 0.4rem;
     
     @include small-desktop{
-      gap: 1.25vw;
+      width: 1.5vw;
       margin-right: 2rem;
     }
     @include tablet{
