@@ -11,19 +11,23 @@
     justify-content: space-between;
     align-items: center;
     padding: 0rem 6rem 0 4.5rem;
+    height: 5rem;
     width: 100vw;
     background-color: $green-color-tertiary;
     @include small-desktop {
       font-size: 1.5rem;
       padding: 1rem 3.5rem 1rem 3.25rem;
+      height: 2.25rem;
     }
     @include tablet {
       font-size: 1.1rem;
-      padding: 1rem 3rem 1rem 2.5rem;
+      padding: 1rem 2.4rem 1rem 1.9rem;
+      height: 2.5rem;
     }
     @include mobile {
       font-size: 2rem;
       padding: 0 2rem;
+        height: 5rem;
     }
   }
   &__icon {
