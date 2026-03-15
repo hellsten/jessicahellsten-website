@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import "./ProjectPage.scss";
 import projects from "./../../assets/data/projects.js";
 
+import Skills from "./../../components/Skills/Skills.jsx";
+
 function ProjectPage() {
   const { id } = useParams();
   //Find function to find id in projects file
@@ -21,8 +23,8 @@ function ProjectPage() {
                 <div className="projectPage__hero__container-tagline">
                   {projectItem.tagline}
                 </div>
-              </div> 
-               {/* <div className="projectPage__hero__container-stats">
+              </div>
+              {/* <div className="projectPage__hero__container-stats">
                  {projectItem.stats.map((stat, index) => (
               <div key={index} className="projectPage__hero__container-stat">
                 <div className="projectPage__hero__container-label">{stat.label}:</div>
@@ -31,17 +33,12 @@ function ProjectPage() {
               </div>
             ))}
                </div> */}
-              <div 
-              className="projectPage__hero__container-intro">
+              <div className="projectPage__hero__container-intro">
                 {projectItem.intro}
               </div>
               <div className="projectPage__hero__container-links">
-                <a className="projectPage__hero__container-demoLink">
-                  Demo
-                </a>
-                <a className="projectPage__hero__container-codeLink">
-                  Code
-                </a>
+                <a className="projectPage__hero__container-demoLink">Demo</a>
+                <a className="projectPage__hero__container-codeLink">Code</a>
               </div>
             </div>
           </section>
@@ -55,20 +52,31 @@ function ProjectPage() {
               {projectItem.overview}
             </div>
           </section> */}
-          <section className="projectPage__features">
-            <div className="projectPage__features-title">Features</div>
-            {projectItem.features.map((feature, index) => (
-              <div key={index} className="projectPage__features-item">
-                {feature}
+          <div className="projectPage__details">
+            <section className="projectPage__features">
+              <div className="projectPage__features-container">
+                <div className="projectPage__features-title">Features</div>
+                <div className="projectPage__features-items">
+                  {projectItem.features.map((feature, index) => (
+                    <div key={index} className="projectPage__features-item">
+                      {feature}
+                    </div>
+                  ))}
+                </div>
               </div>
-            ))}
-          </section>
-          <section className="projectPage__skills">
-            
-          </section>
+            </section>
+            <section className="projectPage__skills">
+              <div className="projectPage__skills-container">
+                <Skills />
+              </div>
+            </section>
+          </div>
           <section className="projectPage__screenshots">
             {projectItem.screenshots.map((screenshot, index) => (
               <div key={index} className="projectPage__screenshot-item">
+                <div className="projectPage__screenshot-item-title">
+                  {screenshot.title}
+                </div>
                 <div className="projectPage__screenshot-item-images">
                   {screenshot.images.map((image, index) => (
                     <img
@@ -79,16 +87,35 @@ function ProjectPage() {
                   ))}
                 </div>
 
-                <div className="projectPage__screenshot-title">
-                  {screenshot.title}
-                </div>
-                <div className="projectPage__screenshot-description">
+                <div className="projectPage__screenshot-item-description">
                   {screenshot.description}
                 </div>
               </div>
             ))}
           </section>
-          <section className="projectPage__resources"></section>
+          <section className="projectPage__resources">
+            <div className="projectPage__resources-title">
+              Resources
+            </div>
+            <div className="projectPage__resources-container">
+              
+            {projectItem.resources.map((resource, index) => (
+              <div key={index} className="projectPage__resource">
+                <div className="projectPage__resource-name">
+                  {resource.name}
+                </div>
+                <div className="projectPage__resource-description">
+                  {resource.description}
+                </div>
+
+                <div className="projectPage__resource-link">
+                  <div className="projectPage__resource-link-title">Link:</div>
+                  <a>{resource.link}</a>
+                </div>
+              </div>
+            ))}
+            </div>
+          </section>
         </div>
       </section>
     </>
