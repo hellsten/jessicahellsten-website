@@ -3,8 +3,8 @@ import education from "./../../assets/data/education.js";
 
 function Education() {
   return (
-    <section className="education">
-      <div className="education__container" id="sectionEducation">
+    <section className="education" id="sectionEducation">
+      <div className="education__container">
         <div className="education__header">
           <div className="education__title">Education</div>
         </div>
