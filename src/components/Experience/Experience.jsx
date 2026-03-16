@@ -3,8 +3,8 @@ import experience from "./../../assets/data/experience.js";
 
 function Experience() {
   return (
-    <section className="experience">
-      <div className="experience__container" id="sectionExperience">
+    <section className="experience" id="sectionExperience">
+      <div className="experience__container">
         <div className="experience__header">
           <div className="experience__title">Experience</div>
         </div>
