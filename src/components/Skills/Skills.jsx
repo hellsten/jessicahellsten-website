@@ -3,8 +3,8 @@ import skills from "./../../assets/data/skills.js";
 
 function Skills() {
   return (
-    <section className="skills">
-      <div className="skills__container" id="sectionSkills">
+    <section className="skills" id="sectionSkills">
+      <div className="skills__container" >
         <div className="skills__header">
           <div className="skills__title">Skills</div>
         </div>
