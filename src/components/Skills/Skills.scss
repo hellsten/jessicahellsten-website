@@ -4,16 +4,7 @@
 
 .skills {
   &__container {
-    padding: 10rem 0 0;
-    @include small-desktop{
-      padding: 8rem 0 0;
-    }
-    @include tablet{
-      padding: 6rem 0 0;
-    }
-    @include mobile{
-      padding: 3rem 0 0;
-    }
+
   }
   &__header {
     display: flex;
