@@ -135,9 +135,11 @@ function Footer( {siteMap} ) {
             <div className="footer__projects">
               <h1>Projects</h1>
               {projects.map((project) => (
-                <NavLink key={project.id} to={`/project/${project.id}`} className="footer__projects-item">
+                <li>
+                  <NavLink key={project.id} to={`/project/${project.id}`} className="footer__projects-item">
                   {project.title}
                 </NavLink>
+                </li>
               ))}
             </div>
             <div className="footer__pages">
