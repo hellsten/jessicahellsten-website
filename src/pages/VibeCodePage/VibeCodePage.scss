@@ -228,6 +228,7 @@ $green-color-accent: #7b929f;
 
   &__heroImage {
     width: 100%;
+    height: auto;
     aspect-ratio: 4 / 4.5;
     object-fit: cover;
     display: block;

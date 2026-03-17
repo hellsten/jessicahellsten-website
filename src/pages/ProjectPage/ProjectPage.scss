@@ -337,6 +337,8 @@
         
       }
       &-images {
+        width: auto;
+        height: auto;
         display: flex;
         background-color: $color-white;
         padding: 2rem;
@@ -349,6 +351,8 @@
         //flex: grow shrink basis
         flex: 1 1 0;
         min-width: 0;
+        width: auto;
+        height: auto;
         border-radius: 2rem;
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
         @include mobile{
