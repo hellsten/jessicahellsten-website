@@ -2,7 +2,6 @@
 @use "./../../styles/mixins" as *;
 
 .footer {
-  margin-top: 5rem;
   &__container {
     display: flex;
     flex-direction: column;
@@ -16,7 +15,7 @@
   &__content {
     display: flex;
     flex-direction: row;
-    padding: 4rem 0;
+    padding: 4rem 0 0;
     gap: 4rem;
     @include mobile {
       flex-direction: column;
