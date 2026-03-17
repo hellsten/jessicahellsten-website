@@ -1,0 +1,93 @@
+@use "./../../styles/colors" as *;
+@use "./../../styles/mixins" as *;
+@use "./../../styles/keyframes" as *;
+
+.skills {
+  &__container {
+
+  }
+  &__header {
+    display: flex;
+    justify-content: center;
+  }
+  &__title {
+    padding: 0 0 3rem;
+    border-radius: 20rem;
+    font-size: 4rem;
+    font-weight: 700;
+    color: $green-color-primary;
+    @include small-desktop{
+      font-size: 3.5rem;
+      padding: 0 0 2rem;
+    }
+    @include tablet {
+      font-size: 4rem;
+      padding: 0 0 2rem;
+    }
+    @include mobile {
+      font-size: 3rem;
+      padding: 0 0 1rem;
+    }
+  }
+  &__card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 5rem;
+    @include small-desktop{
+      padding: 0 4rem;
+    }
+    @include tablet{
+      padding: 0 3rem;
+    }
+    @include mobile{
+      padding: 0 2rem;
+    }
+  }
+  &__skill {
+    &-card {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 5.5rem;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      background-color: $green-color-primary;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+      transition:
+        transform 0.5s ease,
+        background-color 0.5s ease;
+      @include small-desktop{
+        padding: 0.75rem 0.5rem;
+      }
+      @include tablet{
+        padding: 1rem 0.75rem;
+      }
+      &:hover {
+        transform: scale(1.1);
+        background-color: $green-color-secondary;
+      }
+    }
+    &-svg {
+      height: 4rem;
+      fill: $color-white;
+      background-color: none;
+      @include small-desktop{
+        height: 3.5rem;
+      }
+    }
+    &-item {
+      text-align: center;
+      color: $color-white;
+      font-weight: 600;
+      font-size: 1rem;
+      @include small-desktop{
+        font-size: 0.75rem;
+      }
+      @include tablet{
+        font-size: 1rem;
+      }
+    }
+  }
+}

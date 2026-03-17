@@ -1,8 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./UtilityNavigation.scss";
 
-import Hamburger from '../../assets/icons/Hamburger.svg?react'
-
 function UtilityNavigation() {
     
   const scrollToSection = (id) => {
@@ -37,14 +35,9 @@ function UtilityNavigation() {
 
         <div className="utility-navigation__links">
           <NavLink
-            to="/"
+            to="/vibecode"
           >
-            Extra
-          </NavLink>
-          <NavLink
-            to="/"
-          >
-            ENGLISH (US) V
+            Vibe it
           </NavLink>
         </div>
       </nav>

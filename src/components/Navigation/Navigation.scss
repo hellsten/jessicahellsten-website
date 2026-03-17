@@ -3,7 +3,6 @@
 @use "./../../styles/mixins" as *;
 
 .navigation {
-  position: sticky;
   display: flex;
   justify-content: center;
   &__container {
@@ -11,56 +10,88 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
-    width: 75%;
+    padding: 0rem 6rem 0 4.5rem;
+    height: 5rem;
+    width: 100vw;
+    background-color: $green-color-tertiary;
+    @include small-desktop {
+      font-size: 1.5rem;
+      padding: 1rem 3.5rem 1rem 3.25rem;
+      height: 2.25rem;
+    }
+    @include tablet {
+      font-size: 1.1rem;
+      padding: 1rem 2.25rem 1rem 2rem;
+      height: 2.5rem;
+    }
+    @include mobile {
+      font-size: 2rem;
+      padding: 0 2rem;
+      height: 5rem;
+    }
   }
   &__icon {
-    padding: 10px;
-    border-radius: 20px;
+    margin: 1.5rem;
+    border-radius: 2rem;
+    border: 2px solid $green-color-tertiary;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    color: $color-white;
+    cursor: pointer;
+    &:hover {
+      border: 2px solid $color-white;
+    }
+    @include small-desktop {
+      padding: 0.5rem;
+      margin: 0;
+      font-size: 1.75rem;
+    }
+    @include tablet {
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      margin: 0;
+    }
+    @include mobile {
+      font-size: 1.75rem;
+      padding: 0.25rem 0.5rem;
+      margin: 0;
+    }
     a {
-      padding: 10px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 700;
-      color: $green-color-primary;
-      border: 1px solid transparent;
-            @include tablet{
-              border-radius: 12px;
-              font-size: 10px;
-              padding: 8px;
-            }
-      &:hover {
-        color: $color-white;
-        background-color: $green-color-primary;
-        border: 1px solid $green-color-primary;
-      }
     }
   }
   &__links {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 60%;
-    @include tablet{
-      width: 70%;
+    @include small-desktop {
+      width: 65%;
+    }
+    @include tablet {
+      width: 65%;
     }
     a {
-      padding: 10px;
-      border-radius: 20px;
-      font-size: 14px;
+      padding: 0.75rem;
+      border-radius: 2rem;
+      font-size: 1rem;
       font-weight: 700;
-      color: $green-color-primary;
-      border: 1px solid transparent;
-            @include tablet{
-              border-radius: 12px;
-              font-size: 10px;
-              padding: 8px;
-            }
-      @include mobile{
-        display: none;
+      color: $color-white;
+      border: 2px solid transparent;
+      cursor: pointer;
+      @include small-desktop {
+        padding: 0.5rem;
+        border-radius: 1.5rem;
+        font-size: 0.75rem;
+      }
+      @include tablet {
+        padding: 0.4rem;
+        border-radius: 1.25rem;
+        font-size: 0.75rem;
       }
       &:hover {
-        border: 1px solid $green-color-primary;
+        border: 2px solid $color-white;
       }
     }
   }
@@ -68,43 +99,214 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 1vw;
-    padding: 10px;
-    gap: 5px;
-    @include tablet{
+    align-items: center;
+    width: 2vw;
+    padding: 0 0 0.25rem;
+    gap: 0.25rem;
+
+    @include small-desktop {
+      width: 3.5vw;
+    }
+    @include tablet {
       display: none;
     }
     p {
-      font-size: 16px;
+      font-size: 2rem;
       font-weight: 700;
-      color: $green-color-primary;
+      color: $color-white;
       opacity: 0;
-      animation: dotFadeIn 350ms ease-out forwards;
-      &.navigation__dots-1 { animation-delay: 1s; }
-      &.navigation__dots-2 { animation-delay: 2s; }
-      &.navigation__dots-3 { animation-delay: 3s; }
-      &.navigation__dots-4 { animation-delay: 4s; }
-      &.navigation__dots-5 { animation-delay: 5s; }
-      &.navigation__dots-6 { animation-delay: 6s; }
-      &.navigation__dots-7 { animation-delay: 7s; }
-      &.navigation__dots-8 { animation-delay: 8s; }
-      &.navigation__dots-9 { animation-delay: 9s; }
-      &.navigation__dots-10 { animation-delay: 10s; }
+      @include small-desktop {
+        font-size: 1.5rem;
+      }
+      //animation: dotFadeIn 350ms ease-out forwards;
+      animation: dotFade 2s ease-in-out;
+      &.navigation__dots-1 {
+        animation-delay: 1s;
+        svg {
+          height: 1rem;
+          width: 1rem;
+          margin-top: 1rem;
+          transform: rotate(90deg);
+          fill: $color-white;
+          @include small-desktop {
+            margin-top: 0.75rem;
+          }
+        }
+      }
+      &.navigation__dots-2 {
+        animation-delay: 2s;
+        svg {
+          height: 1rem;
+          width: 1rem;
+          transform: scaleX(-1) rotate(-90deg);
+          margin-bottom: 1rem;
+          fill: $color-white;
+          @include small-desktop {
+            margin-bottom: 0.25rem;
+          }
+        }
+      }
+      &.navigation__dots-3 {
+        animation-delay: 3s;
+        svg {
+          height: 1rem;
+          width: 1rem;
+          margin-top: 1rem;
+          transform: rotate(90deg);
+          fill: $color-white;
+          @include small-desktop {
+            margin-top: 0.75rem;
+          }
+        }
+      }
+      &.navigation__dots-4 {
+        animation-delay: 4s;
+        svg {
+          height: 1rem;
+          width: 1rem;
+          transform: scaleX(-1) rotate(-90deg);
+          margin-bottom: 1rem;
+          fill: $color-white;
+          @include small-desktop {
+            margin-bottom: 0.25rem;
+          }
+        }
+      }
+      &.navigation__dots-5 {
+        animation-delay: 5s;
+        svg {
+          height: 1rem;
+          width: 1rem;
+          margin-top: 1rem;
+          transform: rotate(90deg);
+          fill: $color-white;
+          @include small-desktop {
+            margin-top: 0.75rem;
+          }
+        }
+      }
+      &.navigation__dots-6 {
+        animation-delay: 6s;
+        svg {
+          height: 1rem;
+          width: 1rem;
+          transform: scaleX(-1) rotate(-90deg);
+          margin-bottom: 1rem;
+          fill: $color-white;
+          @include small-desktop {
+            margin-bottom: 0.25rem;
+          }
+        }
+      }
+      &.navigation__dots-7 {
+        animation-delay: 7s;
+        svg {
+          height: 1rem;
+          width: 1rem;
+          margin-top: 1rem;
+          transform: rotate(90deg);
+          fill: $color-white;
+          @include small-desktop {
+            margin-top: 0.75rem;
+          }
+        }
+      }
+      &.navigation__dots-8 {
+        animation-delay: 8s;
+        svg {
+          height: 1rem;
+          width: 1rem;
+          transform: scaleX(-1) rotate(-90deg);
+          margin-bottom: 1rem;
+          fill: $color-white;
+          @include small-desktop {
+            margin-bottom: 0.25rem;
+          }
+        }
+      }
+      &.navigation__dots-9 {
+        animation-delay: 9s;
+        svg {
+          height: 1rem;
+          width: 1rem;
+          margin-top: 1rem;
+          transform: rotate(90deg);
+          fill: $color-white;
+          @include small-desktop {
+            margin-top: 0.75rem;
+          }
+        }
+      }
+      &.navigation__dots-10 {
+        animation-delay: 10s;
+        svg {
+          height: 1rem;
+          width: 1rem;
+          transform: scaleX(-1) rotate(-90deg);
+          margin-bottom: 1rem;
+          fill: $color-white;
+          @include small-desktop {
+            margin-bottom: 0.25rem;
+          }
+        }
+      }
     }
   }
-  &__hamburger-icon{
-      width: 48px;
-      height: 48px;
-      color: $green-color-primary;
-
+  &__hamburger {
+    &-icon {
+      width: 4rem;
+      height: 4rem;
+      color: $color-white;
+    }
   }
-  &__desktop-on{
+  &__mobile-nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 2;
+    inset: 0;
+    background-color: $green-color-tertiary;
+    &-header{
+      display: flex;
+      justify-content: right;
+      padding: 1.25rem 2.5rem;
+    }
+    &-close{
+      display: flex;
+      background: none;
+    }
+    svg{
+      height: 2rem;
+      width: 2rem;
+      fill: $color-white;
+    }
+    &-links{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2rem 2rem;
+      gap: 1rem;
+    }
+    a{
+      font-size: 2rem;
+      font-weight: 600;
+      text-align: center;
+      color: $color-white;
+      padding: 0.5rem;
+      
+      &:hover{
+        color: $green-color-secondary;
+        cursor: pointer;
+      }
+    }
+  }
+  &__desktop-on {
     display: flex;
     @include mobile {
       display: none;
     }
   }
-  &__mobile-on{
+  &__mobile-on {
     display: none;
     @include mobile {
       display: flex;

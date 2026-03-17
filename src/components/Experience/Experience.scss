@@ -1,0 +1,184 @@
+@use "./../../styles/colors" as *;
+@use "./../../styles/mixins" as *;
+@use "./../../styles/keyframes" as *;
+
+.experience {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  @include small-desktop {
+    width: 90%;
+  }
+  @include tablet {
+    width: 100%;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 5rem 0;
+    @include small-desktop {
+      padding: 8rem 4rem 0;
+      width: 75%;
+    }
+    @include tablet {
+      flex-direction: column;
+      padding: 6rem 0 0;
+      width: 90%;
+    }
+    @include mobile {
+      padding: 3rem 0 0;
+      width: 95%;
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: center;
+  }
+  &__title {
+    padding: 0 0 3rem;
+    border-radius: 20rem;
+    font-size: 4rem;
+    font-weight: 700;
+    color: $green-color-primary;
+    @include small-desktop {
+      font-size: 3.5rem;
+      padding: 0 0 2rem;
+    }
+    @include tablet {
+      font-size: 4rem;
+      padding: 0 0 2rem;
+    }
+    @include mobile {
+      font-size: 3rem;
+      padding: 0 0 1rem;
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include tablet {
+      gap: 2rem;
+    }
+    &-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      border-radius: 2rem;
+      padding: 3rem;
+      width: 100%;
+      margin-bottom: 3rem;
+      gap: 2rem;
+      transition: transform 0.5s ease;
+      @include tablet {
+        flex-direction: column;
+        margin: 0;
+      }
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+    &-outside {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 3rem;
+      @include tablet {
+        gap: 2rem;
+      }
+      &:last-child {
+        .experience__card-line-line {
+          display: none;
+        }
+      }
+      &:hover {
+        color: $green-color-primary;
+        .experience__card-line-dot {
+          color: $green-color-primary;
+        }
+        .experience__card-line-line {
+          border-color: $green-color-primary;
+        }
+      }
+    }
+    &-logo {
+      display: flex;
+      height: 10rem;
+      @include small-desktop {
+        height: 6rem;
+        align-self: center;
+      }
+    }
+    &-details {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      gap: 1rem;
+      @include tablet {
+        text-align: left;
+      }
+    }
+    &-dates {
+      font-size: 1.5rem;
+      font-weight: 600;
+      @include small-desktop {
+        font-size: 1.25rem;
+      }
+      @include mobile {
+        font-size: 1rem;
+      }
+    }
+    &-company {
+      font-size: 2rem;
+      font-weight: 700;
+      @include small-desktop {
+        font-size: 1.5rem;
+      }
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+    &-position {
+      font-size: 1.5rem;
+      font-weight: 700;
+      @include small-desktop {
+        font-size: 1.25rem;
+      }
+      @include mobile {
+        font-size: 1rem;
+      }
+    }
+    &-location {
+      font-size: 1rem;
+      font-weight: 600;
+      @include small-desktop {
+        font-size: 0.9rem;
+      }
+      @include mobile {
+        font-size: 0.75rem;
+      }
+    }
+    &-line {
+      display: flex;
+      flex-direction: column;
+      @include tablet {
+        display: none;
+      }
+      &-dot {
+        font-size: 6rem;
+        line-height: 1rem;
+        padding: 1rem 0 1rem;
+        color: $green-color-accent;
+        transform: translateX(-0.75rem);
+      }
+      &-line {
+        padding: 0;
+        height: 100%;
+        border-left: 3px solid $green-color-accent;
+      }
+    }
+  }
+}

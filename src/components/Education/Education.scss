@@ -1,0 +1,194 @@
+@use "./../../styles/colors" as *;
+@use "./../../styles/mixins" as *;
+@use "./../../styles/keyframes" as *;
+
+.education {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0 0;
+  margin-top: 5rem;
+  width: 70%;
+    @include small-desktop{
+      padding: 3.5rem 0 0;
+      margin-top: 3.5rem;
+      width: 70%;
+    }
+    @include tablet{
+      flex-direction: column;
+      padding: 3rem 0 0;
+      margin-top: 3rem;
+      width: 90%;
+    }
+    @include mobile{
+      padding: 3rem 0 0;
+      margin-top: 0;
+      width: 95%;
+    }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 5rem;
+    border-radius: 2rem;
+    background-color: $green-color-primary;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    @include small-desktop{
+      padding: 4rem 3rem 3rem;
+    }
+    @include tablet{
+      padding: 3rem 2rem 2rem;
+      width: auto;
+    }
+    @include mobile{
+      padding: 2rem 1rem;
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: center;
+  }
+  &__title {
+    padding: 0 0 3rem;
+    border-radius: 20rem;
+    font-size: 4rem;
+    font-weight: 700;
+    color: $color-white;
+    @include small-desktop{
+      font-size: 3.5rem;
+      padding: 0 0 2rem;
+    }
+    @include tablet {
+      font-size: 4rem;
+      padding: 0 0 2rem;
+    }
+    @include mobile {
+      font-size: 3rem;
+      padding: 0 0 1rem;
+    }
+  }
+  &__card-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      @include small-desktop{
+        gap: 1.5rem;
+      }
+      @include tablet{
+        gap: 2rem;
+      }
+      @include mobile;
+    }
+  &__card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    line-height: 1.5rem;
+    gap: 2rem;
+    padding: 3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 2rem;
+    height: auto;
+    background-color: $green-color-tertiary;
+    @include small-desktop{
+      padding: 2rem;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    @include tablet{
+      flex-direction: column-reverse;
+      padding: 1.5rem;
+      gap: 2rem;
+    }
+    @include mobile{
+      gap: 1rem;
+    }
+    transition:
+        transform 0.5s ease;
+    &:hover{
+        transform: scale(1.01);
+    }
+    &-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        gap: 1.5rem;
+        @include small-desktop{
+          gap: 1rem;
+        }
+        @include tablet{
+          gap: 0.25rem;
+        }
+        @include mobile{
+          gap: 0rem;
+        }
+    }
+    &-dates{
+        font-size: 1rem;
+        font-weight: 700;
+        color: $green-color-tertiary;
+        color: $green-color-accent;
+        @include small-desktop{
+          font-size: 1rem;
+        }
+        @include tablet{
+          text-align: center;
+        }
+        @include mobile{
+          font-size: 0.75rem;
+        }
+    }
+    &-degree{
+        font-size: 1.25rem;
+        font-weight: 700;
+        padding: 1rem 0 0;
+        color: $green-color-secondary;
+        @include tablet{
+          text-align: center;
+          font-size: 1rem;
+        }
+        @include mobile{
+          padding: 0.5rem 0 0;
+          font-size: 1rem;
+        }
+    }
+    &-major{
+        font-size: 2rem;
+        text-indent: 1.5rem;
+        font-weight: 700;
+        color: $color-white;
+        @include small-desktop{
+          font-size: 1.75rem;
+          text-indent: 0.75rem;
+          height: 2rem;
+        }
+        @include tablet{
+          font-size: 1.5rem;
+          text-indent: 0;
+        }
+        @include mobile{
+          font-size: 1.25rem;
+          text-indent: 0;
+          text-align: center;
+        }
+    }
+    &-logo{
+       width: 23rem;
+       height: auto;  
+       align-self: center;
+       
+       padding: 1rem;
+       @include mobile{
+        width: 4rem;
+       }
+       @include small-desktop{
+        width: 13rem;
+        padding: 0.25rem;
+       }
+    }
+  }
+}

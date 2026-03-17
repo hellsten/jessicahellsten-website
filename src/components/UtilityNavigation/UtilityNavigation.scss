@@ -3,20 +3,17 @@
 @use "./../../styles/mixins" as *;
 
 .utility-navigation {
-  position: sticky;
   display: flex;
-  justify-content: center;
   background-color: $green-color-primary;
   height: 48px;
-  align-items: center;
+  justify-content: center;
+  padding: 0rem 6rem;
   &__container {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
-    width: 75%;
-    
   }
   &__icon {
     padding: 10px;
