@@ -12,7 +12,7 @@ function ProjectPage() {
 
   return (
     <>
-      <section className="projectPage">
+      <section className="projectPage" id="sectionOverview">
         <div className="projectPage__container">
           <section className="projectPage__hero">
             <div className="projectPage__hero__container">
@@ -53,7 +53,7 @@ function ProjectPage() {
             </div>
           </section> */}
           <div className="projectPage__details">
-            <section className="projectPage__features">
+            <section className="projectPage__features" id="sectionFeatures">
               <div className="projectPage__features-container">
                 <div className="projectPage__features-title">Features</div>
                 <div className="projectPage__features-items">
@@ -71,7 +71,7 @@ function ProjectPage() {
               </div>
             </section>
           </div>
-          <section className="projectPage__screenshots">
+          <section className="projectPage__screenshots" id="sectionScreenshots">
             {projectItem.screenshots.map((screenshot, index) => (
               <div key={index} className="projectPage__screenshot-item">
                 <div className="projectPage__screenshot-item-title">
@@ -93,7 +93,7 @@ function ProjectPage() {
               </div>
             ))}
           </section>
-          <section className="projectPage__resources">
+          <section className="projectPage__resources" id="sectionResources">
             <div className="projectPage__resources-title">
               Resources
             </div>
