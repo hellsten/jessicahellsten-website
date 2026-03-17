@@ -7,7 +7,7 @@ import projects from "../../assets/data/projects.js";
 import education from "../../assets/data/education.js";
 import experience from "../../assets/data/experience.js";
 
-function VibeCodePage({ siteMap }) {
+function VibeCodePage() {
   useEffect(() => {
     window.scrollTo({ top: 0 });
   }, []);
