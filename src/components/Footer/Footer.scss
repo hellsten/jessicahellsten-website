@@ -17,6 +17,9 @@
     flex-direction: row;
     padding: 4rem 0 0;
     gap: 4rem;
+    @include tablet{
+      padding: 4rem 0 2rem 0;
+    }
     @include mobile {
       flex-direction: column;
       padding: 2rem 0;
@@ -194,12 +197,11 @@
     padding-bottom: 3rem;
     font-weight: 600;
     text-align: center;
-  }
-  &__dot {
-    font-size: 2rem;
-    padding: 0 0.5rem 0.25rem;
-    @include tablet {
-      display: none;
+    @include small-desktop{
+      padding: 3rem;
+    }
+    @include tablet{
+      padding-bottom: 2rem;
     }
   }
   &__legal {
