@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
-import "./App.css";
+import "./App.scss";
 
 import UtilityNavigation from './components/UtilityNavigation/UtilityNavigation.jsx'
 import Navigation from "./components/Navigation/Navigation.jsx";
