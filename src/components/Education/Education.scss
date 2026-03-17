@@ -89,10 +89,10 @@
     line-height: 1.5rem;
     gap: 2rem;
     padding: 3rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
     border-radius: 2rem;
     height: auto;
-    background-color: $green-color-tertiary;
+    background-color: $green-color-base;
     @include small-desktop{
       padding: 2rem;
       gap: 2.5rem;
@@ -130,8 +130,7 @@
     &-dates{
         font-size: 1rem;
         font-weight: 700;
-        color: $green-color-tertiary;
-        color: $green-color-accent;
+        color: $green-color-accent-light;
         @include small-desktop{
           font-size: 1rem;
         }
