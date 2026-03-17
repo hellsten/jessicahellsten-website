@@ -20,12 +20,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navigation />
+
         <Routes>
-          <Route path="/" element={<><HomePage /><Footer siteMap={homeSiteMap}/></>} />
+          <Route path="/" element={<><Navigation /><HomePage /><Footer siteMap={homeSiteMap}/></>} />
           <Route path="/project/:id" element={<><ProjectPage /><Footer siteMap={projectSiteMap}/></>} />
         </Routes>
-
         
       </BrowserRouter>
     </>

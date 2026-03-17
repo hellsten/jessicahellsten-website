@@ -14,6 +14,11 @@ function HomePage() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
+  //smooth scroll to top when navigating to new page
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
   return (
     <>
       <About />
