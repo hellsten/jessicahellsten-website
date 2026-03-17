@@ -34,7 +34,7 @@ function App() {
             <Route path="/" element={<><UtilityNavigation /><Navigation /><HomePage /><Footer siteMap={homeSiteMap}/></>} />
             <Route path="/project/:id" element={<><ProjectPage /><Footer siteMap={projectSiteMap}/></>} />
             <Route path="/magical-vibecode" element={<MagicalVibeCodePage/>}/>
-            <Route path="/vibecode" element={<><UtilityNavigation /><VibeCodePage /></>} />
+            <Route path="/vibecode" element={<VibeCodePage />} />
         </Routes>
         
       </BrowserRouter>

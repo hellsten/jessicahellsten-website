@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./VibeCodePage.scss";
 
 import Me from "../../assets/images/me.jpg";
@@ -8,6 +9,8 @@ import education from "../../assets/data/education.js";
 import experience from "../../assets/data/experience.js";
 
 function VibeCodePage() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     window.scrollTo({ top: 0 });
   }, []);
@@ -86,10 +89,10 @@ function VibeCodePage() {
         <nav className="vibeCodePage__nav">
           <button
             className="vibeCodePage__brand"
-            onClick={() => scrollToSection("vibe-hero")}
+            onClick={() => navigate("/")}
             type="button"
           >
-            JH
+            JH Back
           </button>
 
           <div className="vibeCodePage__navLinks">

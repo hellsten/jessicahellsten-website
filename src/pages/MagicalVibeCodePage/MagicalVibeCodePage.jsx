@@ -487,8 +487,7 @@ function MagicalVibeCodePage() {
             <span>Projects</span>
             <h2>Projects with personality.</h2>
             <p>
-              These cards now match your real project data structure and pull
-              directly from your imported JavaScript file.
+              A collection of things I’ve built, broken, redesigned, and brought to life. Each project is a mix of creativity and logic — where clean code meets strong visuals and real-world problem solving.
             </p>
           </div>
 
@@ -585,8 +584,7 @@ function MagicalVibeCodePage() {
             <span>Education</span>
             <h2>Learning by building, refining, and shipping.</h2>
             <p>
-              This section now matches your education file structure, including
-              school name, degree, major, dates, location, and logo.
+              The foundation behind everything I build. This is where I developed my technical mindset, learned how to think through problems, and started turning ideas into structured, working systems.
             </p>
           </div>
 
@@ -633,8 +631,7 @@ function MagicalVibeCodePage() {
             <span>Experience</span>
             <h2>Frontend work with strong visual instincts.</h2>
             <p>
-              This experience section now uses your actual company, position,
-              dates, location, and logo fields.
+              Where things moved from theory to reality. These roles shaped how I collaborate, build, and deliver — turning ideas into real impact through hands-on experience.
             </p>
           </div>
 
