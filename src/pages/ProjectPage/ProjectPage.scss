@@ -1,17 +1,17 @@
 @use "./../../styles/colors" as *;
 @use "./../../styles/mixins" as *;
-.projectPage__navigation{
-    position: sticky;
+.projectPage__navigation {
+  position: sticky;
   top: 0;
   z-index: 10;
-  &__links{
+  &__links {
     display: flex;
     flex-direction: row;
     justify-content: right;
     align-items: center;
-    width: 4rem;
-      height: 4rem;
-      color: $color-white;
+    width: 7rem;
+    height: 4rem;
+    color: $color-white;
     a {
       padding: 0.75rem;
       border-radius: 2rem;
@@ -35,7 +35,7 @@
       }
     }
   }
-  }
+}
 .projectPage {
   display: flex;
   flex-direction: column;
@@ -52,14 +52,14 @@
       display: flex;
       flex-direction: column;
       justify-content: left;
-      
+
       padding: 4rem;
       margin: 2rem 4rem 0;
       border-radius: 2rem;
       background-color: $color-white;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
       gap: 2rem;
-      @include mobile{
+      @include mobile {
         box-sizing: border-box;
         padding: 2rem;
         margin: 0rem 0 0;
@@ -70,7 +70,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        @include tablet{
+        @include tablet {
           flex-direction: column;
         }
       }
@@ -83,12 +83,12 @@
         @include small-desktop {
           border-right: none;
         }
-        @include tablet{
+        @include tablet {
           border-right: none;
-          
+
           padding-right: none;
         }
-        @include mobile{
+        @include mobile {
           font-size: 3rem;
         }
       }
@@ -100,15 +100,14 @@
         padding-left: 1rem;
         @include small-desktop {
           border-left: 0.5rem solid $green-color-primary;
-          
         }
-         @include tablet{
+        @include tablet {
           border-left: none;
           border-top: 0.5rem solid $green-color-primary;
           padding: 0;
           text-align: center;
         }
-        @include mobile{
+        @include mobile {
           font-size: 1.5rem;
           line-height: 1.75rem;
         }
@@ -157,7 +156,7 @@
         font-weight: 500;
         text-indent: 2rem;
         color: $green-color-accent;
-        @include mobile{
+        @include mobile {
           font-size: 1rem;
           line-height: 1.3rem;
         }
@@ -165,12 +164,12 @@
       &-links {
         display: flex;
         flex-direction: row;
-        
+
         gap: 2rem;
-        @include tablet{
+        @include tablet {
           justify-content: space-between;
         }
-        @include mobile{
+        @include mobile {
           gap: 1rem;
         }
         a {
@@ -184,10 +183,10 @@
           color: $color-white;
           background-color: $green-color-primary;
           transition: background-color 0.3s ease;
-          @include tablet{
+          @include tablet {
             width: 100%;
           }
-          @include mobile{
+          @include mobile {
             padding: 0.5rem 1rem;
             font-size: 1.25rem;
           }
@@ -204,10 +203,10 @@
     margin: 4rem 4rem;
     gap: 4rem;
     width: auto;
-    @include tablet{
+    @include tablet {
       flex-direction: column;
     }
-    @include mobile{
+    @include mobile {
       justify-content: center;
       width: 95%;
       margin: 2rem auto 4rem;
@@ -230,7 +229,7 @@
       background-color: $green-color-base;
       border-radius: 2rem;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
-      @include mobile{
+      @include mobile {
         padding: 1rem 1rem 2rem;
       }
     }
@@ -246,10 +245,10 @@
       text-align: center;
       justify-content: center;
       box-sizing: border-box;
-      @include small-desktop{
+      @include small-desktop {
         margin: 0;
       }
-      @include mobile{
+      @include mobile {
         font-size: 3rem;
         padding: 1rem;
       }
@@ -260,7 +259,7 @@
       box-sizing: border-box;
       gap: 2rem;
       min-width: 0;
-      @include mobile{
+      @include mobile {
         gap: 1rem;
       }
     }
@@ -279,7 +278,7 @@
       @include small-desktop {
         padding: 1rem;
       }
-      @include mobile{
+      @include mobile {
         padding: 1rem;
         font-size: 1rem;
         line-height: 1.5rem;
@@ -303,7 +302,7 @@
       padding: 3rem 0;
       border-radius: 2rem;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
-      @include mobile{
+      @include mobile {
         padding: 2rem 0 0;
         height: 100%;
       }
@@ -313,7 +312,7 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    @include mobile{
+    @include mobile {
       gap: 2rem;
     }
   }
@@ -322,7 +321,7 @@
       margin: auto 4rem;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
       border-radius: 2rem;
-      @include mobile{
+      @include mobile {
         width: 95%;
         margin: auto;
       }
@@ -335,11 +334,10 @@
         padding: 4rem;
         border-radius: 2rem 2rem 0 0;
         border-bottom: 0.5rem solid $green-color-secondary;
-        @include mobile{
+        @include mobile {
           font-size: 3rem;
           padding: 2rem 0 1rem;
         }
-        
       }
       &-images {
         width: auto;
@@ -348,7 +346,7 @@
         background-color: $color-white;
         padding: 2rem;
         gap: 2rem;
-        @include mobile{
+        @include mobile {
           padding: 0;
         }
       }
@@ -360,7 +358,7 @@
         height: auto;
         border-radius: 2rem;
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
-        @include mobile{
+        @include mobile {
           border-radius: 0;
           box-shadow: none;
         }
@@ -372,17 +370,17 @@
         font-weight: 500;
         padding: 2rem 4rem 4rem;
         border-radius: 0 0 2rem 2rem;
-        @include small-desktop{
+        @include small-desktop {
           font-size: 1.5rem;
         }
-        @include mobile{
+        @include mobile {
           padding: 1rem 2rem 2rem;
           font-size: 1.25rem;
         }
       }
     }
   }
-  &__resources{
+  &__resources {
     display: flex;
     flex-direction: column;
     justify-self: center;
@@ -390,36 +388,36 @@
     border-radius: 2rem;
     background-color: $green-color-base;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
-    @include mobile{
+    @include mobile {
       margin: 2rem auto;
       width: 95%;
     }
-    &-title{
-        display: flex;
-        justify-content: center;
-        font-size: 4rem;
-        color: $green-color-primary;
-        font-weight: 700;
-        padding: 4rem 0 2rem;
-        border-radius: 2rem 2rem 0 0;
-        @include mobile{
-          font-size: 3rem;
-          padding: 2rem 0 0;
-        }
+    &-title {
+      display: flex;
+      justify-content: center;
+      font-size: 4rem;
+      color: $green-color-primary;
+      font-weight: 700;
+      padding: 4rem 0 2rem;
+      border-radius: 2rem 2rem 0 0;
+      @include mobile {
+        font-size: 3rem;
+        padding: 2rem 0 0;
+      }
     }
-    &-container{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2rem;
-        padding: 4rem;
-        @include mobile{
-          padding: 1rem 1rem 2rem;
-        }
+    &-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 4rem;
+      @include mobile {
+        padding: 1rem 1rem 2rem;
+      }
     }
   }
-  &__resource{
+  &__resource {
     display: flex;
     flex-direction: column;
     background-color: $color-white;
@@ -429,65 +427,67 @@
     min-width: 15rem;
     max-width: 18rem;
     flex: 1 1 0;
-    @include mobile{
+    @include mobile {
       padding: 2rem;
       min-width: none;
       max-width: none;
       gap: 1rem;
     }
-    &-name{
-        font-size: 2rem;
-        font-weight: 600;
-        
-        color: $green-color-primary;
+    &-name {
+      font-size: 2rem;
+      font-weight: 600;
+
+      color: $green-color-primary;
     }
-    &-description{
+    &-description {
+      font-size: 1rem;
+      font-weight: 500;
+      color: $green-color-accent;
+      @include mobile {
+        line-height: 1.5rem;
+      }
+    }
+    &-link {
+      display: flex;
+      gap: 1rem;
+      &-title {
         font-size: 1rem;
-        font-weight: 500;
-        color: $green-color-accent;
-        @include mobile{
-          line-height: 1.5rem;
-        }
-    }
-    &-link{
-        display: flex;
-        gap: 1rem;
-        &-title{
-            font-size: 1rem;
-            font-weight: 700;
-            color: $green-color-primary;
-        }
-        a{
-            font-weight: 600;
-        }
+        font-weight: 700;
+        color: $green-color-primary;
+      }
+      a {
+        font-weight: 600;
+      }
     }
   }
 }
 
-#sectionNav{
-    scroll-margin-top: 4rem;
+#sectionNav {
+  scroll-margin-top: 4rem;
 }
 
 #sectionOverview {
   scroll-margin-top: 3rem;
 }
 
-#sectionFeatures, #sectionResources, #sectionScreenshots {
+#sectionFeatures,
+#sectionResources,
+#sectionScreenshots {
   scroll-margin-top: 9rem;
-  @include small-desktop{
+  @include small-desktop {
     scroll-margin-top: 8rem;
   }
 }
 
-#sectionSkills{
-    scroll-margin-top: 12rem;
-    @include small-desktop{
-        scroll-margin-top: 11rem;
-    }
-    @include tablet{
-        scroll-margin-top: 11rem;
-    }
-    @include mobile{
-        scroll-margin-top: 8rem;
-    }
+#sectionSkills {
+  scroll-margin-top: 12rem;
+  @include small-desktop {
+    scroll-margin-top: 11rem;
+  }
+  @include tablet {
+    scroll-margin-top: 11rem;
+  }
+  @include mobile {
+    scroll-margin-top: 8rem;
+  }
 }
