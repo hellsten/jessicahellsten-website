@@ -634,7 +634,7 @@ $green-color-accent: #7b929f;
     }
   }
 
-  &__footer {
+  &__footer, &__believe {
     width: min(1400px, 92%);
     margin: 0 auto;
     padding: 1rem 0 3rem;
@@ -650,9 +650,8 @@ $green-color-accent: #7b929f;
     }
   }
   &__believe{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 2rem;
+    text-align: center;
+    padding-bottom: 1rem;
   }
   &__footerBrand {
     strong {

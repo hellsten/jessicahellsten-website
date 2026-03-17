@@ -23,7 +23,7 @@ function UtilityNavigation() {
         </div>
       </nav> */}
 
-      <nav className="utility-navigation__container utility-navigation__desktop-on">
+      <nav className="utility-navigation__container">
         <div className="utility-navigation__icon">
             <NavLink
             to="/"

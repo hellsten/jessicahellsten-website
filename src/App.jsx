@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 import "./App.css";
 
 import UtilityNavigation from './components/UtilityNavigation/UtilityNavigation.jsx'
@@ -9,6 +10,14 @@ import ProjectPage from "./pages/ProjectPage/ProjectPage.jsx";
 import VibeCodePage from "./pages/VibeCodePage/VibeCodePage.jsx";
 
 function App() {
+
+  useEffect(() => {
+    const navSection = document.getElementById("sectionNav");
+
+    if (navSection) {
+      navSection.scrollIntoView({ behavior: "auto", block: "start" });
+    }
+  }, []);
 
   const homeSiteMap=[
     "About", "Skills", "Projects", "Education", "Experience", "Contact",
@@ -26,7 +35,7 @@ function App() {
         <Routes>
           <Route path="/" element={<><Navigation /><HomePage /><Footer siteMap={homeSiteMap}/></>} />
           <Route path="/project/:id" element={<><ProjectPage /><Footer siteMap={projectSiteMap}/></>} />
-          <Route path="/vibecode" element={<VibeCodePage siteMap={homeSiteMap}/>} />
+          <Route path="/vibecode" element={<VibeCodePage />} />
         
         </Routes>
         
