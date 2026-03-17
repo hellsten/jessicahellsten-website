@@ -9,7 +9,7 @@
   }
 }
 @mixin small-desktop {
-  @media screen and (max-width: 1460px) {
+  @media screen and (max-width: 1600px) {
     @content;
   }
 }
