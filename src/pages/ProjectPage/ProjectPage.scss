@@ -1,6 +1,10 @@
 @use "./../../styles/colors" as *;
 @use "./../../styles/mixins" as *;
-.projectPage__navigation__links{
+.projectPage__navigation{
+    position: sticky;
+  top: 0;
+  z-index: 10;
+  &__links{
     display: flex;
     flex-direction: row;
     justify-content: right;
@@ -30,6 +34,7 @@
         border: 2px solid $color-white;
       }
     }
+  }
   }
 .projectPage {
   display: flex;
@@ -457,4 +462,32 @@
         }
     }
   }
+}
+
+#sectionNav{
+    scroll-margin-top: 4rem;
+}
+
+#sectionOverview {
+  scroll-margin-top: 3rem;
+}
+
+#sectionFeatures, #sectionResources, #sectionScreenshots {
+  scroll-margin-top: 9rem;
+  @include small-desktop{
+    scroll-margin-top: 8rem;
+  }
+}
+
+#sectionSkills{
+    scroll-margin-top: 12rem;
+    @include small-desktop{
+        scroll-margin-top: 11rem;
+    }
+    @include tablet{
+        scroll-margin-top: 11rem;
+    }
+    @include mobile{
+        scroll-margin-top: 8rem;
+    }
 }

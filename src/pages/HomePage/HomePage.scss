@@ -2,6 +2,9 @@
 @use "./../../styles/keyframes" as *;
 @use "./../../styles/mixins" as *;
 
+#sectionNav{
+    scroll-margin-top: 4rem;
+}
 #sectionAbout,
 #sectionProjects,
 #sectionEducation,

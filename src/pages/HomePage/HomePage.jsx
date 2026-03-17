@@ -17,6 +17,7 @@ function HomePage() {
 
   return (
     <>
+    <div id="sectionNav"></div>
       <About />
       <Skills />
       <Projects />
