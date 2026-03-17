@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 import "./ProjectPage.scss";
 import projects from "./../../assets/data/projects.js";
@@ -6,9 +7,14 @@ import projects from "./../../assets/data/projects.js";
 import Skills from "./../../components/Skills/Skills.jsx";
 
 function ProjectPage() {
-  const { id } = useParams();
   //Find function to find id in projects file
+  const { id } = useParams();
   const projectItem = projects.find((p) => p.id === id);
+
+  //smooth scroll to top when navigating to new page
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
 
   return (
     <>
@@ -94,26 +100,25 @@ function ProjectPage() {
             ))}
           </section>
           <section className="projectPage__resources" id="sectionResources">
-            <div className="projectPage__resources-title">
-              Resources
-            </div>
+            <div className="projectPage__resources-title">Resources</div>
             <div className="projectPage__resources-container">
-              
-            {projectItem.resources.map((resource, index) => (
-              <div key={index} className="projectPage__resource">
-                <div className="projectPage__resource-name">
-                  {resource.name}
-                </div>
-                <div className="projectPage__resource-description">
-                  {resource.description}
-                </div>
+              {projectItem.resources.map((resource, index) => (
+                <div key={index} className="projectPage__resource">
+                  <div className="projectPage__resource-name">
+                    {resource.name}
+                  </div>
+                  <div className="projectPage__resource-description">
+                    {resource.description}
+                  </div>
 
-                <div className="projectPage__resource-link">
-                  <div className="projectPage__resource-link-title">Link:</div>
-                  <a>{resource.link}</a>
+                  <div className="projectPage__resource-link">
+                    <div className="projectPage__resource-link-title">
+                      Link:
+                    </div>
+                    <a>{resource.link}</a>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
             </div>
           </section>
         </div>

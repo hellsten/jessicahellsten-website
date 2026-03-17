@@ -1,12 +1,11 @@
-import { useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
 
-import Navigation from './components/Navigation/Navigation.jsx'
-import Footer from './components/Footer/Footer.jsx'
-import HomePage from './pages/HomePage/HomePage.jsx'
-import ProjectPage from './pages/ProjectPage/ProjectPage.jsx'
-import ExtraPage from './pages/ExtraPage/ExtraPage.jsx'
+import Navigation from "./components/Navigation/Navigation.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import HomePage from "./pages/HomePage/HomePage.jsx";
+import ProjectPage from "./pages/ProjectPage/ProjectPage.jsx";
+import ExtraPage from "./pages/ExtraPage/ExtraPage.jsx";
 
 function App() {
 
@@ -22,7 +21,6 @@ function App() {
     <>
       <BrowserRouter>
         <Navigation />
-
         <Routes>
           <Route path="/" element={<><HomePage /><Footer siteMap={homeSiteMap}/></>} />
           <Route path="/project/:id" element={<><ProjectPage /><Footer siteMap={projectSiteMap}/></>} />
@@ -31,7 +29,7 @@ function App() {
         
       </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
