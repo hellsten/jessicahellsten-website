@@ -686,7 +686,7 @@ function MagicalVibeCodePage() {
 
             <div className="magical-vibe-code-page__contact-links">
               <MagneticButton
-                href="mailto:your-email@example.com"
+                href="mailto:jessicahellsten@gmail.com"
                 className="magical-vibe-code-page__contact-link-button"
               >
                 <Mail className="magical-vibe-code-page__contact-icon" />
@@ -694,7 +694,7 @@ function MagicalVibeCodePage() {
               </MagneticButton>
 
               <MagneticButton
-                href="#"
+                href="https://www.linkedin.com/in/jessicahellsten/"
                 className="magical-vibe-code-page__contact-link-button"
               >
                 <LinkedIn className="magical-vibe-code-page__contact-icon" />
@@ -702,7 +702,7 @@ function MagicalVibeCodePage() {
               </MagneticButton>
 
               <MagneticButton
-                href="#"
+                href="https://github.com/hellsten"
                 className="magical-vibe-code-page__contact-link-button"
               >
                 <GitHub className="magical-vibe-code-page__contact-icon" />
