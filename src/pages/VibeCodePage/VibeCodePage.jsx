@@ -396,6 +396,8 @@ function VibeCodePage({ siteMap }) {
         </div>
       </section>
 
+      <div className="vibeCodePage__believe">Believe it or not. This website was painstakingly all vibe coded.</div>
+
       <footer className="vibeCodePage__footer">
         <div className="vibeCodePage__footerBrand">
           <strong>Jessica Hellsten</strong>

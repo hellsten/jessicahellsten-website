@@ -649,7 +649,11 @@ $green-color-accent: #7b929f;
       align-items: flex-start;
     }
   }
-
+  &__believe{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+  }
   &__footerBrand {
     strong {
       display: block;
