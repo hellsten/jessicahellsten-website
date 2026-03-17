@@ -10,17 +10,25 @@ import ExtraPage from './pages/ExtraPage/ExtraPage.jsx'
 
 function App() {
 
+  const homeSiteMap=[
+    "About", "Skills", "Projects", "Education", "Experience", "Contact",
+  ]
+
+  const projectSiteMap=[
+   "Overview", "Features", "Skills", "Screenshots", "Resources",
+  ]
+
   return (
     <>
       <BrowserRouter>
         <Navigation />
 
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/project/:id" element={<ProjectPage />} />
+          <Route path="/" element={<><HomePage /><Footer siteMap={homeSiteMap}/></>} />
+          <Route path="/project/:id" element={<><ProjectPage /><Footer siteMap={projectSiteMap}/></>} />
         </Routes>
 
-        <Footer />
+        
       </BrowserRouter>
     </>
   )

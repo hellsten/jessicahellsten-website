@@ -86,6 +86,7 @@
       &:hover {
         fill: $color-white;
         background: $green-color-secondary;
+        cursor: pointer;
       }
     }
   }
@@ -110,6 +111,7 @@
     &:hover {
       color: $color-white;
       background-color: $green-color-secondary;
+      cursor: pointer;
     }
   }
   &__right {
@@ -145,9 +147,11 @@
         align-self: center;
       }
       a {
+        font-weight: 500;
         color: inherit;
         &:hover {
           color: $green-color-secondary;
+          cursor: pointer;
         }
       }
     }
@@ -166,10 +170,21 @@
     }
     li {
       list-style: none;
+      
       @include mobile {
         align-self: center;
       }
+      
     }
+a {
+  font-weight: 500;
+        color: inherit;
+        &:hover {
+          color: $green-color-secondary;
+          cursor: pointer;
+        }
+      }
+    
   }
   &__pages {
     display: flex;
@@ -185,10 +200,19 @@
     }
     li {
       list-style: none;
+      font-weight: 500;
       @include mobile {
         align-self: center;
       }
     }
+    a {
+  font-weight: 500;
+        color: inherit;
+        &:hover {
+          color: $green-color-secondary;
+          cursor: pointer;
+        }
+      }
   }
   &__disclaimer {
     display: flex;
