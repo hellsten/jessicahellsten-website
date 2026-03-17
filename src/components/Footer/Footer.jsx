@@ -7,13 +7,14 @@ import GitHub from "./../../assets/icons/github.svg?react";
 import LinkedIn from "./../../assets/icons/linkedin.svg?react";
 import Mail from "./../../assets/icons/mail.svg?react";
 
-function Footer() {
+function Footer( {siteMap} ) {
   const scrollToSection = (id) => {
     const sectionElement = document.getElementById(id);
     if (sectionElement) {
       sectionElement.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
     <section className="footer">
       <div className="footer__container">
@@ -55,6 +56,20 @@ function Footer() {
           </div>
           <div className="footer__right">
             <div className="footer__site-map">
+              <h1>Site Map</h1>
+              {siteMap.map((section, index) => (
+                <li key={index}>
+                  <NavLink  
+                onClick={(e)=>{
+                  scrollToSection(`section${section}`);
+                  }} 
+                  className="footer__projects-item">
+                  {section}
+                </NavLink>
+                </li>
+              ))}
+           </div>
+             {/* <div className="footer__site-map">
               <h1>Site Map</h1>
               <li>
                 <NavLink
@@ -116,13 +131,13 @@ function Footer() {
                   Contact
                 </NavLink>
               </li>
-            </div>
+            </div> */}
             <div className="footer__projects">
               <h1>Projects</h1>
               {projects.map((project) => (
-                <li key={project.id} className="footer__projects-item">
+                <NavLink key={project.id} to={`/project/${project.id}`} className="footer__projects-item">
                   {project.title}
-                </li>
+                </NavLink>
               ))}
             </div>
             <div className="footer__pages">
@@ -132,10 +147,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <span className="footer__disclaimer">
-          <span className="footer__dot">•</span> Believe it or not. This website
-          was painstakingly all coded by hand.{" "}
-          <span className="footer__dot">•</span>
+        <span className="footer__disclaimer">Believe it or not. This website was painstakingly all coded by hand.
         </span>
         <div className="footer__legal">
           <div className="footer__counter">Visitors: 3</div>

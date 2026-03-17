@@ -30,7 +30,7 @@ function ProjectPage() {
 
   return (
     <>
-      <section className="projectPage">
+      <section className="projectPage" id="sectionOverview">
         <div className="projectPage__container">
           <section className="navigation" id="sectionNav">
       <nav className="navigation__container">
@@ -86,7 +86,7 @@ function ProjectPage() {
             </div>
           </section> */}
           <div className="projectPage__details">
-            <section className="projectPage__features">
+            <section className="projectPage__features" id="sectionFeatures">
               <div className="projectPage__features-container">
                 <div className="projectPage__features-title">Features</div>
                 <div className="projectPage__features-items">
@@ -104,7 +104,7 @@ function ProjectPage() {
               </div>
             </section>
           </div>
-          <section className="projectPage__screenshots">
+          <section className="projectPage__screenshots" id="sectionScreenshots">
             {projectItem.screenshots.map((screenshot, index) => (
               <div key={index} className="projectPage__screenshot-item">
                 <div className="projectPage__screenshot-item-title">
@@ -126,27 +126,26 @@ function ProjectPage() {
               </div>
             ))}
           </section>
-          <section className="projectPage__resources">
-            <div className="projectPage__resources-title">
-              Resources
-            </div>
+          <section className="projectPage__resources" id="sectionResources">
+            <div className="projectPage__resources-title">Resources</div>
             <div className="projectPage__resources-container">
-              
-            {projectItem.resources.map((resource, index) => (
-              <div key={index} className="projectPage__resource">
-                <div className="projectPage__resource-name">
-                  {resource.name}
-                </div>
-                <div className="projectPage__resource-description">
-                  {resource.description}
-                </div>
+              {projectItem.resources.map((resource, index) => (
+                <div key={index} className="projectPage__resource">
+                  <div className="projectPage__resource-name">
+                    {resource.name}
+                  </div>
+                  <div className="projectPage__resource-description">
+                    {resource.description}
+                  </div>
 
-                <div className="projectPage__resource-link">
-                  <div className="projectPage__resource-link-title">Link:</div>
-                  <a>{resource.link}</a>
+                  <div className="projectPage__resource-link">
+                    <div className="projectPage__resource-link-title">
+                      Link:
+                    </div>
+                    <a>{resource.link}</a>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
             </div>
           </section>
         </div>

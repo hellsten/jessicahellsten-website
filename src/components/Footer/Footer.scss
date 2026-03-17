@@ -2,7 +2,6 @@
 @use "./../../styles/mixins" as *;
 
 .footer {
-  margin-top: 5rem;
   &__container {
     display: flex;
     flex-direction: column;
@@ -16,8 +15,11 @@
   &__content {
     display: flex;
     flex-direction: row;
-    padding: 4rem 0;
+    padding: 4rem 0 0;
     gap: 4rem;
+    @include tablet{
+      padding: 4rem 0 2rem 0;
+    }
     @include mobile {
       flex-direction: column;
       padding: 2rem 0;
@@ -84,6 +86,7 @@
       &:hover {
         fill: $color-white;
         background: $green-color-secondary;
+        cursor: pointer;
       }
     }
   }
@@ -108,6 +111,7 @@
     &:hover {
       color: $color-white;
       background-color: $green-color-secondary;
+      cursor: pointer;
     }
   }
   &__right {
@@ -143,9 +147,11 @@
         align-self: center;
       }
       a {
+        font-weight: 500;
         color: inherit;
         &:hover {
           color: $green-color-secondary;
+          cursor: pointer;
         }
       }
     }
@@ -164,10 +170,21 @@
     }
     li {
       list-style: none;
+      
       @include mobile {
         align-self: center;
       }
+      
     }
+a {
+  font-weight: 500;
+        color: inherit;
+        &:hover {
+          color: $green-color-secondary;
+          cursor: pointer;
+        }
+      }
+    
   }
   &__pages {
     display: flex;
@@ -183,10 +200,19 @@
     }
     li {
       list-style: none;
+      font-weight: 500;
       @include mobile {
         align-self: center;
       }
     }
+    a {
+  font-weight: 500;
+        color: inherit;
+        &:hover {
+          color: $green-color-secondary;
+          cursor: pointer;
+        }
+      }
   }
   &__disclaimer {
     display: flex;
@@ -195,12 +221,11 @@
     padding-bottom: 3rem;
     font-weight: 600;
     text-align: center;
-  }
-  &__dot {
-    font-size: 2rem;
-    padding: 0 0.5rem 0.25rem;
-    @include tablet {
-      display: none;
+    @include small-desktop{
+      padding: 3rem;
+    }
+    @include tablet{
+      padding-bottom: 2rem;
     }
   }
   &__legal {
