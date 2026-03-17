@@ -13,7 +13,6 @@
     padding: 0rem 6rem 0 4.5rem;
     height: 5rem;
     width: 100vw;
-
     background-color: $green-color-tertiary;
     @include small-desktop {
       font-size: 1.5rem;
@@ -277,20 +276,19 @@
       background: none;
     }
     svg{
-      height: 2.5rem;
-      width: 2.5rem;
+      height: 2rem;
+      width: 2rem;
       fill: $color-white;
     }
     &-links{
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 80vw;
-      padding: 4rem 3rem;
-      gap: 2rem;
+      padding: 2rem 2rem;
+      gap: 1rem;
     }
     a{
-      font-size: 3rem;
+      font-size: 2rem;
       font-weight: 600;
       text-align: center;
       color: $color-white;
