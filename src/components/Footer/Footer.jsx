@@ -155,6 +155,11 @@ function Footer( {siteMap} ) {
                   Vibe it
                 </NavLink>
               </li>
+              <li>
+                  <NavLink to={`/magical-vibecode`}>
+                  Magical it
+                </NavLink>
+              </li>
               </ul>
             </div>
           </div>

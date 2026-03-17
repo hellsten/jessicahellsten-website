@@ -50,7 +50,7 @@
     width: 22%;
     gap: 24px;
     @include tablet{
-      width: 30%;
+      width: 50%;
     }
     a {
       padding: 10px;
@@ -65,7 +65,7 @@
               padding: 8px;
             }
       @include mobile{
-        font-size: 1rem;
+        font-size: 0.75rem;
       }
       &:hover {
         border: 1px solid $color-white;
