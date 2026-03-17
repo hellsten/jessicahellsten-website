@@ -43,13 +43,14 @@
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: none;
     scroll-behavior: smooth;
+    padding-bottom: 2rem;
   }
 
   &__snap-section {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
   }
 
   &__cursor-glow {
@@ -742,7 +743,7 @@
   }
 
   &__section {
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -750,7 +751,11 @@
   }
 
   &__section--contact {
-    padding-bottom: 2rem;
+    min-height: auto;
+    justify-content: flex-start;
+    padding: 7rem 0 1.5rem;
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
   }
 
   &__section-heading {
@@ -1397,24 +1402,33 @@
     animation: magicalIconWiggle 4s ease-in-out infinite;
   }
 
+  &__footer,
+  &__section--contact {
+    position: relative;
+    z-index: 2;
+  }
+
   &__footer {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    padding: 1rem 0 2.5rem;
+    padding: 1rem 0 3.5rem;
     color: var(--muted);
     font-size: 0.92rem;
     flex-wrap: wrap;
     min-height: auto;
     scroll-snap-align: none;
+    scroll-snap-stop: normal;
   }
 
   &__footer-note {
     width: 100%;
     color: var(--gold);
-    text-align: center;
     font-size: 0.95rem;
-    padding-top: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 2rem;
+    vertical-align: center;
+    text-align: center;
     animation: magicalSoftPulse 3.8s ease-in-out infinite;
   }
 
@@ -1505,9 +1519,9 @@
     }
 
     &__hero {
-      min-height: 100vh;
       gap: 1.75rem;
       padding: 7.5rem 0 1rem;
+      min-height: auto;
     }
 
     &__hero-right {
@@ -1536,7 +1550,7 @@
 
   @media (max-width: 640px) {
     &__scroll-shell {
-      scroll-snap-type: y proximity;
+      scroll-snap-type: none;
     }
 
     &__nav-shell {
@@ -1712,10 +1726,6 @@
       grid-template-columns: 1fr;
     }
 
-    &__project-visual {
-      height: 10rem;
-    }
-
     &__timeline {
       padding-left: 1.1rem;
 
@@ -1816,9 +1826,6 @@
       padding: 6.25rem 0 2.2rem;
     }
 
-    &__project-visual {
-      height: 8.5rem;
-    }
 
     &__timeline-logo-shell,
     &__experience-logo-shell {
