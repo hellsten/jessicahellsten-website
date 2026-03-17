@@ -1,0 +1,24 @@
+@use "./../../styles/colors" as *;
+@use "./../../styles/keyframes" as *;
+@use "./../../styles/mixins" as *;
+
+#sectionAbout,
+#sectionProjects,
+#sectionEducation,
+#sectionExperience,
+#sectionContact {
+  scroll-margin-top: 3rem;
+}
+
+#sectionSkills{
+    scroll-margin-top: 14rem;
+    @include small-desktop{
+        scroll-margin-top: 12rem;
+    }
+    @include tablet{
+        scroll-margin-top: 10rem;
+    }
+    @include mobile{
+        scroll-margin-top: 8rem;
+    }
+}
