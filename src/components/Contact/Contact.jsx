@@ -68,6 +68,7 @@ function Contact() {
             <div className="contact__card-find contact__card-find-email">
               <NavLink
                 className="contact__card-link"
+                aria-label="contact me by email"
                 to="mailto:jessicahellsten@gmail.com"
               >
                 <Mail />
@@ -77,6 +78,7 @@ function Contact() {
             <div className="contact__card-find contact__card-find-linkedin">
               <NavLink
                 className="contact__card-link"
+                aria-label="visit my linkedin profile"
                 to="https://www.linkedin.com/in/jessicahellsten/"
               >
                 <LinkedIn />
@@ -86,6 +88,7 @@ function Contact() {
             <div className="contact__card-find contact__card-find-github">
               <NavLink
                 className="contact__card-link"
+                aria-label="visit my github profile"
                 to="https://github.com/hellsten"
               >
                 <GitHub />

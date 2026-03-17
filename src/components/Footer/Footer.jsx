@@ -33,13 +33,14 @@ function Footer( {siteMap} ) {
               modern, dependable web applications.
             </div>
             <div className="footer__socials">
-              <NavLink to="https://github.com/hellsten">
+              <NavLink aria-label="visit my github profile"
+              to="https://github.com/hellsten">
                 <GitHub />
               </NavLink>
-              <NavLink to="https://www.linkedin.com/in/jessicahellsten/">
+              <NavLink aria-label="visit my linkedin profile" to="https://www.linkedin.com/in/jessicahellsten/">
                 <LinkedIn />
               </NavLink>
-              <NavLink to="mailto:jessicahellsten@gmail.com">
+              <NavLink aria-label="contact me by email" to="mailto:jessicahellsten@gmail.com">
                 <Mail />
               </NavLink>
             </div>
