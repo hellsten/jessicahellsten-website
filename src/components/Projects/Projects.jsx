@@ -22,8 +22,8 @@ function Projects() {
             ))}
             </div>
             <div className="project__card-links">
-              <NavLink className="project__card-links-learnmore" to={`/project/${project.id}`}>
-                Learn More
+              <NavLink className="project__card-links-learnmore" aria-label={`Learn more about ${project.title}`} to={`/project/${project.id}`}>
+                Learn More <span className="visually-hidden"> about {project.title}</span>
               </NavLink>
               <div className="project__card-links-group">
                 <a className="project__card-demo" href={project.demoLink}>Demo</a>
