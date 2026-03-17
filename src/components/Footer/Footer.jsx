@@ -45,14 +45,14 @@ function Footer( {siteMap} ) {
               </NavLink>
             </div>
             <div className="footer__back-to-top">
-              <NavLink
+              <a
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection("sectionNav");
                 }}
               >
                 Back to Top
-              </NavLink>
+              </a>
             </div>
           </div>
           <div className="footer__right">
@@ -61,13 +61,13 @@ function Footer( {siteMap} ) {
               <ul>
               {siteMap.map((section, index) => (
                 <li key={index}>
-                  <NavLink  
+                  <a  
                 onClick={(e)=>{
                   scrollToSection(`section${section}`);
                   }} 
                   className="footer__projects-item">
                   {section}
-                </NavLink>
+                </a>
                 </li>
               ))}
               </ul>
