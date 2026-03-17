@@ -1,4 +1,6 @@
-import { useParams } from "react-router-dom";
+import { useParams, NavLink, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import {  } from "react-router-dom";
 
 import "./ProjectPage.scss";
 import projects from "./../../assets/data/projects.js";
@@ -6,14 +8,45 @@ import projects from "./../../assets/data/projects.js";
 import Skills from "./../../components/Skills/Skills.jsx";
 
 function ProjectPage() {
-  const { id } = useParams();
+
+  //Back button
+  const navigate = useNavigate();
+  const handleBack = () => {
+    if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      navigate("/");
+    }
+  };
+
   //Find function to find id in projects file
+  const { id } = useParams();
   const projectItem = projects.find((p) => p.id === id);
+
+  //smooth scroll to top when navigating to new page
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [id]);
 
   return (
     <>
       <section className="projectPage">
         <div className="projectPage__container">
+          <section className="navigation" id="sectionNav">
+      <nav className="navigation__container">
+        <div className="navigation__icon">
+          <NavLink to="/">Jessica Hellsten</NavLink>
+        </div>
+
+        <div className="navigation__links navigation__desktop-on">
+          <NavLink
+            onClick={handleBack} 
+          >
+              ← Back
+          </NavLink>
+        </div>
+      </nav>
+    </section>
           <section className="projectPage__hero">
             <div className="projectPage__hero__container">
               <div className="projectPage__hero__container-header">
