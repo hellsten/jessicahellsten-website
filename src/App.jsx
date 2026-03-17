@@ -13,7 +13,6 @@ function App() {
 
   useEffect(() => {
     const navSection = document.getElementById("sectionNav");
-
     if (navSection) {
       navSection.scrollIntoView({ behavior: "auto", block: "start" });
     }
