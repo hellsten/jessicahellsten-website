@@ -396,7 +396,7 @@ function VibeCodePage() {
         </div>
       </section>
 
-      <div className="vibeCodePage__believe">Believe it or not. This website was painstakingly all vibe coded.</div>
+      <div className="vibeCodePage__believe">Believe it or not. This page was painstakingly all vibe coded.</div>
 
       <footer className="vibeCodePage__footer">
         <div className="vibeCodePage__footerBrand">

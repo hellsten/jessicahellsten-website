@@ -24,8 +24,12 @@ function ProjectPage() {
 
   //smooth scroll to top when navigating to new page
   useEffect(() => {
-    window.scrollTo({ top: 0 });
-  }, [id]);
+  const navSection = document.getElementById("sectionNav");
+
+  if (navSection) {
+    navSection.scrollIntoView({ behavior: "instant", block: "start" });
+  }
+}, [id]);
 
   return (
     <main>

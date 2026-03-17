@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation/Navigation.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import HomePage from "./pages/HomePage/HomePage.jsx";
 import ProjectPage from "./pages/ProjectPage/ProjectPage.jsx";
+import MagicalVibeCodePage from "./pages/MagicalVibeCodePage/MagicalVibeCodePage.jsx";
 import VibeCodePage from "./pages/VibeCodePage/VibeCodePage.jsx";
 
 function App() {
@@ -29,12 +30,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <UtilityNavigation />
-
         <Routes>
-            <Route path="/" element={<><Navigation /><HomePage /><Footer siteMap={homeSiteMap}/></>} />
+            <Route path="/" element={<><UtilityNavigation /><Navigation /><HomePage /><Footer siteMap={homeSiteMap}/></>} />
             <Route path="/project/:id" element={<><ProjectPage /><Footer siteMap={projectSiteMap}/></>} />
-            <Route path="/vibecode" element={<VibeCodePage />} />
+            <Route path="/magical-vibecode" element={<MagicalVibeCodePage/>}/>
+            <Route path="/vibecode" element={<><UtilityNavigation /><VibeCodePage /></>} />
         </Routes>
         
       </BrowserRouter>
