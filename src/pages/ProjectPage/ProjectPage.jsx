@@ -1,6 +1,6 @@
 import { useParams, NavLink, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import {  } from "react-router-dom";
+import {} from "react-router-dom";
 
 import "./ProjectPage.scss";
 import projects from "./../../assets/data/projects.js";
@@ -8,7 +8,6 @@ import projects from "./../../assets/data/projects.js";
 import Skills from "./../../components/Skills/Skills.jsx";
 
 function ProjectPage() {
-
   //Back button
   const navigate = useNavigate();
   const handleBack = () => {
@@ -30,23 +29,19 @@ function ProjectPage() {
 
   return (
     <>
-      <section className="projectPage" id="sectionOverview">
+      <section className="projectPage">
         <div className="projectPage__container">
           <section className="navigation" id="sectionNav">
-      <nav className="navigation__container">
-        <div className="navigation__icon">
-          <NavLink to="/">Jessica Hellsten</NavLink>
-        </div>
+            <nav className="navigation__container">
+              <div className="navigation__icon">
+                <NavLink to="/">Jessica Hellsten</NavLink>
+              </div>
 
-        <div className="navigation__links navigation__desktop-on">
-          <NavLink
-            onClick={handleBack} 
-          >
-              ← Back
-          </NavLink>
-        </div>
-      </nav>
-    </section>
+              <div className="projectPage__navigation__links navigation__desktop-on">
+                <NavLink onClick={handleBack}>← Back</NavLink>
+              </div>
+            </nav>
+          </section>
           <section className="projectPage__hero">
             <div className="projectPage__hero__container">
               <div className="projectPage__hero__container-header">
@@ -86,7 +81,7 @@ function ProjectPage() {
             </div>
           </section> */}
           <div className="projectPage__details">
-            <section className="projectPage__features" id="sectionFeatures">
+            <section className="projectPage__features">
               <div className="projectPage__features-container">
                 <div className="projectPage__features-title">Features</div>
                 <div className="projectPage__features-items">
@@ -104,7 +99,7 @@ function ProjectPage() {
               </div>
             </section>
           </div>
-          <section className="projectPage__screenshots" id="sectionScreenshots">
+          <section className="projectPage__screenshots">
             {projectItem.screenshots.map((screenshot, index) => (
               <div key={index} className="projectPage__screenshot-item">
                 <div className="projectPage__screenshot-item-title">
@@ -126,7 +121,7 @@ function ProjectPage() {
               </div>
             ))}
           </section>
-          <section className="projectPage__resources" id="sectionResources">
+          <section className="projectPage__resources">
             <div className="projectPage__resources-title">Resources</div>
             <div className="projectPage__resources-container">
               {projectItem.resources.map((resource, index) => (
