@@ -132,10 +132,8 @@ function Footer() {
             </div>
           </div>
         </div>
-        <span className="footer__disclaimer">
-          <span className="footer__dot">•</span> Believe it or not. This website
-          was painstakingly all coded by hand.{" "}
-          <span className="footer__dot">•</span>
+        <span className="footer__disclaimer">Believe it or not. This website
+          was painstakingly all coded by hand.
         </span>
         <div className="footer__legal">
           <div className="footer__counter">Visitors: 3</div>
