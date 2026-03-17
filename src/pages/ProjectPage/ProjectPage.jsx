@@ -28,7 +28,7 @@ function ProjectPage() {
   }, [id]);
 
   return (
-    <>
+    <main>
       <section className="projectPage">
         <div className="projectPage__container" id="sectionNav">
           <section className="navigation" >
@@ -145,7 +145,7 @@ function ProjectPage() {
           </section>
         </div>
       </section>
-    </>
+    </main>
   );
 }
 

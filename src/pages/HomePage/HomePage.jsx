@@ -16,7 +16,7 @@ function HomePage() {
   }, []);
 
   return (
-    <>
+    <main>
     <div id="sectionNav"></div>
       <About />
       <Skills />
@@ -24,7 +24,7 @@ function HomePage() {
       <Education />
       <Experience />
       <Contact />
-    </>
+    </main>
   )
 }
 

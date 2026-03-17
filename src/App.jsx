@@ -32,10 +32,9 @@ function App() {
         <UtilityNavigation />
 
         <Routes>
-          <Route path="/" element={<><Navigation /><HomePage /><Footer siteMap={homeSiteMap}/></>} />
-          <Route path="/project/:id" element={<><ProjectPage /><Footer siteMap={projectSiteMap}/></>} />
-          <Route path="/vibecode" element={<VibeCodePage />} />
-        
+            <Route path="/" element={<><Navigation /><HomePage /><Footer siteMap={homeSiteMap}/></>} />
+            <Route path="/project/:id" element={<><ProjectPage /><Footer siteMap={projectSiteMap}/></>} />
+            <Route path="/vibecode" element={<VibeCodePage />} />
         </Routes>
         
       </BrowserRouter>
