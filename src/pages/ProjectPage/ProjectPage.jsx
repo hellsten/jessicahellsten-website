@@ -28,10 +28,10 @@ function ProjectPage() {
   }, [id]);
 
   return (
-    <>
+    <main>
       <section className="projectPage">
-        <div className="projectPage__container">
-          <section className="navigation" id="sectionNav">
+        <div className="projectPage__container" id="sectionNav">
+          <section className="navigation" >
             <nav className="navigation__container">
               <div className="navigation__icon">
                 <NavLink to="/">Jessica Hellsten</NavLink>
@@ -42,7 +42,7 @@ function ProjectPage() {
               </div>
             </nav>
           </section>
-          <section className="projectPage__hero">
+          <section className="projectPage__hero" id="sectionOverview">
             <div className="projectPage__hero__container">
               <div className="projectPage__hero__container-header">
                 <div className="projectPage__hero__container-title">
@@ -81,7 +81,7 @@ function ProjectPage() {
             </div>
           </section> */}
           <div className="projectPage__details">
-            <section className="projectPage__features">
+            <section className="projectPage__features" id="sectionFeatures">
               <div className="projectPage__features-container">
                 <div className="projectPage__features-title">Features</div>
                 <div className="projectPage__features-items">
@@ -99,7 +99,7 @@ function ProjectPage() {
               </div>
             </section>
           </div>
-          <section className="projectPage__screenshots">
+          <section className="projectPage__screenshots" id="sectionScreenshots">
             {projectItem.screenshots.map((screenshot, index) => (
               <div key={index} className="projectPage__screenshot-item">
                 <div className="projectPage__screenshot-item-title">
@@ -121,7 +121,7 @@ function ProjectPage() {
               </div>
             ))}
           </section>
-          <section className="projectPage__resources">
+          <section className="projectPage__resources" id="sectionResources">
             <div className="projectPage__resources-title">Resources</div>
             <div className="projectPage__resources-container">
               {projectItem.resources.map((resource, index) => (
@@ -145,7 +145,7 @@ function ProjectPage() {
           </section>
         </div>
       </section>
-    </>
+    </main>
   );
 }
 

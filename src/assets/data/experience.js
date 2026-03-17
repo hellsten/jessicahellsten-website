@@ -1,5 +1,5 @@
-import Rainforest from "./../images/rainforest.png"
-import FingerFood from "./../images/fingerfood.png"
+import Rainforest from "./../images/rainforest.webp"
+import FingerFood from "./../images/fingerfood.webp"
 import defaultImage from "../images/default.jpg";
 
 const experience = [

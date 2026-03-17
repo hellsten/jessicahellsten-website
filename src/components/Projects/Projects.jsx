@@ -13,7 +13,7 @@ function Projects() {
         <div className="projects__card-container">
             {projects.map((project) => (
           <div key={project.id} className="project__card">
-            <img src={project.image} className="project__card-image" />
+            <img src={project.image} alt={`${project.title} preview`} className="project__card-image" />
             <div className="project__card-title">{project.title}</div>
             <div className="project__card-intro">{project.intro}</div>
             <div className="project__card-skills">
@@ -22,8 +22,8 @@ function Projects() {
             ))}
             </div>
             <div className="project__card-links">
-              <NavLink className="project__card-links-learnmore" to={`/project/${project.id}`}>
-                Learn More
+              <NavLink className="project__card-links-learnmore" aria-label={`Learn more about ${project.title}`} to={`/project/${project.id}`}>
+                Learn More <span className="visually-hidden"> about {project.title}</span>
               </NavLink>
               <div className="project__card-links-group">
                 <a className="project__card-demo" href={project.demoLink}>Demo</a>

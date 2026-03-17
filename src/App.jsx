@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
-import "./App.css";
+import "./App.scss";
 
 import UtilityNavigation from './components/UtilityNavigation/UtilityNavigation.jsx'
 import Navigation from "./components/Navigation/Navigation.jsx";
@@ -32,10 +32,9 @@ function App() {
         <UtilityNavigation />
 
         <Routes>
-          <Route path="/" element={<><Navigation /><HomePage /><Footer siteMap={homeSiteMap}/></>} />
-          <Route path="/project/:id" element={<><ProjectPage /><Footer siteMap={projectSiteMap}/></>} />
-          <Route path="/vibecode" element={<VibeCodePage />} />
-        
+            <Route path="/" element={<><Navigation /><HomePage /><Footer siteMap={homeSiteMap}/></>} />
+            <Route path="/project/:id" element={<><ProjectPage /><Footer siteMap={projectSiteMap}/></>} />
+            <Route path="/vibecode" element={<VibeCodePage />} />
         </Routes>
         
       </BrowserRouter>

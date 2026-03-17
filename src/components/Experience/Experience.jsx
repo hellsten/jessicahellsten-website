@@ -12,7 +12,7 @@ function Experience() {
           {experience.map((experience) => (
             <div key={experience.id} className="experience__card-outside">
               <div className="experience__card-container">
-                <img className="experience__card-logo" src={experience.logo} />
+                <img className="experience__card-logo" src={experience.logo} alt={`${experience.company} logo`} />
                 <div className="experience__card-details">
                   <div className="experience__card-dates">
                     {experience.dates}

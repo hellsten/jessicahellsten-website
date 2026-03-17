@@ -24,7 +24,7 @@ function Navigation() {
   };
 
   return (
-    <section className="navigation" id="sectionNav">
+    <section className="navigation" >
       <nav className="navigation__container">
         <div className="navigation__icon">
           <NavLink to="/">Jessica Hellsten</NavLink>

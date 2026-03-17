@@ -1,6 +1,6 @@
 import "./About.scss";
 
-import Me from "../../assets/images/me.jpg";
+import Me from "../../assets/images/me.webp";
 
 function About() {
   return (
@@ -33,7 +33,7 @@ function About() {
             </span>
           </div>
           <div className="about__card-right">
-            <img src={Me} />
+            <img src={Me} alt="picture of me" />
           </div>
         </div>
       </div>

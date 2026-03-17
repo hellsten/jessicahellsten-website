@@ -33,13 +33,14 @@ function Footer( {siteMap} ) {
               modern, dependable web applications.
             </div>
             <div className="footer__socials">
-              <NavLink to="https://github.com/hellsten">
+              <NavLink aria-label="visit my github profile"
+              to="https://github.com/hellsten">
                 <GitHub />
               </NavLink>
-              <NavLink to="https://www.linkedin.com/in/jessicahellsten/">
+              <NavLink aria-label="visit my linkedin profile" to="https://www.linkedin.com/in/jessicahellsten/">
                 <LinkedIn />
               </NavLink>
-              <NavLink to="mailto:jessicahellsten@gmail.com">
+              <NavLink aria-label="contact me by email" to="mailto:jessicahellsten@gmail.com">
                 <Mail />
               </NavLink>
             </div>
@@ -57,6 +58,7 @@ function Footer( {siteMap} ) {
           <div className="footer__right">
             <div className="footer__site-map">
               <h1>Site Map</h1>
+              <ul>
               {siteMap.map((section, index) => (
                 <li key={index}>
                   <NavLink  
@@ -68,6 +70,7 @@ function Footer( {siteMap} ) {
                 </NavLink>
                 </li>
               ))}
+              </ul>
            </div>
              {/* <div className="footer__site-map">
               <h1>Site Map</h1>
@@ -134,6 +137,7 @@ function Footer( {siteMap} ) {
             </div> */}
             <div className="footer__projects">
               <h1>Projects</h1>
+              <ul>
               {projects.map((project) => (
                 <li key={project.id}>
                   <NavLink to={`/project/${project.id}`} className="footer__projects-item">
@@ -141,11 +145,17 @@ function Footer( {siteMap} ) {
                 </NavLink>
                 </li>
               ))}
+              </ul>
             </div>
             <div className="footer__pages">
               <h1>Extras</h1>
-              <li>Outside</li>
-              <li>References</li>
+              <ul>
+                <li>
+                  <NavLink to={`/vibecode`}>
+                  Vibe it
+                </NavLink>
+              </li>
+              </ul>
             </div>
           </div>
         </div>

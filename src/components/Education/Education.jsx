@@ -17,7 +17,7 @@ function Education() {
                 <div className="education__card-degree">{education.degree}</div>
                 <div className="education__card-major">{education.major}</div>
               </div>
-              <img className="education__card-logo" src={education.logo}/>
+              <img className="education__card-logo" src={education.logo} alt={`${education.school} logo`} />
             </div>
           ))}
         </div>

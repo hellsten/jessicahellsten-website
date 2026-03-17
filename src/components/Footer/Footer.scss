@@ -67,7 +67,7 @@
     span {
       font-size: 2rem;
       font-weight: 700;
-      color: $green-color-secondary;
+      color: $green-color-secondary-light;
     }
   }
   &__socials {
@@ -85,7 +85,7 @@
       border-radius: 1rem;
       &:hover {
         fill: $color-white;
-        background: $green-color-secondary;
+        background: $green-color-secondary-light;
         cursor: pointer;
       }
     }
@@ -110,7 +110,7 @@
     }
     &:hover {
       color: $color-white;
-      background-color: $green-color-secondary;
+      background-color: $green-color-secondary-light;
       cursor: pointer;
     }
   }
@@ -143,6 +143,7 @@
     }
     li {
       list-style: none;
+      padding: 1rem 0;
       @include mobile {
         align-self: center;
       }
@@ -150,7 +151,7 @@
         font-weight: 500;
         color: inherit;
         &:hover {
-          color: $green-color-secondary;
+          color: $green-color-secondary-light;
           cursor: pointer;
         }
       }
@@ -170,7 +171,7 @@
     }
     li {
       list-style: none;
-      
+      padding: 1rem 0;
       @include mobile {
         align-self: center;
       }
@@ -180,7 +181,7 @@ a {
   font-weight: 500;
         color: inherit;
         &:hover {
-          color: $green-color-secondary;
+          color: $green-color-secondary-light;
           cursor: pointer;
         }
       }
@@ -201,15 +202,17 @@ a {
     li {
       list-style: none;
       font-weight: 500;
+      padding: 1rem 0;
       @include mobile {
         align-self: center;
+        padding: 0.5rem
       }
     }
     a {
   font-weight: 500;
         color: inherit;
         &:hover {
-          color: $green-color-secondary;
+          color: $green-color-secondary-light;
           cursor: pointer;
         }
       }

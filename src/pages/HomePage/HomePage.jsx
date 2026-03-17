@@ -16,14 +16,15 @@ function HomePage() {
   }, []);
 
   return (
-    <>
+    <main>
+    <div id="sectionNav"></div>
       <About />
       <Skills />
       <Projects />
       <Education />
       <Experience />
       <Contact />
-    </>
+    </main>
   )
 }
 
