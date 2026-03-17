@@ -1,5 +1,5 @@
 import Uvic from "./../images/uvic.svg"
-import BrainStation from "./../images/brainstationwhite.png"
+import BrainStation from "./../images/brainstationwhite.webp"
 
 const education = [
     {

@@ -1,6 +1,6 @@
 import "./About.scss";
 
-import Me from "../../assets/images/me.jpg";
+import Me from "../../assets/images/me.webp";
 
 function About() {
   return (
