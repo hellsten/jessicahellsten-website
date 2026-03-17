@@ -1,0 +1,688 @@
+@use "./../../styles/mixins" as *;
+
+$color-white: #fafafa;
+$green-color-base: #111a1b;
+$green-color-tertiary: #1a2d28;
+$green-color-primary: #144e2d;
+$green-color-secondary: #24a346;
+$green-color-accent: #7b929f;
+
+.vibeCodePage {
+  min-height: 100vh;
+  color: $color-white;
+  background:
+    radial-gradient(circle at top left, rgba(36, 163, 70, 0.08), transparent 30%),
+    linear-gradient(180deg, #0d1415 0%, #111a1b 100%);
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  &__hero {
+    min-height: 100vh;
+    padding: 1.5rem 0 3rem;
+  }
+
+  &__nav {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    width: min(1400px, 92%);
+    margin: 0 auto;
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(250, 250, 250, 0.08);
+    border-radius: 1.25rem;
+    background: rgba(17, 26, 27, 0.72);
+    backdrop-filter: blur(14px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet {
+      width: 95%;
+      gap: 1rem;
+    }
+
+    @include mobile {
+      padding: 0.9rem 1rem;
+    }
+  }
+
+  &__brand {
+    border: 0;
+    background: linear-gradient(135deg, $green-color-primary, $green-color-secondary);
+    color: $color-white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  &__navLinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.4rem;
+
+    @include mobile {
+      gap: 0.25rem;
+    }
+  }
+
+  &__navLink,
+  &__footerLink {
+    border: 0;
+    background: transparent;
+    color: rgba(250, 250, 250, 0.8);
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    &:hover {
+      background-color: rgba(250, 250, 250, 0.08);
+      color: $color-white;
+    }
+
+    @include mobile {
+      padding: 0.6rem 0.75rem;
+      font-size: 0.85rem;
+    }
+  }
+
+  &__heroContent {
+    width: min(1400px, 92%);
+    margin: 4rem auto 0;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2rem;
+    align-items: center;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__heroCopy,
+  &__heroCard,
+  &__panel,
+  &__projectCard,
+  &__timelineCard,
+  &__contactCard,
+  &__skillCard {
+    border: 1px solid rgba(250, 250, 250, 0.08);
+    background: rgba(26, 45, 40, 0.5);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+  }
+
+  &__heroCopy {
+    padding: 3rem;
+    border-radius: 2rem;
+
+    @include mobile {
+      padding: 1.5rem;
+      border-radius: 1.5rem;
+    }
+  }
+
+  &__eyebrow,
+  &__sectionLabel {
+    text-transform: uppercase;
+    letter-spacing: 0.16rem;
+    color: $green-color-secondary;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-size: clamp(2.75rem, 6vw, 5.5rem);
+    line-height: 0.95;
+    margin: 0 0 1.5rem;
+    max-width: 11ch;
+  }
+
+  &__subtitle {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: rgba(250, 250, 250, 0.82);
+    max-width: 60ch;
+    margin-bottom: 2rem;
+
+    @include mobile {
+      font-size: 1rem;
+    }
+  }
+
+  &__heroActions,
+  &__contactActions,
+  &__projectLinks,
+  &__heroPills,
+  &__projectSkills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    padding: 0.85rem 1.3rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.2s ease;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    &--primary {
+      background: linear-gradient(135deg, $green-color-primary, $green-color-secondary);
+      color: $color-white;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+
+    &--secondary {
+      background: transparent;
+      color: $color-white;
+      border-color: rgba(250, 250, 250, 0.18);
+
+      &:hover {
+        background-color: rgba(250, 250, 250, 0.08);
+      }
+    }
+  }
+
+  &__heroPills {
+    margin-top: 1.5rem;
+
+    span {
+      padding: 0.65rem 0.95rem;
+      border-radius: 999px;
+      background-color: rgba(250, 250, 250, 0.06);
+      color: rgba(250, 250, 250, 0.85);
+      font-size: 0.92rem;
+    }
+  }
+
+  &__heroCard {
+    border-radius: 2rem;
+    overflow: hidden;
+
+    @include mobile {
+      border-radius: 1.5rem;
+    }
+  }
+
+  &__heroImage {
+    width: 100%;
+    aspect-ratio: 4 / 4.5;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__heroCardContent {
+    padding: 1.5rem;
+
+    h2 {
+      font-size: 1.6rem;
+      margin: 0 0 0.9rem;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0;
+      color: rgba(250, 250, 250, 0.78);
+      line-height: 1.7;
+    }
+  }
+
+  &__heroCardLabel {
+    color: $green-color-secondary !important;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14rem;
+    margin-bottom: 0.7rem !important;
+  }
+
+  &__section {
+    width: min(1400px, 92%);
+    margin: 0 auto;
+    padding: 4rem 0;
+
+    @include mobile {
+      padding: 3rem 0;
+    }
+
+    &--contact {
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__sectionHeading {
+    margin-bottom: 1.8rem;
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      margin: 0;
+      line-height: 1.05;
+      max-width: 16ch;
+    }
+  }
+
+  &__aboutGrid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 1.25rem;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__panel {
+    padding: 2rem;
+    border-radius: 1.75rem;
+
+    p {
+      margin: 0 0 1rem;
+      line-height: 1.9;
+      color: rgba(250, 250, 250, 0.82);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__textHighlight {
+    color: $green-color-secondary;
+    font-weight: 700;
+  }
+
+  &__aboutStats {
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+
+    div {
+      padding: 1rem 1.1rem;
+      background-color: rgba(250, 250, 250, 0.04);
+      border-radius: 1rem;
+      border: 1px solid rgba(250, 250, 250, 0.06);
+    }
+
+    span {
+      display: block;
+      font-size: 0.82rem;
+      color: rgba(250, 250, 250, 0.56);
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    strong {
+      font-size: 1.05rem;
+    }
+  }
+
+  &__skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+
+    @include small-desktop {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__skillCard {
+    padding: 1.1rem;
+    border-radius: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__skillIcon {
+    width: 3.2rem;
+    height: 3.2rem;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+    background: rgba(250, 250, 250, 0.06);
+
+    svg {
+      width: 1.7rem;
+      height: 1.7rem;
+      fill: $color-white;
+    }
+  }
+
+  &__skillContent {
+    h3 {
+      margin: 0 0 0.25rem;
+      font-size: 1rem;
+    }
+
+    p {
+      margin: 0;
+      color: rgba(250, 250, 250, 0.62);
+      font-size: 0.92rem;
+    }
+  }
+
+  &__projectsGrid {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  &__projectCard {
+    border-radius: 1.75rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__projectImageWrap {
+    position: relative;
+    min-height: 100%;
+    background: linear-gradient(135deg, $green-color-tertiary, $green-color-primary);
+  }
+
+  &__projectImage {
+    width: 100%;
+    height: 100%;
+    min-height: 18rem;
+    object-fit: cover;
+    display: block;
+    opacity: 0.82;
+  }
+
+  &__projectBadge {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    padding: 0.55rem 0.8rem;
+    border-radius: 999px;
+    background-color: rgba(17, 26, 27, 0.8);
+    border: 1px solid rgba(250, 250, 250, 0.08);
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  &__projectContent {
+    padding: 1.5rem;
+  }
+
+  &__projectTop {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__projectTagline,
+  &__projectIntro,
+  &__timelineContent p {
+    color: rgba(250, 250, 250, 0.78);
+    line-height: 1.75;
+  }
+
+  &__projectTagline {
+    margin: 0;
+  }
+
+  &__projectDate {
+    white-space: nowrap;
+    margin: 0;
+    color: rgba(250, 250, 250, 0.55);
+    font-size: 0.9rem;
+  }
+
+  &__projectIntro {
+    margin: 0 0 1rem;
+  }
+
+  &__projectMeta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__metaItem {
+    padding: 0.9rem 1rem;
+    border-radius: 1rem;
+    background-color: rgba(250, 250, 250, 0.05);
+
+    span {
+      display: block;
+      color: rgba(250, 250, 250, 0.5);
+      font-size: 0.8rem;
+      margin-bottom: 0.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08rem;
+    }
+
+    strong {
+      font-size: 0.95rem;
+      word-break: break-word;
+    }
+  }
+
+  &__projectSkills {
+    margin-bottom: 1rem;
+
+    span {
+      padding: 0.55rem 0.8rem;
+      background-color: rgba(36, 163, 70, 0.12);
+      color: $color-white;
+      border: 1px solid rgba(36, 163, 70, 0.24);
+      border-radius: 999px;
+      font-size: 0.85rem;
+    }
+  }
+
+  &__projectLinks {
+    a {
+      color: $color-white;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 0.8rem 1rem;
+      border-radius: 999px;
+      background-color: rgba(250, 250, 250, 0.06);
+      border: 1px solid rgba(250, 250, 250, 0.08);
+
+      &:hover {
+        background-color: rgba(250, 250, 250, 0.12);
+      }
+    }
+  }
+
+  &__timeline {
+    display: grid;
+    gap: 1rem;
+  }
+
+  &__timelineCard {
+    border-radius: 1.5rem;
+    padding: 1.25rem;
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    gap: 1rem;
+    align-items: start;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__timelineLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__logoImage,
+  &__logoFallback {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    object-fit: cover;
+    background-color: rgba(250, 250, 250, 0.06);
+    border: 1px solid rgba(250, 250, 250, 0.08);
+  }
+
+  &__logoFallback {
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    color: $color-white;
+  }
+
+  &__timelineContent {
+    p {
+      margin: 0;
+    }
+  }
+
+  &__timelineTop {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.4rem;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.15rem;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    span {
+      color: rgba(250, 250, 250, 0.55);
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+  }
+
+  &__contactCard {
+    border-radius: 2rem;
+    padding: 2.25rem;
+    text-align: center;
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 0 0 1rem;
+    }
+
+    p {
+      max-width: 52ch;
+      margin: 0 auto 1.5rem;
+      color: rgba(250, 250, 250, 0.78);
+      line-height: 1.8;
+    }
+
+    .vibeCodePage__contactActions {
+      justify-content: center;
+    }
+  }
+
+  &__footer {
+    width: min(1400px, 92%);
+    margin: 0 auto;
+    padding: 1rem 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid rgba(250, 250, 250, 0.08);
+
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__footerBrand {
+    strong {
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    p {
+      margin: 0;
+      color: rgba(250, 250, 250, 0.58);
+    }
+  }
+
+  &__footerLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  &__status {
+    &--complete {
+      color: #7ef0a0;
+    }
+
+    &--active {
+      color: #8fd4ff;
+    }
+
+    &--incomplete {
+      color: #ff9a8b;
+    }
+
+    &--notStarted {
+      color: #ffd27d;
+    }
+  }
+}
