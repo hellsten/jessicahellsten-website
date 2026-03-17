@@ -11,6 +11,9 @@
 #sectionExperience,
 #sectionContact {
   scroll-margin-top: 3rem;
+  @include mobile{
+    scroll-margin-top: 0rem;
+  }
 }
 
 #sectionSkills{
