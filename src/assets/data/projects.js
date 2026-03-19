@@ -1,10 +1,26 @@
 import defaultImage from "../images/default.jpg";
+import portfolioImage from "../images/projects/portfolio/portfolioImage.png";
+import cansimplanImage from "../images/projects/cansimplan/cansimplanImage.png";
+import canhuntImage from "../images/projects/canhunt/canhuntImage.jpg";
+
+import eventureImage from "../images/projects/eventure/eventureImage.webp";
+import eventureVideo from "../images/projects/eventure/eventureVideo.mp4";
+import eventureList from "../images/projects/eventure/eventureList.webp";
+import eventureStep1 from "../images/projects/eventure/eventureStep1.webp";
+import eventureStep1Validation from "../images/projects/eventure/eventureStep1Validation.webp";
+import eventureStep2 from "../images/projects/eventure/eventureStep2.webp";
+import eventureStep3Confirm from "../images/projects/eventure/eventureStep3Confirm.webp";
+import eventureStep3Success from "../images/projects/eventure/eventureStep3Success.webp";
+import eventureAttendingEvent from "../images/projects/eventure/eventureAttendingEvent.webp";
+import eventureYourEvents from "../images/projects/eventure/eventureYourEvents.webp";
+import eventureYourEvents2 from "../images/projects/eventure/eventureYourEvents2.webp";
+import eventureLearnMore from "../images/projects/eventure/eventureLearnMore.webp";
 
 const projects = [
   {
     id: "portfolio",
     title: "Portfolio",
-    image: defaultImage,
+    image: portfolioImage,
     tagline:
       "Personal developer portfolio showcasing projects and technical work.",
     stats: [
@@ -15,7 +31,7 @@ const projects = [
       { label: "Completed", value: "Incomplete" },
     ],
     started: "March 3 2026 - Present",
-    intro: 
+    intro:
       "Personal developer portfolio built with React showcasing projects, skills, and technical work through a responsive modern interface.",
     overview:
       "This portfolio was built to showcase development projects and technical experience through a clean, responsive interface. The site highlights software projects, technical skills, and case studies while emphasizing usability and performance.",
@@ -58,7 +74,7 @@ const projects = [
   {
     id: "canhunt",
     title: "CANhunt",
-    image: defaultImage,
+    image: canhuntImage,
     tagline: "Cross-platform hunting navigation and regulation assistant.",
     stats: [
       { label: "Type", value: "navigation" },
@@ -121,13 +137,13 @@ const projects = [
   {
     id: "cansimplan",
     title: "CAN-Simplan",
-    image: defaultImage,
+    image: cansimplanImage,
     tagline: "AI-assisted urban planning simulation platform.",
     stats: [
       { label: "Type", value: "AI Proposal Analysis Platform" },
       { label: "Platforms", css: "web", value: "web" },
       { label: "Framework", css: "react", value: "react" },
-      { label: "Responsive", css: "md",value: "mobile & desktop" },
+      { label: "Responsive", css: "md", value: "mobile & desktop" },
       { label: "Status", css: "complete", value: "complete" },
     ],
     started: "Feb 26 2026 - March 1 2026",
@@ -226,8 +242,9 @@ const projects = [
   {
     id: "eventure",
     title: "Eventure",
-    image: defaultImage,
-    tagline: "Event discovery and management platform.",
+    image: eventureImage,
+    video: eventureVideo,
+    tagline: "Event discovery and management platform",
     stats: [
       { label: "Type", value: "Event Management" },
       { label: "Platforms", value: "web" },
@@ -247,30 +264,81 @@ const projects = [
       "Responsive UI",
     ],
     skills: ["React", "JavaScript", "REST APIs", "SCSS", "Git"],
+
     screenshots: [
       {
-        images: [defaultImage],
-        title: "Event Listing",
+        images: [eventureList],
+        title: "Event Discovery Homepage",
         description:
-          "Users can browse upcoming events through an event listing interface.",
+          "The homepage gives users a clear overview of available events in a scrollable event listing layout. From here, users can quickly browse upcoming opportunities and click “Register Now” to begin the sign-up flow.",
       },
       {
-        images: [defaultImage],
-        title: "Event Details",
+        images: [eventureLearnMore],
+        title: "Event Attendee Details",
         description:
-          "Event pages display event information and registration options.",
+          "From the homepage, users can access detailed attendee information by selecting the 'Learn More' option on an event. This view displays a list of registered participants, including names and contact details, providing organizers with quick insight into event attendance.",
+      },
+      {
+        images: [eventureStep1, eventureStep1Validation],
+        title: "Step 1: Personal Details",
+        description:
+          "The first registration step collects attendee information such as name, email, role, and phone number. Validation states are built directly into the form to guide users with clear feedback when required fields are missing or values are entered in an invalid format.",
+      },
+      {
+        images: [eventureStep2],
+        title: "Step 2: Event Selection and Attendance Details",
+        description:
+          "In the second step, users can provide their reason for attending and select additional events using a checkbox-based interface. This makes it easy to reserve spots for multiple related events during a single registration flow.",
+      },
+      {
+        images: [eventureStep3Confirm, eventureStep3Success],
+        title: "Step 3: Confirmation and Submission",
+        description:
+          "The final step presents a confirmation screen where users can review their personal information, attendance details, and selected events before submitting. After submission, a success page confirms that responses were saved and gives users easy access to next actions such as returning to events or reviewing policies.",
+      },
+      {
+        images: [
+          eventureAttendingEvent,
+          eventureYourEvents,
+          eventureYourEvents2,
+        ],
+        title: "Managing Registered Events",
+        description:
+          "Beyond registration, Eventure also provides a self-service flow for attendees to look up and manage their event registrations. Users can navigate to a dedicated area from the homepage, search by email, and view a list of all events they are currently registered to attend.",
       },
     ],
 
     resources: [
       {
         name: "React Documentation",
-        description: "Framework used for the frontend.",
+        description: "Frontend framework used to build the user interface.",
         link: "https://react.dev",
+      },
+      {
+        name: "REST API Concepts",
+        description:
+          "Used to structure communication between frontend and backend services.",
+        link: "https://restfulapi.net/",
+      },
+      {
+        name: "MySQL Documentation",
+        description: "Database used to store and manage event and user data.",
+        link: "https://dev.mysql.com/doc/",
+      },
+      {
+        name: "Express.js Guide",
+        description: "Backend framework used to build API endpoints.",
+        link: "https://expressjs.com/",
+      },
+      {
+        name: "Responsive Web Design",
+        description:
+          "Principles used to ensure the application works across mobile and desktop.",
+        link: "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design",
       },
     ],
     demoLink: "#",
-    codeLink: "#",
+    codeLink: "https://github.com/hellsten/Eventure-Sprint-Server",
   },
   {
     id: "trailbucket",

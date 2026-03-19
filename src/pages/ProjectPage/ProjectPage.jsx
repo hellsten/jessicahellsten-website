@@ -34,8 +34,7 @@ function ProjectPage() {
   return (
     <main>
       <section className="projectPage">
-        <div className="projectPage__container" id="sectionNav">
-          <section className="navigation" >
+        <section className="navigation" >
             <nav className="navigation__container">
               <div className="navigation__icon">
                 <NavLink to="/">Jessica Hellsten</NavLink>
@@ -46,6 +45,7 @@ function ProjectPage() {
               </div>
             </nav>
           </section>
+        <div className="projectPage__container" id="sectionNav">
           <section className="projectPage__hero" id="sectionOverview">
             <div className="projectPage__hero__container">
               <div className="projectPage__hero__container-header">
@@ -65,12 +65,20 @@ function ProjectPage() {
               </div>
             ))}
                </div> */}
+              <div className="projectPage__hero__container-image">
+                <video
+                  controls
+                  poster={projectItem.image}
+                >
+                  <source src={projectItem.video} type="video/mp4" />
+                </video>
+              </div>
               <div className="projectPage__hero__container-intro">
                 {projectItem.intro}
               </div>
               <div className="projectPage__hero__container-links">
-                <a className="projectPage__hero__container-demoLink">Demo</a>
-                <a className="projectPage__hero__container-codeLink">Code</a>
+                <a className="projectPage__hero__container-demoLink" href={projectItem.demoLink}>Demo</a>
+                <a className="projectPage__hero__container-codeLink" href={projectItem.codeLink}>Code</a>
               </div>
             </div>
           </section>
@@ -141,7 +149,7 @@ function ProjectPage() {
                     <div className="projectPage__resource-link-title">
                       Link:
                     </div>
-                    <a>{resource.link}</a>
+                    <a href={`${resource.link}`}>{resource.link}</a>
                   </div>
                 </div>
               ))}
