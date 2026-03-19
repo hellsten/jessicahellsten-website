@@ -2,36 +2,25 @@ import { useEffect, useState } from "react";
 
 function VisitorCounter({ page = "home" }) {
   const [count, setCount] = useState(null);
-  const [error, setError] = useState("");
 
   useEffect(() => {
-    const trackVisit = async () => {
-      try {
-        const res = await fetch(`/api/counter?page=${page}`, {
-          method: "POST",
-        });
+    const key = `visitor-count:${page}`;
+    const seenKey = `visitor-seen:${page}`;
 
-        if (!res.ok) {
-          const text = await res.text();
-          throw new Error(`HTTP ${res.status}: ${text}`);
-        }
+    const current = Number(localStorage.getItem(key) || "0");
+    const alreadySeen = localStorage.getItem(seenKey) === "1";
 
-        const data = await res.json();
-        setCount(data.count);
-      } catch (err) {
-        console.error("Counter error:", err);
-        setError("Counter unavailable");
-      }
-    };
-
-    trackVisit();
+    if (!alreadySeen) {
+      const next = current + 1;
+      localStorage.setItem(key, String(next));
+      localStorage.setItem(seenKey, "1");
+      setCount(next);
+    } else {
+      setCount(current);
+    }
   }, [page]);
 
-  if (error) {
-    return <p>{error}</p>;
-  }
-
-  return <p>{count !== null ? `Visitors: ${count} ` : "Loading..."}</p>;
+  return <p>{count !== null ? `Visitors: ${count}` : "Loading..."}</p>;
 }
 
 export default VisitorCounter;

@@ -3,25 +3,16 @@ import crypto from "node:crypto";
 
 const redis = Redis.fromEnv();
 
-const json = (data, status = 200) =>
-  new Response(JSON.stringify(data), {
-    status,
-    headers: {
-      "Content-Type": "application/json",
-      "Cache-Control": "no-store",
-    },
-  });
-
 const hash = (value) =>
   crypto.createHash("sha256").update(value).digest("hex");
 
-const getClientIp = (request) => {
-  const forwardedFor = request.headers.get("x-forwarded-for");
+const getClientIp = (req) => {
+  const forwardedFor = req.headers["x-forwarded-for"];
   if (forwardedFor) {
     return forwardedFor.split(",")[0].trim();
   }
 
-  const realIp = request.headers.get("x-real-ip");
+  const realIp = req.headers["x-real-ip"];
   if (realIp) {
     return realIp.trim();
   }
@@ -29,43 +20,47 @@ const getClientIp = (request) => {
   return "unknown";
 };
 
-export async function GET(request) {
-  const url = new URL(request.url);
-  const page = url.searchParams.get("page") || "home";
+export default async function handler(req, res) {
+  try {
+    const page = req.query.page || "home";
 
-  const count = Number((await redis.get(`count:${page}`)) || 0);
+    res.setHeader("Content-Type", "application/json");
+    res.setHeader("Cache-Control", "no-store");
 
-  return json({ count, page });
-}
+    if (req.method === "GET") {
+      const count = Number((await redis.get(`count:${page}`)) || 0);
+      return res.status(200).json({ count, page });
+    }
 
-export async function POST(request) {
-  const url = new URL(request.url);
-  const page = url.searchParams.get("page") || "home";
+    if (req.method === "POST") {
+      const ip = getClientIp(req);
+      const visitorKey = hash(`${ip}:${page}`);
 
-  const ip = getClientIp(request);
-  const visitorKey = hash(`${ip}:${page}`);
+      const exists = await redis.get(`visitor:${visitorKey}`);
 
-  const exists = await redis.get(`visitor:${visitorKey}`);
+      if (!exists) {
+        const next = await redis.incr(`count:${page}`);
+        await redis.set(`visitor:${visitorKey}`, "1");
 
-  if (!exists) {
-    const current = Number((await redis.get(`count:${page}`)) || 0);
-    const next = current + 1;
+        return res.status(200).json({
+          count: Number(next),
+          counted: true,
+          page,
+        });
+      }
 
-    await redis.set(`visitor:${visitorKey}`, "1");
-    await redis.set(`count:${page}`, next);
+      const count = Number((await redis.get(`count:${page}`)) || 0);
 
-    return json({
-      count: next,
-      counted: true,
-      page,
-    });
+      return res.status(200).json({
+        count,
+        counted: false,
+        page,
+      });
+    }
+
+    return res.status(405).json({ error: "Method not allowed" });
+  } catch (error) {
+    console.error("Counter API error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-
-  const count = Number((await redis.get(`count:${page}`)) || 0);
-
-  return json({
-    count,
-    counted: false,
-    page,
-  });
 }
