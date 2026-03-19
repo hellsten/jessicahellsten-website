@@ -1,7 +1,16 @@
 import defaultImage from "../images/default.jpg";
 import portfolioImage from "../images/projects/portfolio/portfolioImage.png";
-import cansimplanImage from "../images/projects/cansimplan/cansimplanImage.png";
+
 import canhuntImage from "../images/projects/canhunt/canhuntImage.jpg";
+import canhuntLayers from "../images/projects/canhunt/canhuntLayers.png";
+import canhuntSearchBar from "../images/projects/canhunt/canhuntSearchBar.png";
+import canhuntConditions from "../images/projects/canhunt/canhuntConditions.jpg";
+
+import cansimplanImage from "../images/projects/cansimplan/cansimplanImage.png";
+import cansimplanDashboard from "../images/projects/cansimplan/cansimplanDashboard.png";
+import cansimplanProposal from "../images/projects/cansimplan/cansimplanProposal.png";
+import cansimplanTable from "../images/projects/cansimplan/cansimplanTable.png";
+import cansimplanLogin from "../images/projects/cansimplan/cansimplanLogin.png";
 
 import instockImage from "../images/projects/instock/warehouses.webp";
 import instockAddInventory from "../images/projects/instock/addInventory.webp";
@@ -86,92 +95,146 @@ const projects = [
   },
   {
     id: "canhunt",
-    title: "CANhunt",
+    title: "CAN-Hunt",
     image: canhuntImage,
-    tagline: "Cross-platform hunting navigation and regulation assistant.",
+
+    tagline:
+      "AI-generated geospatial application for exploring hunting zones, regulations, and environmental conditions.",
+
     stats: [
-      { label: "Type", value: "navigation" },
-      { label: "Platforms", value: "web, iOS, android" },
-      { label: "Framework", value: "react & React Native" },
-      { label: "Responsive", value: "mobile & desktop" },
-      { label: "Status", value: "incomplete" },
+      { label: "Type", value: "Geospatial Mapping Application" },
+      { label: "Platforms", css: "web", value: "web" },
+      { label: "Framework", css: "react", value: "react" },
+      { label: "Responsive", css: "md", value: "mobile & desktop" },
+      { label: "Status", css: "complete", value: "Completed (Experimental)" },
     ],
-    started: "January 2026 - Present",
+
+    started: "March 2026",
+
     intro:
-      "Cross-platform hunting app for web, Android, and iOS, providing map layer boundaries, regional hunting regulations, and the ability to save favorite spots.",
+      "CAN-Hunt is an AI-generated geospatial web application designed to help users explore hunting zones, boundaries, and environmental conditions across Canada. The project was developed entirely using Claude AI, demonstrating rapid prototyping and full application generation through AI-assisted development.",
+
     overview:
-      "CANhunt simplifies how hunters access geographic boundaries and hunting regulations by combining mapping tools and planning features into a single application.",
+      "The platform integrates geographic boundary data sourced from government APIs with an interactive map interface, allowing users to visualize hunting areas, apply filters, and assess environmental conditions in real time.",
+
+    problem:
+      "Accessing accurate hunting zone boundaries and environmental data often requires navigating multiple fragmented government resources, making it difficult for users to quickly gather the information they need.",
+
+    solution:
+      "CAN-Hunt consolidates boundary data and environmental insights into a single, interactive interface. By leveraging AI-generated code and real-world data sources, the platform simplifies exploration and improves accessibility for users.",
+
     features: [
-      "Interactive hunting boundary maps",
-      "Regional hunting regulation references",
-      "Saved hunting locations",
-      "Cross-platform support",
+      "Interactive map with hunting zone boundaries",
+      "Government API integration for geospatial data",
+      "Dynamic layer toggling for map visualization",
+      "Search functionality for quick navigation",
+      "Environmental condition overlays",
     ],
-    skills: ["TypeScript", "ReactJS", "Git"],
+
+    skills: ["ReactJS", "JavaScript", "Sass", "Git"],
+
     allSkills: [
-      "TypeScript",
       "ReactJS",
-      "Git",
-      "Claude AI",
-      "React Native",
-      "Mapbox / Leaflet",
+      "JavaScript",
+      "Sass",
       "REST APIs",
-      "Data Visualization",
-      "Responsive Design",
+      "Geospatial Data Handling",
+      "AI-Assisted Development (Claude AI)",
     ],
+
     screenshots: [
       {
-        images: [defaultImage],
-        title: "Interactive Map",
+        images: [canhuntLayers],
+        title: "Map Layers & Boundary Visualization",
         description:
-          "Hunters can view hunting zones, terrain layers, and geographic overlays in a single map interface.",
+          "Users can toggle between multiple map layers to visualize hunting zones and geographic boundaries. All boundary data is sourced from government APIs, ensuring accuracy and real-world applicability.",
       },
       {
-        images: [defaultImage],
-        title: "Regulation Lookup",
+        images: [canhuntSearchBar],
+        title: "Search & Navigation",
         description:
-          "Users can quickly search hunting regulations without navigating government PDFs.",
+          "A responsive search interface allows users to quickly locate specific regions and hunting zones, improving accessibility and reducing the need to manually browse large datasets.",
+      },
+      {
+        images: [canhuntConditions],
+        title: "Environmental Conditions Overlay",
+        description:
+          "Environmental data overlays provide additional context such as conditions and terrain, helping users make more informed decisions when exploring hunting areas.",
       },
     ],
+
+    contributions: [
+      "Built a fully functional application using Claude AI for end-to-end development",
+      "Integrated government APIs to retrieve and display geospatial boundary data",
+      "Structured map-based UI for intuitive exploration and interaction",
+      "Implemented dynamic layers and search functionality",
+      "Developed a responsive interface for cross-device usability",
+    ],
+
+    highlights: [
+      "Entire application generated through AI-assisted development (Claude AI)",
+      "Real-world data integration from government sources",
+      "Focus on geospatial visualization and usability",
+      "Rapid prototyping of a complex mapping interface",
+    ],
+
     resources: [
       {
-        name: "Mapbox",
-        description: "Mapping platform used for geographic visualization.",
-        link: "https://www.mapbox.com/",
+        name: "Live Application",
+        description: "Explore the CAN-Hunt platform.",
+        link: "https://canhunt.app/",
       },
       {
-        name: "Leaflet",
-        description: "Lightweight open-source mapping library.",
-        link: "https://leafletjs.com/",
+        name: "Claude AI (Anthropic)",
+        description:
+          "AI assistant and development platform used for building applications, generating code, and solving complex problems through natural language.",
+        link: "https://claude.com/",
       },
     ],
-    demoLink: "https://canhunt.app",
+
+    demoLink: "https://canhunt.app/",
     codeLink: "#",
   },
   {
     id: "cansimplan",
     title: "CAN-Simplan",
     image: cansimplanImage,
-    tagline: "AI-assisted urban planning simulation platform.",
+
+    tagline:
+      "AI-driven platform for evaluating urban development proposals through simulation, analytics, and transparent decision workflows.",
+
     stats: [
       { label: "Type", value: "AI Proposal Analysis Platform" },
       { label: "Platforms", css: "web", value: "web" },
       { label: "Framework", css: "react", value: "react" },
       { label: "Responsive", css: "md", value: "mobile & desktop" },
-      { label: "Status", css: "complete", value: "complete" },
+      { label: "Status", css: "complete", value: "Completed (MVP)" },
     ],
+
     started: "Feb 26 2026 - March 1 2026",
+
     intro:
-      "AI-assisted urban planning platform that helps municipal planners evaluate development proposals using simulation and data analysis. The system models impacts on infrastructure, urban form, and financial feasibility while maintaining transparency through review flags, versioned simulations, and an auditable decision trail.",
+      "CAN-Simplan is an AI-assisted urban planning platform designed to help municipal planners evaluate development proposals through simulation and structured analysis. The system models impacts on infrastructure, land use, and financial feasibility while ensuring transparency through review flags, version-controlled simulations, and a clear decision audit trail.",
+
     overview:
-      "CAN-Simplan models how development proposals affect infrastructure, urban design, and financial feasibility while maintaining transparent planning decisions.",
+      "Urban planning decisions are complex, involving infrastructure constraints, financial feasibility, and long-term city impact. CAN-Simplan simplifies this process by providing planners with a simulation-driven workflow that highlights risks, surfaces key insights, and ensures every decision is backed by transparent data.",
+
+    problem:
+      "Municipal planners often rely on fragmented tools and manual processes to evaluate development proposals, making it difficult to assess long-term impacts, track decisions, and maintain transparency.",
+
+    solution:
+      "CAN-Simplan introduces a unified platform that combines simulation, analytics, and structured workflows. It allows planners to evaluate proposals in one place, flag issues, and maintain a clear audit trail for every decision made.",
+
     features: [
-      "Development simulation modeling",
-      "Planner review flags",
-      "Decision audit trail",
-      "Urban impact visualization",
+      "AI-assisted development simulation modeling",
+      "Interactive planner review and flagging system",
+      "Transparent decision audit trail",
+      "Urban and infrastructure impact visualization",
+      "Proposal status tracking and workflow management",
     ],
+
     skills: ["ReactJS", "JavaScript", "Sass", "Git"],
+
     allSkills: [
       "ReactJS",
       "JavaScript",
@@ -179,27 +242,58 @@ const projects = [
       "Git",
       "Express.js",
       "REST APIs",
+      "UI/UX Design",
+      "Component Architecture",
     ],
+
     screenshots: [
       {
-        images: [defaultImage],
-        title: "Simulation Dashboard",
+        images: [cansimplanDashboard, cansimplanTable],
+        title: "Analytics Dashboard & Proposal Workflow",
         description:
-          "Planners can run simulations to evaluate development impacts.",
+          "A unified dashboard that combines high-level analytics with a structured proposal management table. Planners can filter, review, and track proposal statuses while quickly identifying flagged issues and simulation results.",
       },
       {
-        images: [defaultImage],
-        title: "Planner Review Flags",
+        images: [cansimplanProposal],
+        title: "Detailed Proposal Analysis",
         description:
-          "Flags identify issues requiring planner review before approval.",
+          "A deep-dive view into individual proposals, presenting simulation outputs, planning metrics, and flagged concerns. Designed to support confident, data-driven decision-making with clear and structured information.",
       },
+      {
+        images: [cansimplanLogin],
+        title: "Secure Authentication System",
+        description:
+          "A streamlined login experience with authentication handling to protect sensitive planning data while maintaining a smooth and intuitive user interface.",
+      },
+    ],
+
+    contributions: [
+      "Designed and developed a full React-based frontend architecture",
+      "Built reusable components for dashboards, tables, and proposal views",
+      "Implemented structured data flows for simulation and proposal analysis",
+      "Developed responsive layouts for both desktop and mobile experiences",
+      "Integrated REST APIs to handle proposal data and workflows",
+    ],
+
+    highlights: [
+      "Simulated real-world urban planning workflows",
+      "Focused on transparency with audit trails and review flags",
+      "Designed for scalability with modular component architecture",
+      "Bridged technical implementation with real-world planning concepts",
     ],
 
     resources: [
       {
         name: "Urban Planning Simulation Research",
-        description: "Conceptual basis for modeling planning impacts.",
+        description:
+          "Reference material supporting the modeling of infrastructure and development impact analysis.",
         link: "https://www.planning.org/",
+      },
+      {
+        name: "CAN-Simplan Case Study (UX Design)",
+        description:
+          "Detailed UX design case study outlining the research, user flows, and design decisions behind the CAN-Simplan platform.",
+        link: "https://www.jenniferyaya.ca/can-simplan.html",
       },
     ],
 
@@ -229,13 +323,7 @@ const projects = [
       "Product detail pages",
       "REST API integration",
     ],
-    skills: [
-      "ReactJS",
-      "JavaScript",
-      "Sass",
-      "MySQL",
-      "Git",
-    ],
+    skills: ["ReactJS", "JavaScript", "Sass", "MySQL", "Git"],
     allSkills: [
       "ReactJS",
       "JavaScript",
@@ -252,7 +340,7 @@ const projects = [
       "Postman",
       "Nodemon",
       "dotenv",
-],
+    ],
     screenshots: [
       {
         images: [instockWarehouses, instockWarehouseDetails],

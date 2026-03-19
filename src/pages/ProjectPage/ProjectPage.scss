@@ -192,7 +192,6 @@
       &-links {
         display: flex;
         flex-direction: row;
-
         gap: 2rem;
         @include tablet {
           justify-content: space-between;
@@ -204,7 +203,7 @@
           display: none;
         }
         a {
-          width: 6rem;
+          width: 7rem;
           text-align: center;
           cursor: pointer;
           font-size: 1.5rem;
@@ -492,6 +491,7 @@
     &-link {
       display: flex;
       gap: 1rem;
+     
       &-title {
         font-size: 1rem;
         font-weight: 700;

@@ -36,14 +36,15 @@
   &__icon {
     margin: 1.5rem;
     border-radius: 2rem;
-    border: 2px solid $green-color-tertiary;
+    border: 1px solid $green-color-tertiary;
     font-size: 2rem;
     padding: 0.5rem 1rem;
     font-weight: 600;
     color: $color-white;
     cursor: pointer;
     &:hover {
-      border: 2px solid $color-white;
+      border: 1px solid $green-color-secondary;
+      background-color: $green-color-secondary;
     }
     @include small-desktop {
       padding: 0.5rem;
@@ -81,7 +82,7 @@
       font-size: 1rem;
       font-weight: 700;
       color: $color-white;
-      border: 2px solid transparent;
+      border: 1px solid transparent;
       cursor: pointer;
       @include small-desktop {
         padding: 0.5rem;
@@ -94,7 +95,8 @@
         font-size: 0.75rem;
       }
       &:hover {
-        border: 2px solid $color-white;
+        border: 1px solid $green-color-secondary;
+        background-color: $green-color-secondary;
       }
     }
   }

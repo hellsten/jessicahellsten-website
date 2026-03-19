@@ -108,9 +108,9 @@
     }
     transition:
         transform 0.5s ease;
-    &:hover{
-        transform: scale(1.01);
-    }
+    // &:hover{
+    //     transform: scale(1.01);
+    // }
     &-details{
         display: flex;
         flex-direction: column;
