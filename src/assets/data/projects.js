@@ -151,7 +151,7 @@ const projects = [
         link: "https://vite.dev/",
       },
     ],
-    demoLink: "https://jessicahellsten.com",
+    demoLink: "https://jessica-hellsten.netlify.app/",
     codeLink: "https://github.com/hellsten/jessicahellsten-website.git",
   },
   {
