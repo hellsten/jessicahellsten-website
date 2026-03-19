@@ -5,16 +5,23 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  width: 90vw;
+  width: 70%;
+  padding: 7rem 5rem;
   border-radius: 2rem;
+  @include small-desktop{
+    margin: 0 auto;
+    padding: 5rem 4rem;
+    width: 70%;
+  }
   @include tablet {
     margin: 0 auto;
-    width: 100vw;
+    padding: 6rem 3rem;
+    width: 90%;
   }
   @include mobile {
-    padding: 1rem 0rem;
-    margin: 2rem 0;
-    width: auto;
+    padding: 3rem 0;
+    margin: auto;
+    width: 95%;
   }
   &__container {
     display: flex;
@@ -22,17 +29,8 @@
     justify-content: center;
     border-radius: 2rem;
     // box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-    padding: 4rem 0;
-    width: 96%;
-    @include small-desktop {
-      width: 93%;
-    }
-    @include tablet {
-      width: 70%;
-    }
-    @include mobile{
-        width: 90vw;
-    }
+    padding: 0;
+    width: 100%;
   }
   &__header {
     display: flex;
@@ -42,14 +40,18 @@
     font-size: 4rem;
     font-weight: 700;
     color: $green-color-primary;
-    padding-bottom: 4rem;
+    padding: 0 0 3rem;
+    @include small-desktop{
+      font-size: 3.5rem;
+      padding: 0 0 2rem;
+    }
     @include tablet {
-      font-size: 3rem;
-      padding: 1rem 0 3rem;
+      font-size: 4em;
+      padding: 0 0 3rem;
     }
     @include mobile {
-      font-size: 2rem;
-      padding: 0.5rem 0 2rem;
+      font-size: 3rem;
+      padding: 0 0 1rem;
     }
   }
   &__card {
@@ -58,6 +60,9 @@
     gap: 2rem;
     @include tablet {
       flex-direction: column;
+    }
+    @include mobile{
+      gap: 1rem;
     }
     &-other {
       display: flex;
@@ -90,6 +95,7 @@
       &:hover {
         background-color: $green-color-secondary;
         transform: scale(1.02);
+        cursor: pointer;
       }
       &-text {
         color: $color-white;
@@ -161,7 +167,8 @@
         &:hover {
           color: $color-white;
           background-color: $green-color-secondary;
-          transform: scale(1.1);
+          transform: scale(1.07);
+          cursor: pointer;
         }
       }
     }

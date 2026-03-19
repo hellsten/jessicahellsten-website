@@ -7,17 +7,17 @@
   justify-content: center;
   flex-direction: row;
   &__container {
-    padding: 10rem 5rem 0;
+    padding: 10rem 5rem 10rem;
     @include small-desktop {
-      padding: 8rem 4rem 0;
+      padding: 8rem 4rem 8rem;
     }
     @include tablet {
       flex-direction: column;
-      padding: 6rem 3rem 0;
+      padding: 6rem 3rem 6rem;
       width: 90%;
     }
     @include mobile {
-      padding: 3rem 0 0;
+      padding: 3rem 0 3rem;
       width: 95%;
     }
   }
