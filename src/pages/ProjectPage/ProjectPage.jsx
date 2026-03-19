@@ -107,7 +107,7 @@ function ProjectPage() {
             </section>
             <section className="projectPage__skills">
               <div className="projectPage__skills-container">
-                <Skills />
+                <Skills skills={projectItem.skills} />
               </div>
             </section>
           </div>

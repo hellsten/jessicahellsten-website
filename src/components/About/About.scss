@@ -12,11 +12,11 @@
     padding: 3.5rem 0 0;
     width: 70%;
   }
-  @include tablet{
+  @include tablet {
     padding: 3rem 0 0;
     width: 90%;
   }
-  @include mobile{
+  @include mobile {
     padding: 0.5rem 0rem 0;
     width: 95%;
   }
@@ -31,7 +31,7 @@
     @include tablet {
       padding: 3rem 1rem;
     }
-    @include mobile{
+    @include mobile {
       padding: 2rem 1rem;
     }
   }
@@ -44,7 +44,7 @@
     font-weight: 700;
     color: $green-color-primary;
     padding: 0 0 3rem;
-    @include small-desktop{
+    @include small-desktop {
       font-size: 3.5rem;
       padding: 0 0 2rem;
     }
@@ -69,7 +69,7 @@
       align-items: center;
       gap: 2rem;
     }
-    @include mobile{
+    @include mobile {
     }
   }
   &__card-left {
@@ -78,7 +78,7 @@
     flex-direction: column;
     width: 70%;
     gap: 1rem;
-    @include small-desktop{
+    @include small-desktop {
       width: 85%;
       gap: 0.5rem;
     }
@@ -123,7 +123,7 @@
         padding: 0.25rem 0.75rem;
         line-height: 1.5rem;
         border-radius: 2rem;
-        @include small-desktop{
+        @include small-desktop {
           font-size: 0.8rem;
           padding: 0.1rem 0.5rem;
         }
@@ -131,32 +131,34 @@
           font-size: 1rem;
           padding: 0.5rem 0.75rem;
         }
-        @include mobile{
+        @include mobile {
           font-size: 1rem;
           padding: 0.25rem 0.5rem;
         }
-        &.about__vancouver{
+        &.about__vancouver {
           font-size: 1.25rem;
           padding: 0.5rem 1rem;
-          @include small-desktop{
+          @include small-desktop {
             font-size: 0.8rem;
             padding: 0.1rem 0.5rem;
           }
-          @include tablet{
+          @include tablet {
             font-size: 1rem;
             padding: 0.5rem 0.75rem;
           }
-          @include mobile{
-          font-size: 1rem;
-          padding: 0.25rem 0.5rem;
-        }
+          @include mobile {
+            font-size: 1rem;
+            padding: 0.25rem 0.5rem;
+          }
         }
       }
     }
   }
   &__card-right {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 2rem;
     @include mobile {
       justify-content: center;
     }
@@ -167,7 +169,7 @@
       object-fit: cover;
       border-radius: 20rem;
       transition: transform 0.5s ease;
-      @include small-desktop{
+      @include small-desktop {
       }
       @include mobile {
         width: 80%;
@@ -176,5 +178,55 @@
         transform: scale(1.05);
       }
     }
+  }
+  &__socials {
+    display: flex;
+    gap: 1rem;
+    
+    @include mobile {
+      justify-content: center;
+    }
+    svg {
+      height: 2rem;
+      width: 2rem;
+      padding: 0.5rem;
+      background: $green-color-primary;
+      fill: $color-white;
+      border-radius: 1rem;
+      &:hover {
+        fill: $color-white;
+        background: $green-color-secondary-light;
+        cursor: pointer;
+      }
+    }
+  }
+  &__contact {
+    display: flex;
+    align-items: center;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2rem;
+      font-size: 1rem;
+      border-radius: 1rem;
+      padding: 0.5rem;
+      font-weight: 600;
+      text-align: center;
+      color: $color-white;
+      background: $green-color-primary;
+      letter-spacing: 1px;
+      &:hover {
+        background: $green-color-secondary-light;
+        cursor: pointer;
+      }
+    }
+  }
+  &__believe{
+    color: $green-color-primary;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 2rem;
   }
 }
