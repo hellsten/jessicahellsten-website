@@ -3,6 +3,18 @@ import portfolioImage from "../images/projects/portfolio/portfolioImage.png";
 import cansimplanImage from "../images/projects/cansimplan/cansimplanImage.png";
 import canhuntImage from "../images/projects/canhunt/canhuntImage.jpg";
 
+import instockImage from "../images/projects/instock/warehouses.webp";
+import instockAddInventory from "../images/projects/instock/addInventory.webp";
+import instockAddWarehouse from "../images/projects/instock/addWarehouse.webp";
+import instockDeleteInventory from "../images/projects/instock/deleteInventory.webp";
+import instockDeleteWarehouse from "../images/projects/instock/deleteWarehouse.webp";
+import instockEditInventory from "../images/projects/instock/editInventory.webp";
+import instockEditWarehouse from "../images/projects/instock/editWarehouse.webp";
+import instockInventoryDetails from "../images/projects/instock/inventoryDetails.webp";
+import instockWarehouseDetails from "../images/projects/instock/warehouseDetails.webp";
+import instockWarehouses from "../images/projects/instock/warehouses.webp";
+import instockInventory from "../images/projects/instock/inventory.webp";
+
 import eventureImage from "../images/projects/eventure/eventureImage.webp";
 import eventureVideo from "../images/projects/eventure/eventureVideo.mp4";
 import eventureList from "../images/projects/eventure/eventureList.webp";
@@ -42,13 +54,7 @@ const projects = [
       "SCSS-based styling system",
     ],
     skills: ["ReactJS", "JavaScript", "Sass", "Git"],
-    allSkills: [
-      "ReactJS",
-      "JavaScript",
-      "Sass",
-      "Git",
-      "Responsive Design",
-    ],
+    allSkills: ["ReactJS", "JavaScript", "Sass", "Git", "Responsive Design"],
     screenshots: [
       {
         images: [defaultImage, defaultImage],
@@ -203,7 +209,7 @@ const projects = [
   {
     id: "instock",
     title: "Instock",
-    image: defaultImage,
+    image: instockImage,
     tagline: "Warehouse inventory management system.",
     stats: [
       { label: "Type", value: "inventory management system" },
@@ -223,37 +229,135 @@ const projects = [
       "Product detail pages",
       "REST API integration",
     ],
-    skills: ["ReactJS", "JavaScript", "Git"],
+    skills: [
+      "ReactJS",
+      "JavaScript",
+      "Sass",
+      "MySQL",
+      "Git",
+    ],
     allSkills: [
       "ReactJS",
       "JavaScript",
-      "Git",
+      "SCSS",
+      "Express.js",
+      "Node.js",
+      "MySQL",
       "REST APIs",
+      "Axios",
+      "CRUD Operations",
       "Responsive Design",
-    ],
+      "Git",
+      "GitHub",
+      "Postman",
+      "Nodemon",
+      "dotenv",
+],
     screenshots: [
       {
-        images: [defaultImage],
-        title: "Warehouse Dashboard",
-        description: "Displays warehouse locations and inventory summaries.",
+        images: [instockWarehouses, instockWarehouseDetails],
+        title: "Warehouse Management Flow",
+        description:
+          "Users can browse all warehouses and open detailed warehouse pages to view contact information and associated inventory.",
       },
       {
-        images: [defaultImage],
-        title: "Inventory Details",
+        images: [
+          instockAddWarehouse,
+          instockEditWarehouse,
+          instockDeleteWarehouse,
+        ],
+        title: "Warehouse CRUD Actions",
         description:
-          "Users can view product quantities and update stock information.",
+          "Instock supports full warehouse management, allowing users to add new warehouses, edit existing details, and safely delete records through confirmation flows.",
+      },
+      {
+        images: [instockInventory, instockInventoryDetails],
+        title: "Inventory Management Flow",
+        description:
+          "Users can browse inventory listings and open detailed item pages to review stock levels, status, and warehouse assignment.",
+      },
+      {
+        images: [
+          instockAddInventory,
+          instockEditInventory,
+          instockDeleteInventory,
+        ],
+        title: "Inventory CRUD Actions",
+        description:
+          "The application includes full inventory management with forms for creating items, editing stock details, and deleting entries through protected confirmation steps.",
       },
     ],
 
     resources: [
       {
+        name: "React Documentation",
+        description:
+          "Used to build the frontend UI with reusable components and state management.",
+        link: "https://react.dev",
+      },
+      {
+        name: "JavaScript (MDN)",
+        description:
+          "Core language used for building application logic and handling data interactions.",
+        link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      },
+      {
+        name: "Sass (SCSS)",
+        description:
+          "Used for modular and maintainable styling across the application.",
+        link: "https://sass-lang.com/documentation/",
+      },
+      {
         name: "REST API Design Guide",
-        description: "Reference used for API architecture.",
+        description:
+          "Reference for structuring API endpoints and handling CRUD operations between frontend and backend.",
         link: "https://restfulapi.net/",
+      },
+      {
+        name: "Axios",
+        description:
+          "HTTP client used to communicate with backend APIs and handle asynchronous requests.",
+        link: "https://axios-http.com/",
+      },
+      {
+        name: "Express.js",
+        description:
+          "Backend framework used to build API routes and manage server-side logic.",
+        link: "https://expressjs.com/",
+      },
+      {
+        name: "MySQL Documentation",
+        description:
+          "Relational database used to store warehouse and inventory data.",
+        link: "https://dev.mysql.com/doc/",
+      },
+      {
+        name: "MySQL Workbench",
+        description:
+          "Tool used for database design, querying, and data management during development.",
+        link: "https://www.mysql.com/products/workbench/",
+      },
+      {
+        name: "Node.js",
+        description:
+          "Runtime environment used to run the backend server and API logic.",
+        link: "https://nodejs.org/",
+      },
+      {
+        name: "Git & GitHub",
+        description:
+          "Used for version control, collaboration, and managing project history.",
+        link: "https://github.com/",
+      },
+      {
+        name: "dotenv",
+        description:
+          "Used to manage environment variables securely for database credentials and configuration.",
+        link: "https://www.npmjs.com/package/dotenv",
       },
     ],
     demoLink: "#",
-    codeLink: "#",
+    codeLink: "https://github.com/hellsten/Instock-Server",
   },
   {
     id: "eventure",
@@ -280,13 +384,7 @@ const projects = [
       "Responsive UI",
     ],
     skills: ["ReactJS", "JavaScript", "Sass", "Git"],
-    allSkills: [
-      "ReactJS",
-      "JavaScript",
-      "Sass",
-      "Git",
-      "REST APIs",
-    ],
+    allSkills: ["ReactJS", "JavaScript", "Sass", "Git", "REST APIs"],
     screenshots: [
       {
         images: [eventureList],
@@ -397,8 +495,7 @@ const projects = [
       "GPS Tracking",
       "Responsive Design",
     ],
-    screenshots: [
-    ],
+    screenshots: [],
 
     resources: [
       {

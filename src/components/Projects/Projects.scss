@@ -2,22 +2,26 @@
 @use "./../../styles/mixins" as *;
 
 .projects {
-  margin: auto;
+  background: $green-color-tertiary;
+  margin: 5rem auto;
   display: flex;
   justify-content: center;
   flex-direction: row;
   &__container {
-    padding: 10rem 5rem 10rem;
+    padding: 5rem 5rem 10rem;
     @include small-desktop {
-      padding: 8rem 4rem 8rem;
+      margin: 4rem auto;
+      padding: 4rem 4rem 8rem;
     }
     @include tablet {
+      margin: 3rem auto;
       flex-direction: column;
-      padding: 6rem 3rem 6rem;
+      padding: 3rem 3rem 3rem;
       width: 90%;
     }
     @include mobile {
-      padding: 3rem 0 3rem;
+      margin: 1.5rem auto;
+      padding: 1.5rem 0;
       width: 95%;
     }
   }
@@ -30,7 +34,7 @@
     border-radius: 20rem;
     font-size: 4rem;
     font-weight: 700;
-    color: $green-color-primary;
+    color: $color-white;
     @include small-desktop {
       font-size: 3.5rem;
       padding: 0 0 2rem;
@@ -67,6 +71,7 @@
 }
 
 .project__card {
+  background-color: $color-white;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -92,7 +97,7 @@
     font-weight: 700;
     color: $color-white;
     border-bottom: 4px solid $green-color-secondary;
-    background-color: $green-color-tertiary;
+    background-color: $green-color-base;
     padding: 1.5rem;
     @include small-desktop {
       font-size: 1.75rem;
@@ -110,6 +115,7 @@
   &-intro {
     font-size: 1.25rem;
     color: $green-color-accent;
+    background-color: $color-white;
     padding: 1.5rem;
     line-height: 1.5rem;
     @include small-desktop {
@@ -128,6 +134,7 @@
     }
   }
   &-skills {
+    background-color: $color-white;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -154,6 +161,7 @@
     display: flex;
     flex-direction: column;
     margin: auto 1.5rem 1.5rem;
+    
     font-size: 1.25rem;
     @include small-desktop {
       font-size: 1rem;

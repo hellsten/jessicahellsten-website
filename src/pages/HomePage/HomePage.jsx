@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 
 import "./HomePage.scss";
+import Hero from "./../../components/Hero/Hero.jsx";
 import About from "./../../components/About/About.jsx";
 import Skills from "./../../components/Skills/Skills.jsx";
 import Projects from "./../../components/Projects/Projects.jsx";
@@ -19,6 +20,7 @@ function HomePage() {
   return (
     <main>
       <div id="sectionNav"></div>
+      <Hero />
       <About />
       <Projects />
       <Skills skills={allSkillItems} />
