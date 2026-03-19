@@ -9,7 +9,7 @@ import Mail from "./../../assets/icons/mail.svg?react";
 
 function Contact() {
   // from Formspree.io
-  const [state, handleSubmit] = useForm("xlgplnpb");
+  const [state, handleSubmit] = useForm("xvzwllpo");
   if (state.succeeded) {
     return (
         
