@@ -41,7 +41,14 @@ const projects = [
       "Modern React component architecture",
       "SCSS-based styling system",
     ],
-    skills: ["React", "JavaScript", "SCSS", "Responsive Design", "Git"],
+    skills: ["ReactJS", "JavaScript", "Sass", "Git"],
+    allSkills: [
+      "ReactJS",
+      "JavaScript",
+      "Sass",
+      "Git",
+      "Responsive Design",
+    ],
     screenshots: [
       {
         images: [defaultImage, defaultImage],
@@ -94,16 +101,17 @@ const projects = [
       "Saved hunting locations",
       "Cross-platform support",
     ],
-    skills: [
+    skills: ["TypeScript", "ReactJS", "Git"],
+    allSkills: [
       "TypeScript",
-      "React",
+      "ReactJS",
+      "Git",
       "Claude AI",
       "React Native",
       "Mapbox / Leaflet",
       "REST APIs",
       "Data Visualization",
       "Responsive Design",
-      "Git",
     ],
     screenshots: [
       {
@@ -157,7 +165,15 @@ const projects = [
       "Decision audit trail",
       "Urban impact visualization",
     ],
-    skills: ["React", "JavaScript", "Express.js", "REST APIs", "SCSS", "Git"],
+    skills: ["ReactJS", "JavaScript", "Sass", "Git"],
+    allSkills: [
+      "ReactJS",
+      "JavaScript",
+      "Sass",
+      "Git",
+      "Express.js",
+      "REST APIs",
+    ],
     screenshots: [
       {
         images: [defaultImage],
@@ -181,7 +197,7 @@ const projects = [
       },
     ],
 
-    demoLink: "https://www.jenniferyaya.ca/can-simplan.html",
+    demoLink: "#",
     codeLink: "#",
   },
   {
@@ -207,13 +223,13 @@ const projects = [
       "Product detail pages",
       "REST API integration",
     ],
-    skills: [
-      "React",
+    skills: ["ReactJS", "JavaScript", "Git"],
+    allSkills: [
+      "ReactJS",
       "JavaScript",
-      "REST APIs",
-      "React",
-      "Responsive Design",
       "Git",
+      "REST APIs",
+      "Responsive Design",
     ],
     screenshots: [
       {
@@ -263,8 +279,14 @@ const projects = [
       "User event registration",
       "Responsive UI",
     ],
-    skills: ["React", "JavaScript", "REST APIs", "SCSS", "Git"],
-
+    skills: ["ReactJS", "JavaScript", "Sass", "Git"],
+    allSkills: [
+      "ReactJS",
+      "JavaScript",
+      "Sass",
+      "Git",
+      "REST APIs",
+    ],
     screenshots: [
       {
         images: [eventureList],
@@ -363,30 +385,19 @@ const projects = [
       "Public trail database",
       "GPS activity tracking",
     ],
-    skills: [
+    skills: ["TypeScript", "ReactJS", "Git"],
+    allSkills: [
       "TypeScript",
-      "React",
+      "ReactJS",
+      "Git",
       "React Native",
       "Mapbox / Leaflet",
       "REST APIs",
       "Data Visualization",
       "GPS Tracking",
       "Responsive Design",
-      "Git",
     ],
     screenshots: [
-      {
-        images: [defaultImage],
-        title: "Trail Map",
-        description:
-          "Users can browse public trails through an interactive map interface.",
-      },
-      {
-        images: [defaultImage],
-        title: "Route Tracking",
-        description:
-          "GPS tracking allows users to record and save outdoor routes.",
-      },
     ],
 
     resources: [

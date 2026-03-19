@@ -1,8 +1,24 @@
+import { NavLink } from "react-router-dom";
+
 import "./About.scss";
 
 import Me from "../../assets/images/me.webp";
 
+import GitHub from "./../../assets/icons/github.svg?react";
+import LinkedIn from "./../../assets/icons/linkedin.svg?react";
+import Mail from "./../../assets/icons/mail.svg?react";
+
 function About() {
+  
+  //allows scrolling to different sections with id
+  const scrollToSection = (id) => {
+    const sectionElement = document.getElementById(id);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+      setMobileNav(false);
+    }
+  };
+
   return (
     <section className="about" id="sectionAbout">
       <div className="about__container">
@@ -31,9 +47,34 @@ function About() {
               My goal is to create modern web applications that guide users
               smoothly, offering reliability, clarity, and thoughtful design.
             </span>
+            <div className="about__believe">Believe it or not. This website was painstakingly coded by hand.</div>
           </div>
           <div className="about__card-right">
             <img src={Me} alt="picture of me" />
+            <div className="about__socials">
+              <NavLink aria-label="visit my github profile"
+              to="https://github.com/hellsten">
+                <GitHub />
+              </NavLink>
+              <NavLink aria-label="visit my linkedin profile" to="https://www.linkedin.com/in/jessicahellsten/">
+                <LinkedIn />
+              </NavLink>
+              <NavLink aria-label="contact me by email" to="mailto:jessicahellsten@gmail.com">
+                <Mail />
+              </NavLink>
+              <div className="about__contact">
+              <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("sectionContact");
+                }}
+              >
+                Contact
+              </a>
+              </div>
+            
+            </div>
+            
           </div>
         </div>
       </div>

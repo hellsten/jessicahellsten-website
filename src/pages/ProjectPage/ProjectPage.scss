@@ -43,18 +43,18 @@
   background-color: $green-color-tertiary;
   margin: auto;
   width: 100%;
-  &__container{
+  &__container {
     display: flex;
     flex-direction: column;
     align-self: center;
     width: 70%;
-    @include small-desktop{
+    @include small-desktop {
       width: 90%;
     }
-    @include tablet{
+    @include tablet {
       width: 100%;
     }
-    @include mobile{
+    @include mobile {
       width: 100%;
     }
   }
@@ -108,15 +108,15 @@
           font-size: 3rem;
         }
       }
-      &-image{
+      &-image {
         display: flex;
-        justify-content: center;     
+        justify-content: center;
         object-fit: cover;
-        img{
+        img {
           border-radius: 2rem;
           object-fit: cover;
         }
-        video{
+        video {
           width: 100%;
           height: auto;
         }
@@ -199,6 +199,9 @@
         }
         @include mobile {
           gap: 1rem;
+        }
+        &:not(:has(a:not([href="#"]))) {
+          display: none;
         }
         a {
           width: 6rem;
@@ -339,8 +342,8 @@
   &__screenshots {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
     @include mobile {
+      padding-bottom: 0rem;
       gap: 2rem;
     }
   }
@@ -349,9 +352,11 @@
       margin: auto 4rem;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
       border-radius: 2rem;
+      padding-bottom: 4rem;
       @include mobile {
         width: 95%;
         margin: auto;
+        padding-bottom: 0;
       }
       &-title {
         font-size: 4rem;
@@ -375,10 +380,10 @@
         background-color: $color-white;
         padding: 2rem;
         gap: 2rem;
-        @include small-desktop{
+        @include small-desktop {
           grid-template-columns: 1fr;
         }
-        @include tablet{
+        @include tablet {
         }
         @include mobile {
           padding: 0;
@@ -388,7 +393,7 @@
         min-width: 0;
         width: 100%;
         height: auto;
- 
+
         border-radius: 2rem;
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
         @include mobile {
@@ -417,7 +422,7 @@
     display: flex;
     flex-direction: column;
     justify-self: center;
-    margin: 6rem 4rem;
+    margin: 0rem 4rem;
     border-radius: 2rem;
     background-color: $green-color-base;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
@@ -466,6 +471,10 @@
       max-width: none;
       gap: 1rem;
     }
+    &:has(a[href="#"]) {
+      display: none;
+    }
+
     &-name {
       font-size: 2rem;
       font-weight: 600;
@@ -492,10 +501,13 @@
         overflow-wrap: break-word;
         word-break: break-word;
         font-weight: 600;
-        &:hover{
+        &:hover {
           color: $green-color-secondary-light;
           cursor: pointer;
         }
+      }
+      a[href="#"] {
+        display: none;
       }
     }
   }

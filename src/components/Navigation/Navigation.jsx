@@ -58,14 +58,7 @@ function Navigation() {
               >
                 About
               </NavLink>
-              <NavLink
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("sectionSkills");
-                }}
-              >
-                Skills
-              </NavLink>
+              
               <NavLink
                 onClick={(e) => {
                   e.preventDefault();
@@ -73,6 +66,14 @@ function Navigation() {
                 }}
               >
                 Projects
+              </NavLink>
+              <NavLink
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("sectionSkills");
+                }}
+              >
+                Skills
               </NavLink>
               <NavLink
                 onClick={(e) => {
@@ -122,10 +123,10 @@ function Navigation() {
           <NavLink
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection("sectionSkills");
+              scrollToSection("sectionProjects");
             }}
           >
-            Skills
+            Projects
           </NavLink>
           <div className="navigation__dots">
             <p className="navigation__dots-3">
@@ -138,11 +139,12 @@ function Navigation() {
           <NavLink
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection("sectionProjects");
+              scrollToSection("sectionSkills");
             }}
           >
-            Projects
+            Skills
           </NavLink>
+          
           <div className="navigation__dots">
             <p className="navigation__dots-5">
               <Foot />

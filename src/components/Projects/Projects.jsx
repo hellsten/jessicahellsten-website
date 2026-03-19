@@ -17,7 +17,7 @@ function Projects() {
             <div className="project__card-title">{project.title}</div>
             <div className="project__card-intro">{project.intro}</div>
             <div className="project__card-skills">
-                {project.skills.map((skill, index) => (
+                {project.allSkills.map((skill, index) => (
                     <div key={index} className="project__card-skills-item">{skill}</div>
             ))}
             </div>
@@ -26,7 +26,7 @@ function Projects() {
                 Learn More <span className="visually-hidden"> about {project.title}</span>
               </NavLink>
               <div className="project__card-links-group">
-                <a className="project__card-demo" href={project.demoLink}>Demo</a>
+                <a className="project__card-demo" href={project.demoLink}>Deployed</a>
               <a className="project__card-code" href={project.codeLink}>Code</a>
                 </div>
             </div>
