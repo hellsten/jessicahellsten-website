@@ -7,7 +7,7 @@ function VisitorCounter({ page = "home" }) {
   useEffect(() => {
     const trackVisit = async () => {
       try {
-        const res = await fetch(`/.netlify/functions/counter?page=${page}`, {
+        const res = await fetch(`/api/counter?page=${page}`, {
           method: "POST",
         });
 
