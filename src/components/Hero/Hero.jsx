@@ -17,62 +17,61 @@ function Hero() {
   };
 
   return (
-    <section className="hero1" id="sectionHero">
-      <div className="hero1__container">
-
-        <div className="hero1__left">
-            <div className="hero1__title">
-                Jessica Hellsten
-            </div>
-            <div className="hero1__subtitle">
-                Full-Stack Developer
-            </div>
-            <div className="hero1__description">Building clear paths through complex systems — turning complexity into intuitive, structured experiences.
-
-Carefully built from the ground up.</div>
-            <div className="hero1__buttons">
-                
-
-                <a className="hero1__projects"
-                    onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection("sectionProjects");
-                    }}
-                >
-                    View Projects
-                </a>
-                <a className="hero1__contact"
-                    onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection("sectionContact");
-                    }}
-                >
-                    Contact Me
-                </a>
-            </div>
+    <section className="hero" id="sectionHero">
+      <div className="hero__container">
+        <div className="hero__left">
+          <div className="hero__title">Jessica Hellsten</div>
+          <div className="hero__subtitle">Full-Stack Developer</div>
+          <div className="hero__description">
+            Building clear paths through complex systems — turning complexity
+            into intuitive, structured experiences. Carefully built from the
+            ground up.
+          </div>
+          <div className="hero__buttons">
+            <a
+              className="hero__projects"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("sectionProjects");
+              }}
+            >
+              View Projects
+            </a>
+            <a
+              className="hero__contact"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("sectionContact");
+              }}
+            >
+              Contact Me
+            </a>
+          </div>
         </div>
 
-        <div className="hero1__right">
-          <div className="hero1__socials">
+        <div className="hero__right">
+          <div className="hero__socials">
             <NavLink
               aria-label="visit my github profile"
               to="https://github.com/hellsten"
             >
-              <GitHub /><p>GitHub</p>
+              <GitHub />
+              <p>GitHub</p>
             </NavLink>
             <NavLink
               aria-label="visit my linkedin profile"
               to="https://www.linkedin.com/in/jessicahellsten/"
             >
-              <LinkedIn /><p>LinkedIn</p>
+              <LinkedIn />
+              <p>LinkedIn</p>
             </NavLink>
             <NavLink
               aria-label="contact me by email"
               to="mailto:jessicahellsten@gmail.com"
             >
-              <Mail /><p>Email</p>
+              <Mail />
+              <p>Email</p>
             </NavLink>
-            
           </div>
         </div>
       </div>

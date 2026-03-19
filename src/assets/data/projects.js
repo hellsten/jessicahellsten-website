@@ -1,5 +1,9 @@
 import defaultImage from "../images/default.jpg";
+
 import portfolioImage from "../images/projects/portfolio/portfolioImage.png";
+import portfolioAINav from "../images/projects/portfolio/portfolioAINav.png";
+import portfolioFooter from "../images/projects/portfolio/portfolioFooter.png";
+import portfolioContact from "../images/projects/portfolio/portfolioContact.png";
 
 import canhuntImage from "../images/projects/canhunt/canhuntImage.jpg";
 import canhuntLayers from "../images/projects/canhunt/canhuntLayers.png";
@@ -40,54 +44,111 @@ import eventureLearnMore from "../images/projects/eventure/eventureLearnMore.web
 const projects = [
   {
     id: "portfolio",
-    title: "Portfolio",
+    title: "Portfolio Website",
     image: portfolioImage,
+
     tagline:
-      "Personal developer portfolio showcasing projects and technical work.",
+      "Custom-built developer portfolio showcasing projects, AI-assisted workflows, and interactive web experiences.",
+
     stats: [
       { label: "Type", value: "Developer Portfolio" },
-      { label: "Platforms", value: "Web" },
-      { label: "Framework", value: "React" },
-      { label: "Responsive", value: "Mobile & Desktop" },
-      { label: "Completed", value: "Incomplete" },
+      { label: "Platforms", css: "web", value: "web" },
+      { label: "Framework", css: "react", value: "react" },
+      { label: "Responsive", css: "md", value: "mobile & desktop" },
+      { label: "Status", css: "complete", value: "Completed" },
     ],
-    started: "March 3 2026 - Present",
+
+    started: "March 2026",
+
     intro:
-      "Personal developer portfolio built with React showcasing projects, skills, and technical work through a responsive modern interface.",
+      "This portfolio was designed and developed as a central hub to showcase my projects, technical skills, and development experience. It combines structured data-driven components with creative UI design, while also exploring how AI can be integrated into real-world workflows and features.",
+
     overview:
-      "This portfolio was built to showcase development projects and technical experience through a clean, responsive interface. The site highlights software projects, technical skills, and case studies while emphasizing usability and performance.",
+      "The portfolio provides an interactive experience where users can explore projects in depth, navigate seamlessly between sections, and view AI-assisted experimental pages. Built with scalability in mind, it uses reusable components and structured JavaScript data to manage content efficiently.",
+
+    problem:
+      "Traditional portfolio websites are often static, difficult to scale, and lack interactivity or personalization. They also rarely demonstrate how modern developers integrate AI into real workflows.",
+
+    solution:
+      "This portfolio introduces a dynamic, component-based architecture with structured project data, interactive navigation, and AI-assisted features. It highlights both technical ability and modern development practices, including the use of AI to enhance functionality and user experience.",
+
     features: [
-      "Project showcase pages",
-      "Responsive layout for desktop and mobile",
-      "Modern React component architecture",
-      "SCSS-based styling system",
+      "Dynamic project pages powered by structured JavaScript data",
+      "AI navigation linking to AI-generated experimental pages",
+      "Responsive multi-section layout with smooth navigation",
+      "Footer with site map and project selection navigation",
+      "Contact form powered by Formspree",
+      "AI-assisted unique visitor counter tracking all-time visits",
     ],
+
     skills: ["ReactJS", "JavaScript", "Sass", "Git"],
-    allSkills: ["ReactJS", "JavaScript", "Sass", "Git", "Responsive Design"],
+
+    allSkills: [
+      "ReactJS",
+      "JavaScript",
+      "Sass",
+      "Git",
+      "Component Architecture",
+      "Responsive Design",
+      "Formspree Integration",
+      "AI-Assisted Development",
+      "Frontend Performance Optimization",
+    ],
+
     screenshots: [
       {
-        images: [defaultImage, defaultImage],
-        title: "Portfolio Homepage",
+        images: [portfolioAINav],
+        title: "AI Navigation & Experimental Pages",
         description:
-          "The homepage introduces the developer and highlights featured projects with a clean and responsive layout.",
+          "An AI-driven navigation section that links to pages generated with AI. This demonstrates my ability to use AI as a practical development tool to create experimental interfaces, explore new ideas, and extend beyond traditional static portfolio design.",
       },
       {
-        images: [defaultImage],
-        title: "Project Showcase",
+        images: [portfolioFooter],
+        title: "Footer Navigation & Visitor Tracking",
         description:
-          "Projects are displayed as cards with technologies used, descriptions, and links to live demos or code.",
+          "The footer includes a full site map for navigating between sections, quick access to projects, and links to AI-reformatted pages. It also integrates an AI-assisted visitor tracking system using a custom `visitor.js` file and `VisitorCount.jsx` component to count unique IP-based visits across the site for an all-time total.",
+      },
+      {
+        images: [portfolioContact],
+        title: "Contact System",
+        description:
+          "The contact section allows users to send messages directly through the site. Formspree is used to handle submissions and deliver emails, providing a simple and reliable solution without requiring a custom backend.",
       },
     ],
+
+    contributions: [
+      "Designed and developed the full portfolio architecture using React",
+      "Built reusable components for projects, navigation, and layout sections",
+      "Implemented structured JavaScript data for scalable content management",
+      "Integrated AI-assisted features including navigation and visitor tracking",
+      "Developed responsive UI/UX for both desktop and mobile experiences",
+    ],
+
+    highlights: [
+      "Combines traditional portfolio structure with AI-assisted features",
+      "Demonstrates real-world use of AI in development workflows",
+      "Built with scalability using reusable components and data-driven design",
+      "Balances clean UI design with interactive and experimental elements",
+    ],
+
     resources: [
       {
-        name: "React Documentation",
-        description: "Framework used for building the site UI.",
-        link: "https://react.dev",
+        name: "Formspree",
+        description:
+          "Used to handle contact form submissions and send emails directly from the portfolio.",
+        link: "https://formspree.io/",
       },
       {
-        name: "SCSS Documentation",
-        description: "Styling preprocessor used for modular CSS.",
-        link: "https://sass-lang.com/documentation/",
+        name: "React",
+        description:
+          "Core framework used to build the portfolio with reusable components and dynamic rendering.",
+        link: "https://react.dev/",
+      },
+      {
+        name: "Vite",
+        description:
+          "Frontend tooling used for fast development and optimized builds.",
+        link: "https://vite.dev/",
       },
     ],
     demoLink: "https://jessicahellsten.com",
@@ -95,7 +156,7 @@ const projects = [
   },
   {
     id: "canhunt",
-    title: "CAN-Hunt",
+    title: "CANhunt",
     image: canhuntImage,
 
     tagline:
@@ -112,7 +173,7 @@ const projects = [
     started: "March 2026",
 
     intro:
-      "CAN-Hunt is an AI-generated geospatial web application designed to help users explore hunting zones, boundaries, and environmental conditions across Canada. The project was developed entirely using Claude AI, demonstrating rapid prototyping and full application generation through AI-assisted development.",
+      "Canhunt is an AI-generated geospatial web application designed to help users explore hunting zones, boundaries, and environmental conditions across Canada. The project was developed entirely using Claude AI, demonstrating rapid prototyping and full application generation through AI-assisted development.",
 
     overview:
       "The platform integrates geographic boundary data sourced from government APIs with an interactive map interface, allowing users to visualize hunting areas, apply filters, and assess environmental conditions in real time.",
@@ -121,7 +182,7 @@ const projects = [
       "Accessing accurate hunting zone boundaries and environmental data often requires navigating multiple fragmented government resources, making it difficult for users to quickly gather the information they need.",
 
     solution:
-      "CAN-Hunt consolidates boundary data and environmental insights into a single, interactive interface. By leveraging AI-generated code and real-world data sources, the platform simplifies exploration and improves accessibility for users.",
+      "Canhunt consolidates boundary data and environmental insights into a single, interactive interface. By leveraging AI-generated code and real-world data sources, the platform simplifies exploration and improves accessibility for users.",
 
     features: [
       "Interactive map with hunting zone boundaries",
@@ -181,7 +242,7 @@ const projects = [
     resources: [
       {
         name: "Live Application",
-        description: "Explore the CAN-Hunt platform.",
+        description: "Explore the Canhunt platform.",
         link: "https://canhunt.app/",
       },
       {
@@ -298,7 +359,7 @@ const projects = [
     ],
 
     demoLink: "#",
-    codeLink: "#",
+    codeLink: "https://github.com/hellsten/CAN-Simplan-Front-End",
   },
   {
     id: "instock",

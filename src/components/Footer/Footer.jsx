@@ -1,4 +1,6 @@
 import { NavLink } from "react-router-dom";
+import VisitorCounter from "../VisitorCounter/VisitorCounter.jsx";
+
 import "./Footer.scss";
 
 import projects from "./../../assets/data/projects.js";
@@ -167,7 +169,7 @@ function Footer( {siteMap} ) {
         <span className="footer__disclaimer">Believe it or not. This website was painstakingly coded by hand.
         </span>
         <div className="footer__legal">
-          <div className="footer__counter">Visitors: 3</div>
+          <div className="footer__counter"><VisitorCounter page="website" /></div>
           <div className="footer__rights">
             © 2026 Jessica Hellsten. All Rights Reserved.
           </div>
