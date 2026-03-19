@@ -16,7 +16,7 @@ const experience = [
         id: "rainforest",
         company: "Rainforest Studios Inc.",
         position: "Co-Founder & Full-Stack Developer",
-        dates: "January 2026 - Present",
+        dates: "October 2024 - Present",
         location: "Maple Ridge, BC",
         logo: Rainforest,
     },

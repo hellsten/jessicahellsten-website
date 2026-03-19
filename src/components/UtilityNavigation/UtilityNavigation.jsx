@@ -17,7 +17,7 @@ function UtilityNavigation() {
             <NavLink
             to="/"
           >
-            Extras
+            Use AI
           </NavLink>
         </div>
 

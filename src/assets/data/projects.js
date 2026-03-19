@@ -1,7 +1,32 @@
 import defaultImage from "../images/default.jpg";
+
 import portfolioImage from "../images/projects/portfolio/portfolioImage.png";
-import cansimplanImage from "../images/projects/cansimplan/cansimplanImage.png";
+import portfolioAINav from "../images/projects/portfolio/portfolioAINav.png";
+import portfolioFooter from "../images/projects/portfolio/portfolioFooter.png";
+import portfolioContact from "../images/projects/portfolio/portfolioContact.png";
+
 import canhuntImage from "../images/projects/canhunt/canhuntImage.jpg";
+import canhuntLayers from "../images/projects/canhunt/canhuntLayers.png";
+import canhuntSearchBar from "../images/projects/canhunt/canhuntSearchBar.png";
+import canhuntConditions from "../images/projects/canhunt/canhuntConditions.jpg";
+
+import cansimplanImage from "../images/projects/cansimplan/cansimplanImage.png";
+import cansimplanDashboard from "../images/projects/cansimplan/cansimplanDashboard.png";
+import cansimplanProposal from "../images/projects/cansimplan/cansimplanProposal.png";
+import cansimplanTable from "../images/projects/cansimplan/cansimplanTable.png";
+import cansimplanLogin from "../images/projects/cansimplan/cansimplanLogin.png";
+
+import instockImage from "../images/projects/instock/warehouses.webp";
+import instockAddInventory from "../images/projects/instock/addInventory.webp";
+import instockAddWarehouse from "../images/projects/instock/addWarehouse.webp";
+import instockDeleteInventory from "../images/projects/instock/deleteInventory.webp";
+import instockDeleteWarehouse from "../images/projects/instock/deleteWarehouse.webp";
+import instockEditInventory from "../images/projects/instock/editInventory.webp";
+import instockEditWarehouse from "../images/projects/instock/editWarehouse.webp";
+import instockInventoryDetails from "../images/projects/instock/inventoryDetails.webp";
+import instockWarehouseDetails from "../images/projects/instock/warehouseDetails.webp";
+import instockWarehouses from "../images/projects/instock/warehouses.webp";
+import instockInventory from "../images/projects/instock/inventory.webp";
 
 import eventureImage from "../images/projects/eventure/eventureImage.webp";
 import eventureVideo from "../images/projects/eventure/eventureVideo.mp4";
@@ -19,60 +44,111 @@ import eventureLearnMore from "../images/projects/eventure/eventureLearnMore.web
 const projects = [
   {
     id: "portfolio",
-    title: "Portfolio",
+    title: "Portfolio Website",
     image: portfolioImage,
+
     tagline:
-      "Personal developer portfolio showcasing projects and technical work.",
+      "Custom-built developer portfolio showcasing projects, AI-assisted workflows, and interactive web experiences.",
+
     stats: [
       { label: "Type", value: "Developer Portfolio" },
-      { label: "Platforms", value: "Web" },
-      { label: "Framework", value: "React" },
-      { label: "Responsive", value: "Mobile & Desktop" },
-      { label: "Completed", value: "Incomplete" },
+      { label: "Platforms", css: "web", value: "web" },
+      { label: "Framework", css: "react", value: "react" },
+      { label: "Responsive", css: "md", value: "mobile & desktop" },
+      { label: "Status", css: "complete", value: "Completed" },
     ],
-    started: "March 3 2026 - Present",
+
+    started: "March 2026",
+
     intro:
-      "Personal developer portfolio built with React showcasing projects, skills, and technical work through a responsive modern interface.",
+      "This portfolio was designed and developed as a central hub to showcase my projects, technical skills, and development experience. It combines structured data-driven components with creative UI design, while also exploring how AI can be integrated into real-world workflows and features.",
+
     overview:
-      "This portfolio was built to showcase development projects and technical experience through a clean, responsive interface. The site highlights software projects, technical skills, and case studies while emphasizing usability and performance.",
+      "The portfolio provides an interactive experience where users can explore projects in depth, navigate seamlessly between sections, and view AI-assisted experimental pages. Built with scalability in mind, it uses reusable components and structured JavaScript data to manage content efficiently.",
+
+    problem:
+      "Traditional portfolio websites are often static, difficult to scale, and lack interactivity or personalization. They also rarely demonstrate how modern developers integrate AI into real workflows.",
+
+    solution:
+      "This portfolio introduces a dynamic, component-based architecture with structured project data, interactive navigation, and AI-assisted features. It highlights both technical ability and modern development practices, including the use of AI to enhance functionality and user experience.",
+
     features: [
-      "Project showcase pages",
-      "Responsive layout for desktop and mobile",
-      "Modern React component architecture",
-      "SCSS-based styling system",
+      "Dynamic project pages powered by structured JavaScript data",
+      "AI navigation linking to AI-generated experimental pages",
+      "Responsive multi-section layout with smooth navigation",
+      "Footer with site map and project selection navigation",
+      "Contact form powered by Formspree",
+      "AI-assisted unique visitor counter tracking all-time visits",
     ],
+
     skills: ["ReactJS", "JavaScript", "Sass", "Git"],
+
     allSkills: [
       "ReactJS",
       "JavaScript",
       "Sass",
       "Git",
+      "Component Architecture",
       "Responsive Design",
+      "Formspree Integration",
+      "AI-Assisted Development",
+      "Frontend Performance Optimization",
     ],
+
     screenshots: [
       {
-        images: [defaultImage, defaultImage],
-        title: "Portfolio Homepage",
+        images: [portfolioAINav],
+        title: "AI Navigation & Experimental Pages",
         description:
-          "The homepage introduces the developer and highlights featured projects with a clean and responsive layout.",
+          "An AI-driven navigation section that links to pages generated with AI. This demonstrates my ability to use AI as a practical development tool to create experimental interfaces, explore new ideas, and extend beyond traditional static portfolio design.",
       },
       {
-        images: [defaultImage],
-        title: "Project Showcase",
+        images: [portfolioFooter],
+        title: "Footer Navigation & Visitor Tracking",
         description:
-          "Projects are displayed as cards with technologies used, descriptions, and links to live demos or code.",
+          "The footer includes a full site map for navigating between sections, quick access to projects, and links to AI-reformatted pages. It also integrates an AI-assisted visitor tracking system using a custom `visitor.js` file and `VisitorCount.jsx` component to count unique IP-based visits across the site for an all-time total.",
+      },
+      {
+        images: [portfolioContact],
+        title: "Contact System",
+        description:
+          "The contact section allows users to send messages directly through the site. Formspree is used to handle submissions and deliver emails, providing a simple and reliable solution without requiring a custom backend.",
       },
     ],
+
+    contributions: [
+      "Designed and developed the full portfolio architecture using React",
+      "Built reusable components for projects, navigation, and layout sections",
+      "Implemented structured JavaScript data for scalable content management",
+      "Integrated AI-assisted features including navigation and visitor tracking",
+      "Developed responsive UI/UX for both desktop and mobile experiences",
+    ],
+
+    highlights: [
+      "Combines traditional portfolio structure with AI-assisted features",
+      "Demonstrates real-world use of AI in development workflows",
+      "Built with scalability using reusable components and data-driven design",
+      "Balances clean UI design with interactive and experimental elements",
+    ],
+
     resources: [
       {
-        name: "React Documentation",
-        description: "Framework used for building the site UI.",
-        link: "https://react.dev",
+        name: "Formspree",
+        description:
+          "Used to handle contact form submissions and send emails directly from the portfolio.",
+        link: "https://formspree.io/",
       },
       {
-        name: "SCSS Documentation",
-        description: "Styling preprocessor used for modular CSS.",
-        link: "https://sass-lang.com/documentation/",
+        name: "React",
+        description:
+          "Core framework used to build the portfolio with reusable components and dynamic rendering.",
+        link: "https://react.dev/",
+      },
+      {
+        name: "Vite",
+        description:
+          "Frontend tooling used for fast development and optimized builds.",
+        link: "https://vite.dev/",
       },
     ],
     demoLink: "https://jessicahellsten.com",
@@ -82,90 +158,144 @@ const projects = [
     id: "canhunt",
     title: "CANhunt",
     image: canhuntImage,
-    tagline: "Cross-platform hunting navigation and regulation assistant.",
+
+    tagline:
+      "AI-generated geospatial application for exploring hunting zones, regulations, and environmental conditions.",
+
     stats: [
-      { label: "Type", value: "navigation" },
-      { label: "Platforms", value: "web, iOS, android" },
-      { label: "Framework", value: "react & React Native" },
-      { label: "Responsive", value: "mobile & desktop" },
-      { label: "Status", value: "incomplete" },
+      { label: "Type", value: "Geospatial Mapping Application" },
+      { label: "Platforms", css: "web", value: "web" },
+      { label: "Framework", css: "react", value: "react" },
+      { label: "Responsive", css: "md", value: "mobile & desktop" },
+      { label: "Status", css: "complete", value: "Completed (Experimental)" },
     ],
-    started: "January 2026 - Present",
+
+    started: "March 2026",
+
     intro:
-      "Cross-platform hunting app for web, Android, and iOS, providing map layer boundaries, regional hunting regulations, and the ability to save favorite spots.",
+      "Canhunt is an AI-generated geospatial web application designed to help users explore hunting zones, boundaries, and environmental conditions across Canada. The project was developed entirely using Claude AI, demonstrating rapid prototyping and full application generation through AI-assisted development.",
+
     overview:
-      "CANhunt simplifies how hunters access geographic boundaries and hunting regulations by combining mapping tools and planning features into a single application.",
+      "The platform integrates geographic boundary data sourced from government APIs with an interactive map interface, allowing users to visualize hunting areas, apply filters, and assess environmental conditions in real time.",
+
+    problem:
+      "Accessing accurate hunting zone boundaries and environmental data often requires navigating multiple fragmented government resources, making it difficult for users to quickly gather the information they need.",
+
+    solution:
+      "Canhunt consolidates boundary data and environmental insights into a single, interactive interface. By leveraging AI-generated code and real-world data sources, the platform simplifies exploration and improves accessibility for users.",
+
     features: [
-      "Interactive hunting boundary maps",
-      "Regional hunting regulation references",
-      "Saved hunting locations",
-      "Cross-platform support",
+      "Interactive map with hunting zone boundaries",
+      "Government API integration for geospatial data",
+      "Dynamic layer toggling for map visualization",
+      "Search functionality for quick navigation",
+      "Environmental condition overlays",
     ],
-    skills: ["TypeScript", "ReactJS", "Git"],
+
+    skills: ["ReactJS", "JavaScript", "Sass", "Git"],
+
     allSkills: [
-      "TypeScript",
       "ReactJS",
-      "Git",
-      "Claude AI",
-      "React Native",
-      "Mapbox / Leaflet",
+      "JavaScript",
+      "Sass",
       "REST APIs",
-      "Data Visualization",
-      "Responsive Design",
+      "Geospatial Data Handling",
+      "AI-Assisted Development (Claude AI)",
     ],
+
     screenshots: [
       {
-        images: [defaultImage],
-        title: "Interactive Map",
+        images: [canhuntLayers],
+        title: "Map Layers & Boundary Visualization",
         description:
-          "Hunters can view hunting zones, terrain layers, and geographic overlays in a single map interface.",
+          "Users can toggle between multiple map layers to visualize hunting zones and geographic boundaries. All boundary data is sourced from government APIs, ensuring accuracy and real-world applicability.",
       },
       {
-        images: [defaultImage],
-        title: "Regulation Lookup",
+        images: [canhuntSearchBar],
+        title: "Search & Navigation",
         description:
-          "Users can quickly search hunting regulations without navigating government PDFs.",
+          "A responsive search interface allows users to quickly locate specific regions and hunting zones, improving accessibility and reducing the need to manually browse large datasets.",
+      },
+      {
+        images: [canhuntConditions],
+        title: "Environmental Conditions Overlay",
+        description:
+          "Environmental data overlays provide additional context such as conditions and terrain, helping users make more informed decisions when exploring hunting areas.",
       },
     ],
+
+    contributions: [
+      "Built a fully functional application using Claude AI for end-to-end development",
+      "Integrated government APIs to retrieve and display geospatial boundary data",
+      "Structured map-based UI for intuitive exploration and interaction",
+      "Implemented dynamic layers and search functionality",
+      "Developed a responsive interface for cross-device usability",
+    ],
+
+    highlights: [
+      "Entire application generated through AI-assisted development (Claude AI)",
+      "Real-world data integration from government sources",
+      "Focus on geospatial visualization and usability",
+      "Rapid prototyping of a complex mapping interface",
+    ],
+
     resources: [
       {
-        name: "Mapbox",
-        description: "Mapping platform used for geographic visualization.",
-        link: "https://www.mapbox.com/",
+        name: "Live Application",
+        description: "Explore the Canhunt platform.",
+        link: "https://canhunt.app/",
       },
       {
-        name: "Leaflet",
-        description: "Lightweight open-source mapping library.",
-        link: "https://leafletjs.com/",
+        name: "Claude AI (Anthropic)",
+        description:
+          "AI assistant and development platform used for building applications, generating code, and solving complex problems through natural language.",
+        link: "https://claude.com/",
       },
     ],
-    demoLink: "https://canhunt.app",
+
+    demoLink: "https://canhunt.app/",
     codeLink: "#",
   },
   {
     id: "cansimplan",
     title: "CAN-Simplan",
     image: cansimplanImage,
-    tagline: "AI-assisted urban planning simulation platform.",
+
+    tagline:
+      "AI-driven platform for evaluating urban development proposals through simulation, analytics, and transparent decision workflows.",
+
     stats: [
       { label: "Type", value: "AI Proposal Analysis Platform" },
       { label: "Platforms", css: "web", value: "web" },
       { label: "Framework", css: "react", value: "react" },
       { label: "Responsive", css: "md", value: "mobile & desktop" },
-      { label: "Status", css: "complete", value: "complete" },
+      { label: "Status", css: "complete", value: "Completed (MVP)" },
     ],
+
     started: "Feb 26 2026 - March 1 2026",
+
     intro:
-      "AI-assisted urban planning platform that helps municipal planners evaluate development proposals using simulation and data analysis. The system models impacts on infrastructure, urban form, and financial feasibility while maintaining transparency through review flags, versioned simulations, and an auditable decision trail.",
+      "CAN-Simplan is an AI-assisted urban planning platform designed to help municipal planners evaluate development proposals through simulation and structured analysis. The system models impacts on infrastructure, land use, and financial feasibility while ensuring transparency through review flags, version-controlled simulations, and a clear decision audit trail.",
+
     overview:
-      "CAN-Simplan models how development proposals affect infrastructure, urban design, and financial feasibility while maintaining transparent planning decisions.",
+      "Urban planning decisions are complex, involving infrastructure constraints, financial feasibility, and long-term city impact. CAN-Simplan simplifies this process by providing planners with a simulation-driven workflow that highlights risks, surfaces key insights, and ensures every decision is backed by transparent data.",
+
+    problem:
+      "Municipal planners often rely on fragmented tools and manual processes to evaluate development proposals, making it difficult to assess long-term impacts, track decisions, and maintain transparency.",
+
+    solution:
+      "CAN-Simplan introduces a unified platform that combines simulation, analytics, and structured workflows. It allows planners to evaluate proposals in one place, flag issues, and maintain a clear audit trail for every decision made.",
+
     features: [
-      "Development simulation modeling",
-      "Planner review flags",
-      "Decision audit trail",
-      "Urban impact visualization",
+      "AI-assisted development simulation modeling",
+      "Interactive planner review and flagging system",
+      "Transparent decision audit trail",
+      "Urban and infrastructure impact visualization",
+      "Proposal status tracking and workflow management",
     ],
+
     skills: ["ReactJS", "JavaScript", "Sass", "Git"],
+
     allSkills: [
       "ReactJS",
       "JavaScript",
@@ -173,37 +303,68 @@ const projects = [
       "Git",
       "Express.js",
       "REST APIs",
+      "UI/UX Design",
+      "Component Architecture",
     ],
+
     screenshots: [
       {
-        images: [defaultImage],
-        title: "Simulation Dashboard",
+        images: [cansimplanDashboard, cansimplanTable],
+        title: "Analytics Dashboard & Proposal Workflow",
         description:
-          "Planners can run simulations to evaluate development impacts.",
+          "A unified dashboard that combines high-level analytics with a structured proposal management table. Planners can filter, review, and track proposal statuses while quickly identifying flagged issues and simulation results.",
       },
       {
-        images: [defaultImage],
-        title: "Planner Review Flags",
+        images: [cansimplanProposal],
+        title: "Detailed Proposal Analysis",
         description:
-          "Flags identify issues requiring planner review before approval.",
+          "A deep-dive view into individual proposals, presenting simulation outputs, planning metrics, and flagged concerns. Designed to support confident, data-driven decision-making with clear and structured information.",
       },
+      {
+        images: [cansimplanLogin],
+        title: "Secure Authentication System",
+        description:
+          "A streamlined login experience with authentication handling to protect sensitive planning data while maintaining a smooth and intuitive user interface.",
+      },
+    ],
+
+    contributions: [
+      "Designed and developed a full React-based frontend architecture",
+      "Built reusable components for dashboards, tables, and proposal views",
+      "Implemented structured data flows for simulation and proposal analysis",
+      "Developed responsive layouts for both desktop and mobile experiences",
+      "Integrated REST APIs to handle proposal data and workflows",
+    ],
+
+    highlights: [
+      "Simulated real-world urban planning workflows",
+      "Focused on transparency with audit trails and review flags",
+      "Designed for scalability with modular component architecture",
+      "Bridged technical implementation with real-world planning concepts",
     ],
 
     resources: [
       {
         name: "Urban Planning Simulation Research",
-        description: "Conceptual basis for modeling planning impacts.",
+        description:
+          "Reference material supporting the modeling of infrastructure and development impact analysis.",
         link: "https://www.planning.org/",
+      },
+      {
+        name: "CAN-Simplan Case Study (UX Design)",
+        description:
+          "Detailed UX design case study outlining the research, user flows, and design decisions behind the CAN-Simplan platform.",
+        link: "https://www.jenniferyaya.ca/can-simplan.html",
       },
     ],
 
     demoLink: "#",
-    codeLink: "#",
+    codeLink: "https://github.com/hellsten/CAN-Simplan-Front-End",
   },
   {
     id: "instock",
     title: "Instock",
-    image: defaultImage,
+    image: instockImage,
     tagline: "Warehouse inventory management system.",
     stats: [
       { label: "Type", value: "inventory management system" },
@@ -223,37 +384,129 @@ const projects = [
       "Product detail pages",
       "REST API integration",
     ],
-    skills: ["ReactJS", "JavaScript", "Git"],
+    skills: ["ReactJS", "JavaScript", "Sass", "MySQL", "Git"],
     allSkills: [
       "ReactJS",
       "JavaScript",
-      "Git",
+      "SCSS",
+      "Express.js",
+      "Node.js",
+      "MySQL",
       "REST APIs",
+      "Axios",
+      "CRUD Operations",
       "Responsive Design",
+      "Git",
+      "GitHub",
+      "Postman",
+      "Nodemon",
+      "dotenv",
     ],
     screenshots: [
       {
-        images: [defaultImage],
-        title: "Warehouse Dashboard",
-        description: "Displays warehouse locations and inventory summaries.",
+        images: [instockWarehouses, instockWarehouseDetails],
+        title: "Warehouse Management Flow",
+        description:
+          "Users can browse all warehouses and open detailed warehouse pages to view contact information and associated inventory.",
       },
       {
-        images: [defaultImage],
-        title: "Inventory Details",
+        images: [
+          instockAddWarehouse,
+          instockEditWarehouse,
+          instockDeleteWarehouse,
+        ],
+        title: "Warehouse CRUD Actions",
         description:
-          "Users can view product quantities and update stock information.",
+          "Instock supports full warehouse management, allowing users to add new warehouses, edit existing details, and safely delete records through confirmation flows.",
+      },
+      {
+        images: [instockInventory, instockInventoryDetails],
+        title: "Inventory Management Flow",
+        description:
+          "Users can browse inventory listings and open detailed item pages to review stock levels, status, and warehouse assignment.",
+      },
+      {
+        images: [
+          instockAddInventory,
+          instockEditInventory,
+          instockDeleteInventory,
+        ],
+        title: "Inventory CRUD Actions",
+        description:
+          "The application includes full inventory management with forms for creating items, editing stock details, and deleting entries through protected confirmation steps.",
       },
     ],
 
     resources: [
       {
+        name: "React Documentation",
+        description:
+          "Used to build the frontend UI with reusable components and state management.",
+        link: "https://react.dev",
+      },
+      {
+        name: "JavaScript (MDN)",
+        description:
+          "Core language used for building application logic and handling data interactions.",
+        link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      },
+      {
+        name: "Sass (SCSS)",
+        description:
+          "Used for modular and maintainable styling across the application.",
+        link: "https://sass-lang.com/documentation/",
+      },
+      {
         name: "REST API Design Guide",
-        description: "Reference used for API architecture.",
+        description:
+          "Reference for structuring API endpoints and handling CRUD operations between frontend and backend.",
         link: "https://restfulapi.net/",
+      },
+      {
+        name: "Axios",
+        description:
+          "HTTP client used to communicate with backend APIs and handle asynchronous requests.",
+        link: "https://axios-http.com/",
+      },
+      {
+        name: "Express.js",
+        description:
+          "Backend framework used to build API routes and manage server-side logic.",
+        link: "https://expressjs.com/",
+      },
+      {
+        name: "MySQL Documentation",
+        description:
+          "Relational database used to store warehouse and inventory data.",
+        link: "https://dev.mysql.com/doc/",
+      },
+      {
+        name: "MySQL Workbench",
+        description:
+          "Tool used for database design, querying, and data management during development.",
+        link: "https://www.mysql.com/products/workbench/",
+      },
+      {
+        name: "Node.js",
+        description:
+          "Runtime environment used to run the backend server and API logic.",
+        link: "https://nodejs.org/",
+      },
+      {
+        name: "Git & GitHub",
+        description:
+          "Used for version control, collaboration, and managing project history.",
+        link: "https://github.com/",
+      },
+      {
+        name: "dotenv",
+        description:
+          "Used to manage environment variables securely for database credentials and configuration.",
+        link: "https://www.npmjs.com/package/dotenv",
       },
     ],
     demoLink: "#",
-    codeLink: "#",
+    codeLink: "https://github.com/hellsten/Instock-Server",
   },
   {
     id: "eventure",
@@ -280,13 +533,7 @@ const projects = [
       "Responsive UI",
     ],
     skills: ["ReactJS", "JavaScript", "Sass", "Git"],
-    allSkills: [
-      "ReactJS",
-      "JavaScript",
-      "Sass",
-      "Git",
-      "REST APIs",
-    ],
+    allSkills: ["ReactJS", "JavaScript", "Sass", "Git", "REST APIs"],
     screenshots: [
       {
         images: [eventureList],
@@ -397,8 +644,7 @@ const projects = [
       "GPS Tracking",
       "Responsive Design",
     ],
-    screenshots: [
-    ],
+    screenshots: [],
 
     resources: [
       {

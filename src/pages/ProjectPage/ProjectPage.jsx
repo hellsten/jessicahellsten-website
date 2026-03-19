@@ -24,27 +24,27 @@ function ProjectPage() {
 
   //smooth scroll to top when navigating to new page
   useEffect(() => {
-  const navSection = document.getElementById("sectionNav");
+    const navSection = document.getElementById("sectionNav");
 
-  if (navSection) {
-    navSection.scrollIntoView({ behavior: "instant", block: "start" });
-  }
-}, [id]);
+    if (navSection) {
+      navSection.scrollIntoView({ behavior: "instant", block: "start" });
+    }
+  }, [id]);
 
   return (
     <main>
       <section className="projectPage">
-        <section className="navigation" >
-            <nav className="navigation__container">
-              <div className="navigation__icon">
-                <NavLink to="/">Jessica Hellsten</NavLink>
-              </div>
+        <section className="navigation">
+          <nav className="navigation__container">
+            <div className="navigation__icon">
+              <NavLink to="/">Jessica Hellsten</NavLink>
+            </div>
 
-              <div className="projectPage__navigation__links navigation__desktop-on">
-                <NavLink onClick={handleBack}>← Back</NavLink>
-              </div>
-            </nav>
-          </section>
+            <div className="projectPage__navigation__links navigation__desktop-on">
+              <NavLink onClick={handleBack}>← Back</NavLink>
+            </div>
+          </nav>
+        </section>
         <div className="projectPage__container" id="sectionNav">
           <section className="projectPage__hero" id="sectionOverview">
             <div className="projectPage__hero__container">
@@ -66,19 +66,30 @@ function ProjectPage() {
             ))}
                </div> */}
               <div className="projectPage__hero__container-image">
-                <video
-                  controls
-                  poster={projectItem.image}
-                >
-                  <source src={projectItem.video} type="video/mp4" />
-                </video>
+                {projectItem.video ? (
+                  <video controls playsInline>
+                    <source src={projectItem.video} type="video/mp4" />
+                  </video>
+                ) : (
+                  <img src={projectItem.image} alt={projectItem.title} />
+                )}
               </div>
               <div className="projectPage__hero__container-intro">
                 {projectItem.intro}
               </div>
               <div className="projectPage__hero__container-links">
-                <a className="projectPage__hero__container-demoLink" href={projectItem.demoLink}>Demo</a>
-                <a className="projectPage__hero__container-codeLink" href={projectItem.codeLink}>Code</a>
+                <a
+                  className="projectPage__hero__container-demoLink"
+                  href={projectItem.demoLink}
+                >
+                  View Live
+                </a>
+                <a
+                  className="projectPage__hero__container-codeLink"
+                  href={projectItem.codeLink}
+                >
+                  Code
+                </a>
               </div>
             </div>
           </section>

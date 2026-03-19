@@ -47,33 +47,11 @@ function About() {
               My goal is to create modern web applications that guide users
               smoothly, offering reliability, clarity, and thoughtful design.
             </span>
-            <div className="about__believe">Believe it or not. This website was painstakingly coded by hand.</div>
+            {/* <div className="about__believe">Believe it or not. This website was painstakingly coded by hand.</div> */}
           </div>
           <div className="about__card-right">
             <img src={Me} alt="picture of me" />
-            <div className="about__socials">
-              <NavLink aria-label="visit my github profile"
-              to="https://github.com/hellsten">
-                <GitHub />
-              </NavLink>
-              <NavLink aria-label="visit my linkedin profile" to="https://www.linkedin.com/in/jessicahellsten/">
-                <LinkedIn />
-              </NavLink>
-              <NavLink aria-label="contact me by email" to="mailto:jessicahellsten@gmail.com">
-                <Mail />
-              </NavLink>
-              <div className="about__contact">
-              <a
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("sectionContact");
-                }}
-              >
-                Contact
-              </a>
-              </div>
             
-            </div>
             
           </div>
         </div>

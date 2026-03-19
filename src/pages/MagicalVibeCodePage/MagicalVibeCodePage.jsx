@@ -18,16 +18,21 @@ function normalizeProject(project, index) {
     id: project.id || project.title || `project-${index}`,
     title: project.title || "Project",
     type:
-      project.stats?.find((stat) => stat.label?.toLowerCase() === "type")?.value ||
-      "Featured Project",
+      project.stats?.find((stat) => stat.label?.toLowerCase() === "type")
+        ?.value || "Featured Project",
     description:
       project.tagline ||
       project.intro ||
       project.overview ||
       "A creative frontend project.",
-    tags: Array.isArray(project.skills) ? project.skills : [],
-    live: project.demoLink || project.liveLink || project.live || "#",
-    code: project.codeLink || project.github || project.repo || "#",
+    tags: Array.isArray(project.allSkills)
+      ? project.allSkills
+      : Array.isArray(project.skills)
+      ? project.skills
+      : [],
+    live: project.demoLink || "#",
+    code: project.codeLink || "#",
+    projectPageLink: project.id ? `/project/${project.id}` : "#",
     image: project.image || "",
     started: project.started || "",
     overview: project.overview || "",
@@ -82,6 +87,7 @@ function MagneticButton({
   children,
   className = "",
   href,
+  to,
   onClick,
   type = "button",
   target,
@@ -109,7 +115,26 @@ function MagneticButton({
     });
   };
 
+  if (to) {
+    return (
+      <NavLink
+        ref={ref}
+        to={to}
+        className={`${className} magical-vibe-code-page__magnetic`}
+        style={style}
+        onMouseMove={handleMove}
+        onMouseLeave={handleLeave}
+      >
+        {children}
+      </NavLink>
+    );
+  }
+
   if (href) {
+    const isDisabled = href === "#";
+
+    if (isDisabled) return null;
+
     return (
       <a
         ref={ref}
@@ -454,7 +479,10 @@ function MagicalVibeCodePage() {
               const IconComponent = skill.Icon;
 
               return (
-                <div key={skill.id} className="magical-vibe-code-page__skill-card">
+                <div
+                  key={skill.id}
+                  className="magical-vibe-code-page__skill-card"
+                >
                   <div className="magical-vibe-code-page__skill-dot" />
 
                   <div className="magical-vibe-code-page__skill-text">
@@ -487,7 +515,9 @@ function MagicalVibeCodePage() {
             <span>Projects</span>
             <h2>Projects with personality.</h2>
             <p>
-              A collection of things I’ve built, broken, redesigned, and brought to life. Each project is a mix of creativity and logic — where clean code meets strong visuals and real-world problem solving.
+              A collection of things I’ve built, broken, redesigned, and brought
+              to life. Each project is a mix of creativity and logic — where
+              clean code meets strong visuals and real-world problem solving.
             </p>
           </div>
 
@@ -553,23 +583,36 @@ function MagicalVibeCodePage() {
                 ) : null}
 
                 <div className="magical-vibe-code-page__project-actions">
-                  <MagneticButton
-                    href={project.live}
-                    className="magical-vibe-code-page__project-button magical-vibe-code-page__project-button--primary"
-                    target={project.live !== "#" ? "_blank" : undefined}
-                    rel={project.live !== "#" ? "noreferrer" : undefined}
-                  >
-                    View Project
-                  </MagneticButton>
+                  {project.projectPageLink !== "#" && (
+                    <MagneticButton
+                      to={project.projectPageLink}
+                      className="magical-vibe-code-page__project-button magical-vibe-code-page__project-button--primary"
+                    >
+                      Learn More
+                    </MagneticButton>
+                  )}
 
-                  <MagneticButton
-                    href={project.code}
-                    className="magical-vibe-code-page__project-button magical-vibe-code-page__project-button--secondary"
-                    target={project.code !== "#" ? "_blank" : undefined}
-                    rel={project.code !== "#" ? "noreferrer" : undefined}
-                  >
-                    View Code
-                  </MagneticButton>
+                  {project.live !== "#" && (
+                    <MagneticButton
+                      href={project.live}
+                      className="magical-vibe-code-page__project-button magical-vibe-code-page__project-button--secondary"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      View Live
+                    </MagneticButton>
+                  )}
+
+                  {project.code !== "#" && (
+                    <MagneticButton
+                      href={project.code}
+                      className="magical-vibe-code-page__project-button magical-vibe-code-page__project-button--secondary"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Code
+                    </MagneticButton>
+                  )}
                 </div>
               </article>
             ))}
@@ -584,7 +627,10 @@ function MagicalVibeCodePage() {
             <span>Education</span>
             <h2>Learning by building, refining, and shipping.</h2>
             <p>
-              The foundation behind everything I build. This is where I developed my technical mindset, learned how to think through problems, and started turning ideas into structured, working systems.
+              The foundation behind everything I build. This is where I
+              developed my technical mindset, learned how to think through
+              problems, and started turning ideas into structured, working
+              systems.
             </p>
           </div>
 
@@ -631,7 +677,9 @@ function MagicalVibeCodePage() {
             <span>Experience</span>
             <h2>Frontend work with strong visual instincts.</h2>
             <p>
-              Where things moved from theory to reality. These roles shaped how I collaborate, build, and deliver — turning ideas into real impact through hands-on experience.
+              Where things moved from theory to reality. These roles shaped how
+              I collaborate, build, and deliver — turning ideas into real impact
+              through hands-on experience.
             </p>
           </div>
 
@@ -693,6 +741,8 @@ function MagicalVibeCodePage() {
               <MagneticButton
                 href="https://www.linkedin.com/in/jessicahellsten/"
                 className="magical-vibe-code-page__contact-link-button"
+                target="_blank"
+                rel="noreferrer"
               >
                 <LinkedIn className="magical-vibe-code-page__contact-icon" />
                 <span>LinkedIn</span>
@@ -701,6 +751,8 @@ function MagicalVibeCodePage() {
               <MagneticButton
                 href="https://github.com/hellsten"
                 className="magical-vibe-code-page__contact-link-button"
+                target="_blank"
+                rel="noreferrer"
               >
                 <GitHub className="magical-vibe-code-page__contact-icon" />
                 <span>GitHub</span>
@@ -713,7 +765,7 @@ function MagicalVibeCodePage() {
           <div>MagicalVibeCodePage</div>
           <div>Designed for motion, mood, and mobile screens.</div>
           <div className="magical-vibe-code-page__footer-note">
-            Believe it or not. This website was painstakingly all vibe coded.
+            Believe it or not. This web page was painstakingly all vibe coded.
           </div>
         </footer>
       </div>
